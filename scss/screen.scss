@@ -1,0 +1,968 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+@import "compass/css3";
+@import "_themes.scss";
+
+
+
+html { // http://miniapps.co.uk/blog/post/enable-css-active-pseudo-styles-in-mobile-safari/
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+   tap-highlight-color:         rgba(0,0,0,0);
+}
+
+body {
+    background-color: $background;
+    color: $contentSubtext;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    font-size: 62.5%; /* 1em = 10px */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*
+    Start Screen
+*/
+
+#West {
+    float: left;
+    width: 28em;
+}
+
+#East {
+    margin-left: 30em;
+}
+
+
+#start {
+    -webkit-box-sizing: border-box;
+    padding: 3em 0 0 2em;
+    position: relative;
+
+    #icon {
+        display: block;
+        margin: 3em 0 0 1.5em;
+        width: 22em;
+    }
+
+    ul#series {
+        list-style: none;
+        margin: 4em 0 0 0.5em;
+        padding: 0;
+
+        li {
+            background: $primaryColor;
+            @include border-top-right-radius(100px);
+            @include border-bottom-right-radius(100px);
+            line-height: 0.7;
+            margin: 0 0 2em;
+            padding: 0;
+            position: relative;
+            width: 24em;
+    
+            a {
+                background-color: $background;
+                border-bottom: 1em solid $background;
+                color: $primaryAction;
+                display: inline-block;
+                height: 3.6em;
+                margin: 0 6em 0 2em;
+                padding: 0 1em 0 0;
+                text-align: right;
+                text-decoration: none;
+                width: 9.5em;
+    
+                b {
+                    font-size: 6em;
+                    letter-spacing: -1px;
+                }
+    
+                span {
+                    color: $background;
+                    display: block;
+                    position: absolute;
+                        right: 8em;
+                        bottom: 1em;
+                    text-align: left;
+            
+                    b {
+                        font-size: 1.8em;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+        }
+    
+        .disabled {
+            background-color: darken(grayscale($primaryColor),30%);
+            
+            a {
+                color: darken(grayscale($primaryAction),30%);
+            }
+        }
+
+    }
+
+}
+
+#lastWatched {
+/*     border-bottom: 1em solid $primaryAction; // need HR style for this */
+    padding: 0 4em 4em 0.5em;
+    
+    figure {
+        float: left;
+        margin: 0 2em 4em 0;
+        padding: 0;
+        
+        img {
+            @include border-radius(4px);
+            border: 0.2em solid $primaryAction;
+        }
+    }
+    p {
+        font-size: 1.6em;
+    }
+
+    h4  {
+        color: $contentText;
+        font-size: 3.2em;
+        letter-spacing: -1px;
+        line-height: 1;
+        margin-top: 10px;
+    }
+    
+    h4 strong {
+        padding-right: 2rem; // 20px
+    }
+    
+    h4 span {
+        color: $contentAccent;
+        font-size: 80%;
+        white-space: nowrap;
+    }
+
+
+}
+
+.ruleHeading {
+    background-color: $primaryAction;
+    @include border-radius(100px);
+    display: block;
+    line-height: 0.8;
+    height: 2.8em;
+    margin-bottom: 2em;
+    margin-left: -0.5em;
+    padding: 0 0 0 4em;
+
+    b {
+        background-color: $background;
+        color: $primaryColor;
+        font-size: 3.2em;
+        letter-spacing: -1px;
+        padding: 0 .16em;
+        text-transform: uppercase;
+    }
+}
+
+#southEast {
+    background-color: $contentAccent;
+    @include border-top-left-radius(60px 50px);
+    padding: 2em 0 0 10em;
+
+    .inner {
+        @include border-top-left-radius(30px 25px);
+        height: 17em;
+        padding: 2em;
+    }
+}
+
+.numberSet {
+    list-style: none;
+    margin: 0 0 0 1em;
+    padding: 0;
+    
+    li {
+        color: $primaryColor;
+        float: left;
+        font-size: 2em;
+        width: 6em;
+    }
+}
+
+/*
+    End Start Screen
+*/
+
+
+
+/*
+    Episode View
+*/
+
+a {
+    color: $contentText;
+    text-decoration: none;
+}
+
+.content {
+    font-family: HelveticaNeue;
+    line-height: 1.4;
+}
+
+#top {
+    background-color: $primaryColor;
+    @include border-bottom-left-radius(60px 50px);
+    margin-bottom: 1em;
+    padding: 0 0 2em 10em;
+}
+
+#bottom {
+    background-color: $primaryColor;
+    @include border-top-left-radius(60px 50px);
+    padding: 2em 0 0 10em;
+}
+
+.inner {
+    background-color: $background;
+    padding: 20px;
+    position: relative;
+
+    &>.separator {
+        background-color: $background;
+        display: block;
+        height: 20px;
+        position: absolute;
+            bottom: -20px;
+            left: 100px;
+        width:  1em;
+    }
+}
+
+#bottom .separator {
+        top: -20px;
+        bottom: auto;
+}
+.separator.right {
+        left: auto;
+        right: 35px;
+}
+
+.sweepButton {
+    background-color: $primaryAction;
+    border: 1em solid $background;
+    color: $background;
+    display: block;
+    position: absolute;
+    text-align: right;
+    width: 8em;
+    
+    & b {
+        font-size: 1.6em;
+    }
+
+    &.horz {
+        height: 2em;
+        padding: 0 1em;
+    }
+    &.vert {
+        height: 1em;
+        line-height: 0.3;
+        padding: 4em 1em 1em;
+    }
+    &.sweepHeading {
+        background-color: $background;
+        border-width: 10px 6px 10px 5px;
+        color: $contentText;
+        height: 20px;
+        letter-spacing: -1px;
+        line-height: 0.8;
+        padding: 0;
+        text-transform: uppercase;
+        width: auto;
+
+        & b {
+            font-size: 2.5em;
+        }
+    }
+    &:active {
+        background-color: darken($primaryAction, 10%);
+    }
+}
+
+    #scrollIntoView {
+        background-color: darken($primaryColor, 10%);
+        border-width: 1em 1em 1.2em;
+        height: 1.6em;
+        top: -30px;
+        left: 100px;
+        width: 366px;
+
+        &:active {
+            background-color: darken($primaryColor, 20%);
+        }
+    }
+
+    #playCount {
+        top: -30px;
+        right: 230px;
+        pointer-events: none;
+    }
+
+    #back {
+        height: 40px;
+        line-height: 1;
+        padding: 10px;
+        top: 30px;
+        left: -110px;
+    }
+
+    #random {
+        bottom: -30px;
+        right: 35px;
+
+/*
+        :after {
+          color: red;
+          content: "#{$background}"; // Niiiiiiiice
+          display: block;
+          font-size: 1.6em;
+          position: relative;
+            top: 0px;
+            left: 0px;
+          z-index: 99;
+        }
+*/
+    }
+
+    #episodeNumber {
+/*         background-color: $informational; */
+        background-color: transparent;
+        bottom: -60px;
+        right: 35px;
+
+        &:active {
+            background-color: darken($informational, 10%);
+        }
+    }
+
+    #previous {
+        top: 270px;
+        left: -110px;
+    }
+
+    #next {
+        height: 80px;
+        line-height: 1;
+        padding: 10px;
+        top: 340px;
+        left: -110px;
+    }
+
+    #episodeNav {
+/*         background-color: $informational; */
+        background-color: transparent;
+        border-top: 0;
+        color: $background;
+        top: 210px;
+        left: -110px;
+
+        &:active {
+            background-color: darken($informational, 10%);
+        }
+    }
+
+#top .inner {
+    @include border-bottom-left-radius(30px 25px);
+    padding-top: 2em;
+    
+    h1 {
+        font-size: 3.2em;
+    }
+}
+
+#bottom .inner {
+    @include border-top-left-radius(30px 25px);
+    padding-bottom: 0;
+}
+
+#characters {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & li {
+        float: left;
+    }
+
+    & li a {
+        background-color: $buttonsFilled;
+        @include border-radius(100px);
+        color: $background;
+        display: block;
+        margin: 0 0.6em 0.6em 0;
+        padding: 0.2em 1em 0.2em 1em;
+        position: relative;
+        text-align: right;
+        text-transform: uppercase;
+        width: 7em;
+
+        & .pipe {
+            border-left: 0.3em solid $background;
+            height: 3em;
+            position: absolute;
+                top: 0;
+                left: 1.4em;
+        }
+
+        & b {
+            font-size: 1.6em;
+        }
+    }
+
+    #all span {
+    }
+
+}
+
+#search {
+    position: absolute;
+        top:   20px;
+        right: 20px;
+}
+#searchInput {
+    -webkit-appearance: none;
+    background-color: $background;
+    border: 2px solid $contentAccent;
+    @include border-radius(100px);
+    color: $contentText;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    padding: 5px;
+    text-align: right;
+    width: 160px;
+}
+
+hr {
+    background-color: $contentAccent;
+    border-color: $contentAccent;
+    @include border-radius(100px);
+    border: 0;
+    color: $contentAccent;
+    line-height: 1;
+    height: 1px;
+}
+
+
+
+/*
+    Episode Page
+*/
+
+article {
+    @include border-top-left-radius(15px 12px);
+    height: 550px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+article .content {
+    color: $contentText;
+    padding-right: 40px;
+}
+
+article .content > p {
+    font-size: 1.6em;
+}
+
+article h1 {
+    color: $contentText;
+    font-size: 3.2em;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-top: 10px;
+}
+
+article h1 strong {
+    padding-right: 2rem; // 20px
+}
+
+article h1 span {
+    color: $contentAccent;
+    font-size: 80%;
+    white-space: nowrap;
+}
+
+article h2 {
+    font-size: 2.4em;
+}
+
+article h4 {
+    font-size: 1.6em;
+}
+
+.teaser:before {
+    color: $contentAccent;
+    content: "Teaser: ";
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    text-transform: uppercase;
+}
+
+.plotSummary:before {
+    color: $contentAccent;
+    content: "Plot Summary: ";
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    text-transform: uppercase;
+}
+
+#quotes {
+    color: $contentAccent;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    overflow-x: hidden;
+    padding-bottom: 0.8em;
+    position: relative;
+}
+#quotes:before {
+    color: $contentAccent;
+    content: "Quotes: ";
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    font-size: 1.6em;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+#quotes blockquote {
+    margin: 0;
+    width: 2494px;
+}
+
+#quotes p {
+    display: block;
+    float: left;
+    letter-spacing: -1px;
+    margin: 2.4em 0;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 4em;
+    width: 46.4em;
+
+    & span {
+        font-size: 2.4em;
+    }
+}
+#quotes p:first-child {
+    text-indent: -0.35em;
+}
+
+#quotes cite {
+    font-size: 0.8em;
+}
+
+.tags:before {
+    color: $contentAccent;
+    content: "Tags: ";
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    text-transform: uppercase;
+}
+.tags span {
+    color: $contentSubtext;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    padding: 0 4px 0 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.tags span:after {
+    content: ', ';
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    text-transform: uppercase;
+}
+.tags span:last-child:after {
+    content: '';
+}
+.tags span:hover {
+    @include border-radius(100px);
+    background-color: $contentAccent;
+    color: $background;
+    cursor: pointer;
+    padding: 0 8px;
+}
+.tags span:hover:after {
+    content: '';
+}
+
+article aside {
+    float: right;
+    margin: 0 0 50px 40px;
+    width: 300px;
+}
+
+article aside h4 {
+    color: $contentAccent;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#rating {
+    margin: 10px 0 0;
+}
+
+#rating #myrating {
+    float: left;
+    width: 50%;
+}
+
+#rating #avgrating {
+    margin-left: 50%;
+}
+
+#rating p {
+    font-size: 2.4em;
+    margin: 0 0 1em;
+}
+
+/*
+.pips span {
+    background-color: transparent;
+    border: 2px solid #555;
+    @include border-radius(100px);
+    display: block;
+    float: left;
+    height: 18px;
+    margin: 8px 2px 0 0;
+    width: 18px;
+}
+    .pips span.filled {
+        background: rgba(221,221,221,0.75);
+        @include single-box-shadow(#fff, 0, 1px, 0, 0, inset);
+    }
+*/
+
+
+
+article aside img {
+    @include border-radius(4px);
+}
+
+article aside figure {
+    margin: 1.4em 0 0.2em;
+}
+
+article aside figure img {
+    border: 0.2em solid $primaryAction;
+    max-width: 100%;
+}
+
+#thumbs {
+    margin: 0 0 2em 0;
+}
+
+#thumbs ul,
+#thumbs li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#thumbs li {
+    float: left;
+}
+
+#thumbs li a {
+    display: block;
+    margin-right: 0.4em;
+}
+
+#thumbs li a img {
+    border: 0.2em solid $primaryAction;
+    height: 92px;
+    width:  92px;
+}
+
+#meta {
+    clear: both;
+    list-style: none;
+    margin: 0;
+    padding: 20px 10px 0 20px;
+    text-indent: -20px;
+}
+    #meta li {
+        font-size: 1.6em;
+        margin-bottom: 0.4em;
+    }
+
+#social {
+    list-style: none;
+    margin: 0 0 2em;
+    padding: 1em 0 80px;
+}
+
+    #social li {
+        float: right;
+    }
+
+    #social li a {
+        background-color: transparent;
+        border: 2px solid $contentAccent;
+        color: $contentAccent;
+        display: block;
+        margin: 0 4px 10px 0;
+        padding: 4px 12px 4px 4px;
+        text-align: right;
+        text-transform: uppercase;
+        width: 100px;
+
+        & b {
+            font-size: 1.6em;
+        }
+    }
+    #social li:first-child a {
+        @include border-bottom-right-radius(100px);
+        @include border-top-right-radius(100px);
+    }
+    #social li:last-child a {
+        @include border-bottom-left-radius(100px);
+        @include border-top-left-radius(100px);
+    }
+
+
+
+/*
+    Grid view
+*/
+
+#grid th {
+    background-color: rgba(186,183,251,0.2);
+    border: 1px solid white;
+    border-width: 0 1px 1px 0;
+    padding: 10px 10px;
+    text-transform: uppercase;
+}
+
+#grid b, #grid td {
+    font-size: 1.6em;
+}
+
+#grid #number {
+    @include border-top-left-radius(8px);
+    width: 24px;
+}
+#grid #sceneTitle {
+    width: 200px;
+}
+#grid #desc {
+    width: 486px;
+}
+#grid #ratingHeader {
+    width: 80px;
+}
+
+#grid .seasonHeader td {
+    background-color: rgba(186,183,251,0.18);
+    padding: 3px 10px;
+    text-transform: uppercase;
+    width: 874px;
+}
+
+#grid tr {
+    display: block;
+    position: relative;
+}
+
+#grid tbody {
+    display: block;
+    height: 519px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+#grid td {
+    border: 1px solid white;
+    border-width: 0 1px 1px 0;
+    padding: 10px 10px 0;
+}
+
+#grid .number em {
+    background-color: rgba(186,183,251,1);
+    @include border-top-left-radius(100px);
+    @include border-bottom-left-radius(100px);
+    display: block;
+    font-style: normal;
+    height: 2em;
+    line-height: 1;
+    width: 4em;
+}
+/*
+#grid tr:hover .number,
+#grid tr:active .number {
+    background-color: rgba(186,183,251,0.5);
+}
+*/
+#grid tr:hover {
+    cursor: pointer;
+}
+
+#grid .sceneTitle {
+    padding-bottom: 20px;
+}
+
+#grid p {
+    margin: 0 0 1em;
+}
+
+
+
+/*
+    Grid 2
+*/
+
+#grid2 b, #grid2 td {
+    font-size: 2.5em;
+    line-height: 1.5;
+}
+
+h3 b {
+    color: $contentSubtext;
+    font-size: 2.1em;
+    letter-spacing: -1px;
+    padding-left: 7.6em;
+    text-transform: uppercase;
+}
+
+#grid2 {
+    height: 519px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    .season {
+        border-left: 1.5em solid $informational;
+        @include border-top-left-radius(100px);
+        @include border-bottom-left-radius(100px);
+        color: $primaryAction;
+        padding: 0 0.4em;
+    }
+    .episode {
+        color: $contentAccent;
+        padding: 0 1em 0 0.4em;
+    }
+    .episodeName {
+        padding: 0 1em 0 0.4em;
+        width: 21em;
+    }
+}
+
+
+
+/*
+    Responsive
+*/
+
+@media all and (orientation:portrait) { 
+    .landscape { display: none; }
+
+    body {
+        height: 1024px;
+        width: 768px;
+    }
+
+    #bottom,
+    #top {
+        margin-left: 0;
+    }
+
+    article {
+        height: 770px;
+    }
+
+    #quotes p {
+        margin: 0.5em 0;
+        padding: 0 20px;
+        width: 248px;
+    }
+
+    #social li a {
+        margin: 0 4px 10px 0;
+        padding: 4px 8px 4px 4px;
+        text-align: right;
+        text-transform: uppercase;
+        width: 100px;
+    }
+    
+    #grid2 {
+        height: 700px;
+
+        .season {
+            padding: 0 0.3em;
+        }
+        .episode {
+            padding: 0 0.5em 0 0.3em;
+        }
+        .episodeName {
+            padding: 0 1em 0 0.3em;
+            width: 18em;
+        }
+    }
+}
+@media all and (orientation:landscape) { 
+    .portrait { display: none; }
+
+    body {
+        height: 768px;
+        width: 1024px;
+    }
+
+    #bottom,
+    #top {
+        margin-left: 0;
+    }
+}
+@media only screen and (max-device-width: 480px) and (orientation:portrait) { 
+
+    body {
+        height: 100%;
+        width:  320px;
+    }
+    #top {
+        background-color: $primaryColor;
+        border-bottom-left-radius: 60px 50px;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        padding: 0 0 0px 5px;
+    }
+    
+    #bottom {
+        background-color: $primaryColor;
+        @include border-top-left-radius(60px 50px);
+        margin-left: 0px;
+        padding: 0px 0 0 5px;
+    }
+    .inner {
+        background-color: $background;
+        padding: 10px;
+        position: relative;
+    }
+
+    article {
+        overflow-y: visible;
+        -webkit-overflow-scrolling: none;
+    }
+    article aside {
+        float: none;
+        margin-left: 0;
+        width: 280px;
+    }
+    article .content {
+        color: $contentText;
+        padding-right: 5px;
+    }
+}
+@media only screen and (max-device-width: 480px) and (orientation:landscape) { 
+    body {
+        height: 320px;
+        width:  480px;
+    }
+
+}

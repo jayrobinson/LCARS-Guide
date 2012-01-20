@@ -1,0 +1,124 @@
+@import "compass/css3";
+@import "_themes.scss";
+
+
+
+/*
+    Start Screen
+*/
+
+
+#series {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    li {
+        background: white;
+        @include border-top-right-radius(100px);
+        @include border-bottom-right-radius(100px);
+        margin-bottom: 2em;
+        width: 14em;
+    }
+
+    a {
+        background: black;
+        display: inline-block;
+/*
+        border-left: 2em solid white;
+        border-right: 6em solid white;
+*/
+        height: 4.6em;
+        line-height: 1;
+        margin: 0 6em 0 2em;
+        padding: 0 1em;
+        text-decoration: none;
+
+        b {
+        
+            font-size: 4.2em;
+        }
+
+    }
+
+}
+
+
+
+body {
+    background-color: black;
+    color: $contentSubtext;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    font-size: 62.5%; /* 1em = 10px */
+    margin: 0 4em;
+    padding: 3em;
+}
+
+#top, #bottom {
+    position: relative;
+
+    hr {
+    /*     background-color: #acaff7; */
+        background-color: $contentAccent;
+        border-color: $contentAccent;
+        @include border-radius(100px);
+        border: 0;
+        color: $contentAccent;
+        line-height: 1;
+        height: 2.5em;
+    }
+
+    #status {
+        background-color: black;
+        border: solid black;
+        border-width: 0 0.5em;
+        color: $primaryColor;
+        letter-spacing: -2px;
+        line-height: 1;
+        position: absolute;
+            top: -1.5em;
+            left: 2em;
+        text-transform: uppercase;
+
+        & b {
+            font-size: 3.4em;
+        }
+    }
+}
+
+.endcaps {
+    background-color: $primaryColor;
+    border: 1em solid black;
+    height: 2.5em;
+    position: absolute;
+        top: -1em;
+    width: 2em;
+
+    &.left {
+        @include border-top-left-radius(10em);
+        @include border-bottom-left-radius(10em);
+        left: -1em;
+    }
+
+    &.right {
+        @include border-top-right-radius(10em);
+        @include border-bottom-right-radius(10em);
+        right: -1em;
+    }
+}
+
+#communique {
+    text-align: center;
+    text-transform: uppercase;
+    
+    h1 {
+        color: $primaryColor;
+        font-size: 6em;
+        letter-spacing: -2px;
+        margin: 0;
+    }
+    h3 {
+        color: $contentAccent;
+        font-size: 3em;
+    }
+}

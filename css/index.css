@@ -1,0 +1,196 @@
+/*
+    Color Schemes
+*/
+/* Default, Enterprise-D */
+/*
+$primaryColor  :  #F58609; // Orange
+$primaryAction :  #8179FB; // Purple
+$informational :  #B182BB; // Pink
+$buttonsFilled :  #F8B462; // Lite Orange
+$buttonsHollow :  #BAB7FB; // Lite Purple
+$contentAccent :  #BAB7FB; // Lite Purple
+$contentText   :  #fff;    // White
+$contentSubtext:  #ddd;    // Dim White
+*/
+/* Red Alert, Enterprise-A */
+/*
+$primaryColor  :  #eb1c23; // Pinky Red
+$primaryAction :  #760e12; // Darker Red
+$informational :  #b0151a; // Dark Red
+$buttonsFilled :  #ff0000; // Red
+$contentAccent :  #820404; // Dark Red
+$contentText   :  #fff;    // White
+$contentSubtext:  #ddd;    // Dim White
+*/
+/* Ocean Blue, Voyager */
+/*
+$primaryColor  :  #6598fd; // Blue
+$primaryAction :  #0348fa; // Darker Pale Blue
+$informational :  #2a66f8; // Deeper Blue
+$buttonsFilled :  #6598fd; // Light Blue
+$contentAccent :  #fe9a01; // Orange
+$contentText   :  #728cfd; // Lavender
+$contentSubtext:  #aeafc4; // Light Orange
+*/
+/* Blue/Green, Enterprise-B */
+/* Grayscale */
+/*
+$background    :  white;
+$primaryColor  :  #9f9f9f;
+$primaryAction :  #7d7d7d;
+$informational :  white;
+$buttonsFilled :  #ddd;
+$contentAccent :  #9f9f9f;
+$contentText   :  #ccc;
+$contentSubtext:  #aaa;
+*/
+/* LCARSCom.net (Hex) */
+/*
+$primaryColor  :  #FF9900;
+$primaryAction :  #CC99CC;
+$informational :  #9999CC;
+$buttonsFilled :  #FF9966;
+$buttonsHollow :  #FFCC99;
+$contentAccent :  #9999FF;
+$contentText   :  #CC6666;
+$contentSubtext:  #CC6699;
+*/
+/*
+    Start Screen
+*/
+/* line 11, ../scss/index.scss */
+#series {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  /* line 16, ../scss/index.scss */
+  #series li {
+    background: white;
+    -moz-border-radius-topright: 100px;
+    -webkit-border-top-right-radius: 100px;
+    -o-border-top-right-radius: 100px;
+    -ms-border-top-right-radius: 100px;
+    -khtml-border-top-right-radius: 100px;
+    border-top-right-radius: 100px;
+    -moz-border-radius-bottomright: 100px;
+    -webkit-border-bottom-right-radius: 100px;
+    -o-border-bottom-right-radius: 100px;
+    -ms-border-bottom-right-radius: 100px;
+    -khtml-border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-bottom: 2em;
+    width: 14em; }
+  /* line 24, ../scss/index.scss */
+  #series a {
+    background: black;
+    display: inline-block;
+    /*
+            border-left: 2em solid white;
+            border-right: 6em solid white;
+    */
+    height: 4.6em;
+    line-height: 1;
+    margin: 0 6em 0 2em;
+    padding: 0 1em;
+    text-decoration: none; }
+    /* line 37, ../scss/index.scss */
+    #series a b {
+      font-size: 4.2em; }
+
+/* line 48, ../scss/index.scss */
+body {
+  background-color: black;
+  color: #00c847;
+  font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+  font-size: 62.5%;
+  /* 1em = 10px */
+  margin: 0 4em;
+  padding: 3em; }
+
+/* line 57, ../scss/index.scss */
+#top, #bottom {
+  position: relative; }
+  /* line 60, ../scss/index.scss */
+  #top hr, #bottom hr {
+    /*     background-color: #acaff7; */
+    background-color: #6ae6e3;
+    border-color: #6ae6e3;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -o-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -khtml-border-radius: 100px;
+    border-radius: 100px;
+    border: 0;
+    color: #6ae6e3;
+    line-height: 1;
+    height: 2.5em; }
+  /* line 71, ../scss/index.scss */
+  #top #status, #bottom #status {
+    background-color: black;
+    border: solid black;
+    border-width: 0 0.5em;
+    color: #0d42c5;
+    letter-spacing: -2px;
+    line-height: 1;
+    position: absolute;
+    top: -1.5em;
+    left: 2em;
+    text-transform: uppercase; }
+    /* line 83, ../scss/index.scss */
+    #top #status b, #bottom #status b {
+      font-size: 3.4em; }
+
+/* line 89, ../scss/index.scss */
+.endcaps {
+  background-color: #0d42c5;
+  border: 1em solid black;
+  height: 2.5em;
+  position: absolute;
+  top: -1em;
+  width: 2em; }
+  /* line 97, ../scss/index.scss */
+  .endcaps.left {
+    -moz-border-radius-topleft: 10em;
+    -webkit-border-top-left-radius: 10em;
+    -o-border-top-left-radius: 10em;
+    -ms-border-top-left-radius: 10em;
+    -khtml-border-top-left-radius: 10em;
+    border-top-left-radius: 10em;
+    -moz-border-radius-bottomleft: 10em;
+    -webkit-border-bottom-left-radius: 10em;
+    -o-border-bottom-left-radius: 10em;
+    -ms-border-bottom-left-radius: 10em;
+    -khtml-border-bottom-left-radius: 10em;
+    border-bottom-left-radius: 10em;
+    left: -1em; }
+  /* line 103, ../scss/index.scss */
+  .endcaps.right {
+    -moz-border-radius-topright: 10em;
+    -webkit-border-top-right-radius: 10em;
+    -o-border-top-right-radius: 10em;
+    -ms-border-top-right-radius: 10em;
+    -khtml-border-top-right-radius: 10em;
+    border-top-right-radius: 10em;
+    -moz-border-radius-bottomright: 10em;
+    -webkit-border-bottom-right-radius: 10em;
+    -o-border-bottom-right-radius: 10em;
+    -ms-border-bottom-right-radius: 10em;
+    -khtml-border-bottom-right-radius: 10em;
+    border-bottom-right-radius: 10em;
+    right: -1em; }
+
+/* line 110, ../scss/index.scss */
+#communique {
+  text-align: center;
+  text-transform: uppercase; }
+  /* line 114, ../scss/index.scss */
+  #communique h1 {
+    color: #0d42c5;
+    font-size: 6em;
+    letter-spacing: -2px;
+    margin: 0; }
+  /* line 120, ../scss/index.scss */
+  #communique h3 {
+    color: #6ae6e3;
+    font-size: 3em; }
