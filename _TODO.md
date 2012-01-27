@@ -12,6 +12,7 @@
   * Add photos/optional timestamp
   * Add notes
 * Audio on tap
+* HTML5 Cache Manifest
 
 Quotes view?
 * Built-in Trivia game

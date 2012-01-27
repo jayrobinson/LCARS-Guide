@@ -3,39 +3,69 @@
 <head>
 <meta charset="utf-8">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<meta name="format-detection" content="telephone=no">
 
-<title>LCARS E1 · “Future Imperfect” (TNG S04 E08) · Star Trek Episode Guide</title>
+<title>LCARS E2 · “Brothers” (TNG S04 E03) · Star Trek Episode Guide</title>
+
+<link rel="apple-touch-icon-precomposed" href="img/lcars.png">
+<link rel="apple-touch-startup-image" href="img/splash.png">
+<link rel="stylesheet" href="css/screen.css">
 
 <script type="text/javascript">
+/*
     function scrollUp(paraId) {
       var element = document.getElementById(paraId);
       element.scrollIntoView(true);
     }
+*/
 
     // miniapps.co.uk/blog/post/enable-css-active-pseudo-styles-in-mobile-safari/
     document.addEventListener("touchstart", function() {},false);
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>
+<script type="text/javascript">
+    // detect if installed as webapp. todo: design takeover install screen
+/*
+    if (navigator.standalone) {
+        alert ('Running full screen');
+    } else {
+        alert ('Running in a browser');
+    }
+*/
+
+    // detect network connection
+/*
+    function checkOnline() {
+        if (navigator.onLine) {
+            alert ('There is a network connection');
+        } else {
+            alert ('There is no network connection');
+        }
+    }
+    checkOnline();
+*/
+
     $(document).ready(function() {
+        // iPhone: expand sidebar when clicked
+        $('#test').click(function(){
+            $(this).toggleClass("clicked");
+        });
     });
 </script>
-    
-<link rel="apple-touch-icon-precomposed" href="img/lcars.png">
-<link rel="apple-touch-startup-image" href="img/splash-low.jpg">
-<link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
 
 <div id="top">
     <div class="inner">
-        <span class="separator">&nbsp;</span>
+        <span class="separator"></span>
+            <span class="separatorL">&nbsp;</span>
+            <span class="separatorR">&nbsp;</span>
         <nav>
             <a href="grid2.html" id="back" class="sweepButton vert" title="Go Back"><b>BK</b></a>
-            <a href="episode2.html" id="random" class="sweepButton horz" title="Random Episode"><b>RND</b></a>
-            <a href="#" id="episodeNumber" class="sweepButton horz" title="188 of 727 All | 81 of 176 TNG"><b>0188-081</b></a>
+            <a href="episode.html" id="random" class="sweepButton horz" title="Random Episode"><b>RND</b></a>
+            <a href="#" id="episodeNumber" class="sweepButton horz" title="188 of 727 All | 81 of 176 TNG"><b>0110-005</b></a>
         </nav>
 
         <h1>LCARS Interface Online</h1>
@@ -58,21 +88,23 @@
 </div>
 <div id="bottom">
     <div class="inner">
-        <span class="separator">&nbsp;</span>
-        <span class="separator right">&nbsp;</span>
         <nav>
             <a href="#" id="scrollIntoView" class="sweepButton horz sweepHeading" title="Scroll to top." onclick="scrollUp('test')">&nbsp;</a>
-            <a href="#" id="playCount" class="sweepButton horz sweepHeading" title="You've watched this episode 11 times."><b title="00-011">11 Plays</b></a>
-            <a href="episode2.html" id="previous" class="sweepButton vert" title="Previous Episode"><b>PRV</b></a>
-            <a href="episode2.html" id="next" class="sweepButton vert" title="Next Episode"><b>NX</b></a>
-            <a href="#" id="episodeNav" class="sweepButton vert" title="Season 4, Episode 8"><b>S04 E08</b></a>
+            <a href="#" id="playCount" class="sweepButton horz sweepHeading" title="You've watched this episode 3 times."><b title="00-003">03 Plays</b></a>
+            <a href="episode.html" id="previous" class="sweepButton vert" title="Previous Episode"><b>PRV</b></a>
+            <a href="episode.html" id="next" class="sweepButton vert" title="Next Episode"><b>NX</b></a>
+            <a href="#" onclick="alert('Select from Season/Episode picker');" id="episodeNav" class="sweepButton vert" title="Season 1, Episode 6"><b>S01 E06</b></a>
         </nav>
         <article>
+            <header>
+                <h1><strong>“Where No One Has Gone&nbsp;Before”</strong> <span>TNG S04 E03 · 008 Plays</span></h1>
+                <h4>Stardate 41263.1 · Airdate October 26, 1987</h4>
+            </header>
             <aside id="test">
                 <div id="rating">
                     <div id="myrating">
                         <h4>My Rating</h4>
-                        <p>&#9733;&#9733;&#9733;&star;&star;</p>
+                        <p class="pips"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="unfilled"></span><span class="unfilled"></span></p>
                     </div>
                     <div id="avgrating">
                         <h4>Average Rating</h4>
@@ -80,8 +112,7 @@
                     </div>
                 </div>
                 <figure>
-                    <img src="http://src.sencha.io/292/http://images3.wikia.nocookie.net/__cb20111012192747/memoryalpha/en/images/thumb/9/9f/William_Riker%2C_2383.jpg/292px-William_Riker%2C_2383.jpg" alt="William Riker" height="234" width="292">
-<!--                     <figcaption>William Riker</figcaption> -->
+                    <img src="http://src.sencha.io/292/http://images3.wikia.nocookie.net/__cb20070410194314/memoryalpha/en/images/thumb/9/92/USS_Enterprise-D_in_distant_galaxy.jpg/292px-USS_Enterprise-D_in_distant_galaxy.jpg" alt="">
                 </figure>
                 <div id="thumbs">
                     <ul>
@@ -97,29 +128,21 @@
                     </ul>
                 </div>
                 <ul id="meta">
-                    <li>Written by J. Larry Carroll & David Bennett Carren</li>
-                    <li>Directed by Les Landau</li>
-                    <li>Guest starring Andreas Katsulas, Chris Demetral, Carolyn McCormick, April Grace, George O'Hanlon Jr.</li>
+                    <li>Written by Diane Duane and Michael Reaves</li>
+                    <li>Directed by Rob Bowman</li>
                 </ul>
             </aside>
-
-            <header id="episodeHeader">
-                <h1><strong>“Future Imperfect”</strong> <span>TNG S04 E08</span></h1>
-                <h4>Stardate 44286.5 · Airdate November 12, 1990</h4>
-            </header>
-
             <div class="content">
-                <p class="teaser">Riker awakens one morning to discover he is suddenly 16 years in the future as the captain of the Enterprise, and negotiating a peace treaty with the Romulans with no recollection of how he arrived at that point in time, or of any recent events.</p>
+                <p class="teaser">When a specialist in propulsion makes modifications to the Enterprise's warp drive that send it 2.7 million light years out of the galaxy, then an impossibly unreturnable 1 billion light years in the other direction, it is his assistant, a mysterious alien, and Wesley Crusher that must bring it back home.</p>
                 <p class="tags">
-                    <span>Riker shouting</span>
-                    <span>Romulans</span>
-                    <span>Future</span>
-                    <span>Epic Picard</span>
+                    <span>The Traveler</span>
+                    <span>Leave the Galaxy</span>
+                    <span>Wesley</span>
                 </p>
                 <hr>
                 <div id="quotes">
                     <blockquote>
-                        <p><span>&ldquo;I said &lsquo;shut up&rsquo;. As in &lsquo;close your mouth and stop&nbsp;talking&rsquo;!&rdquo; <cite>&mdash;&nbsp;Riker</cite></span></p>
+                        <p><span>1-7-3-4 6-7-3-2 1-4-7-6 Charlie 3-2-7-8 9-777-6-4-3 Tango 7-3-2 Victor 7­-3-1-1 7-888 7-3-2-4 7-6-7-8 9-7-6-4 3-7-6. Lock.<cite> &mdash;&nbsp;Data</cite></span></p>
                     </blockquote>
                 </div>
                 <hr>
@@ -130,14 +153,7 @@
                 <p>Suddenly, the program freezes and the false future fades away, revealing an advanced Romulan holodeck. "Ambassador" (actually Commander) Tomalak is revealed to be the perpetrator of the deception, the object of which was to trick Riker into giving away the location of a key Federation outpost. The Romulans, Tomalak explained, had been fooled by the intensity of Riker's memories of Minuet and had incorporated her into their fantasy on the assumption that she was real.</p>
                 <p>Riker is put in a holding area, where he meets the boy whose image the Romulans had used to create his "son". The boy identifies himself as "Ethan." Together, they manage to escape and briefly elude their Romulan guards. However, as the two are hiding from their pursuers, Ethan inadvertently refers to Tomalak as "Ambassador", instead of "Commander". Riker realizes that he is still in a simulation; confronting Ethan over it, he demands that the game end immediately and that he be allowed to leave.</p>
                 <p>Everything disappears once more, leaving only Riker and Ethan in the cavern the Enterprise away team had originally been exploring. Ethan confesses that he had created the simulations, using sophisticated scanners to read Riker's mind and create the "reality" he experienced. Ethan's planet had been attacked and his people killed; his mother had hidden him in the cavern for his own safety, with all the simulation equipment, before she herself died; and Ethan, all alone, had been yearning for companionship. Riker realizes the peaceable intentions of Ethan, who reveals his true form as an grey like alien named Barash, and offers him refuge on the Enterprise. Upon contacting the ship, Riker finds out that Worf and La Forge had beamed up without incident, but the Enterprise was unable for some reason to get a transporter lock on him. Barash accepts Riker's offer, and the two friends beam onto the ship.</p>
-                <hr>
             </div>
-            <section>
-                <h2>My Notes</h2>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </section>
 
             <footer>
                 <ul id="social">
@@ -148,6 +164,9 @@
                 </ul>
             </footer>
         </article>
+        <span class="separatorBottom">&nbsp;</span>
+            <span class="separatorL">&nbsp;</span>
+            <span class="separatorR">&nbsp;</span>
     </div>
 </div>
 </body>

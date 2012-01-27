@@ -8,8 +8,12 @@
 @import "_themes.scss";
 
 
+* {
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
+}
 
-html { // http://miniapps.co.uk/blog/post/enable-css-active-pseudo-styles-in-mobile-safari/
+html { // miniapps.co.uk/blog/post/enable-css-active-pseudo-styles-in-mobile-safari/
    -webkit-tap-highlight-color: rgba(0,0,0,0);
    tap-highlight-color:         rgba(0,0,0,0);
 }
@@ -471,7 +475,7 @@ article {
 
 article .content {
     color: $contentText;
-    padding-right: 40px;
+    padding-right: 4em;
 }
 
 article .content > p {
@@ -493,6 +497,7 @@ article h1 strong {
 article h1 span {
     color: $contentAccent;
     font-size: 80%;
+    text-transform: uppercase;
     white-space: nowrap;
 }
 
@@ -557,8 +562,23 @@ article h4 {
     text-indent: -0.35em;
 }
 
+/* Experimenting with generated quotes */
+#quotes p:first-child span:before {
+    content: "\201C";
+}
+#quotes p:last-child cite:before {
+    content: "\201D";
+    font-size: 1.25em;
+    font-style: normal;
+}
+
+
 #quotes cite {
     font-size: 0.8em;
+}
+
+.tags {
+    -webkit-user-select: none;
 }
 
 .tags:before {
@@ -582,7 +602,9 @@ article h4 {
 .tags span:last-child:after {
     content: '';
 }
-.tags span:hover {
+.tags span:hover,
+.tags span:focus,
+.tags span:active {
     @include border-radius(100px);
     background-color: $contentAccent;
     color: $background;
@@ -698,34 +720,32 @@ article aside figure img {
     margin: 0 0 2em;
     padding: 1em 0 80px;
 }
+#social li {
+    float: right;
+}
+#social li a {
+    background-color: transparent;
+    border: 2px solid $contentAccent;
+    color: $contentAccent;
+    display: block;
+    margin: 0 4px 10px 0;
+    padding: 4px 12px 4px 4px;
+    text-align: right;
+    text-transform: uppercase;
+    width: 100px;
 
-    #social li {
-        float: right;
+    & b {
+        font-size: 1.6em;
     }
-
-    #social li a {
-        background-color: transparent;
-        border: 2px solid $contentAccent;
-        color: $contentAccent;
-        display: block;
-        margin: 0 4px 10px 0;
-        padding: 4px 12px 4px 4px;
-        text-align: right;
-        text-transform: uppercase;
-        width: 100px;
-
-        & b {
-            font-size: 1.6em;
-        }
-    }
-    #social li:first-child a {
-        @include border-bottom-right-radius(100px);
-        @include border-top-right-radius(100px);
-    }
-    #social li:last-child a {
-        @include border-bottom-left-radius(100px);
-        @include border-top-left-radius(100px);
-    }
+}
+#social li:first-child a {
+    @include border-bottom-right-radius(100px);
+    @include border-top-right-radius(100px);
+}
+#social li:last-child a {
+    @include border-bottom-left-radius(100px);
+    @include border-top-left-radius(100px);
+}
 
 
 
@@ -919,50 +939,205 @@ h3 b {
         margin-left: 0;
     }
 }
-@media only screen and (max-device-width: 480px) and (orientation:portrait) { 
+
+
+/* iPhone, portrait and landscape */
+
+@media only screen and (max-device-width: 480px) {
 
     body {
+        background-color: $background;
+/*         font-size: .25em; */
         height: 100%;
-        width:  320px;
+        width:  100%;
     }
     #top {
-        background-color: $primaryColor;
-        border-bottom-left-radius: 60px 50px;
-        margin-bottom: 10px;
-        margin-left: 0px;
-        padding: 0 0 0px 5px;
+        background-color: $background;
+        @include border-bottom-left-radius(0);
+        margin: 0;
+        padding: 0;
+        
+        .inner {
+            padding: 0 0 1.1em;
+            * {
+                display: none;
+            }
+            nav,
+            nav back {
+                display: block;
+            }
+            
+            .separator {
+                background-color: $contentAccent;
+                @include border-radius(10em);
+                display: block;
+                height: 1em;
+                opacity: 0.8;
+                position: absolute;
+                    top: 0;
+                    right: auto;
+                    bottom: auto;
+                    left: auto;
+                width: 100%;
+            }
+            .separatorL,
+            .separatorR {
+                background-color: $background;
+                display: block;
+                height: 1em;
+                position: absolute;
+                    top: 0;
+                    left: 1em;
+                width: 0.5em;
+            }
+            .separatorR {
+                    left: auto;
+                    right: 1em;
+            }
+        }
     }
     
     #bottom {
-        background-color: $primaryColor;
-        @include border-top-left-radius(60px 50px);
-        margin-left: 0px;
-        padding: 0px 0 0 5px;
+        background-color: $background;
+        @include border-top-left-radius(0);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        
+        .inner nav {
+            display: none;
+        }
+            
+        .separatorBottom {
+            background-color: $contentAccent;
+            @include border-radius(10em);
+            display: block;
+            height: 1em;
+            margin: 1px 0 0;
+            opacity: 0.8;
+            width: 100%;
+        }
+        .separatorL,
+        .separatorR {
+            background-color: $background;
+            display: block;
+            height: 1em;
+            position: absolute;
+                top: auto;
+                bottom: 0;
+                left: 1em;
+            width: 0.5em;
+        }
+        .separatorR {
+                left: auto;
+                right: 1em;
+        }
+
     }
     .inner {
         background-color: $background;
-        padding: 10px;
+        @include border-top-left-radius(0);
+        padding: 0;
         position: relative;
     }
 
-    article {
-        overflow-y: visible;
-        -webkit-overflow-scrolling: none;
+    #playCount {
+        top: -3em;
+        right: 1em;
+        pointer-events: none;
     }
-    article aside {
-        float: none;
-        margin-left: 0;
-        width: 280px;
+
+    article {
+        height: 438px;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 1em;
+        position: relative;
+    }
+    article {
+        header {
+            h1 {
+                padding-left: .45em;
+                text-indent: -.45em;
+                strong {
+                    padding-right: 0;
+                }
+            
+                span {
+                    display: block;
+                    padding-top: .4em;
+                }
+            }
+
+        }
+        aside {
+            margin: 0 0 2em 1em;
+            width: 48%;
+    
+            * {
+                display: none;
+            }
+    
+            figure,
+            figure img {
+                display: block !important;
+            }
+            &.clicked {
+                margin-left: 0;
+                width: 100%;
+            }
+            &.clicked figure img {
+                width: 100%;
+            }
+        }
     }
     article .content {
         color: $contentText;
         padding-right: 5px;
     }
-}
-@media only screen and (max-device-width: 480px) and (orientation:landscape) { 
-    body {
-        height: 320px;
-        width:  480px;
+    #quotes p:first-child {
+        text-indent: -1em;
     }
 
+    #social {
+        list-style: none;
+        margin: 0 0 2em;
+        padding: 1em 0 3em;
+    }
+    #social li {
+        float: right;
+    }
+    #social li a {
+        background-color: transparent;
+        border: 2px solid $contentAccent;
+        color: $contentAccent;
+        display: block;
+        margin: 0 4px 10px 0;
+        padding: 4px 8px;
+        text-align: right;
+        text-transform: uppercase;
+        width: 5.1em;
+    
+        & b {
+            font-size: 1.2em;
+        }
+    }
+    #social li:first-child a {
+        @include border-bottom-right-radius(100px);
+        @include border-top-right-radius(100px);
+    }
+    #social li:last-child a {
+        @include border-bottom-left-radius(100px);
+        @include border-top-left-radius(100px);
+    }
+
+}
+
+
+
+/* iPhone, landscape */
+@media only screen and (max-device-width: 480px) and (orientation:landscape) { 
+    article {
+        height: 278px;
+    }
 }

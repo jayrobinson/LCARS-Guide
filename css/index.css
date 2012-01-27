@@ -2,16 +2,6 @@
     Color Schemes
 */
 /* Default, Enterprise-D */
-/*
-$primaryColor  :  #F58609; // Orange
-$primaryAction :  #8179FB; // Purple
-$informational :  #B182BB; // Pink
-$buttonsFilled :  #F8B462; // Lite Orange
-$buttonsHollow :  #BAB7FB; // Lite Purple
-$contentAccent :  #BAB7FB; // Lite Purple
-$contentText   :  #fff;    // White
-$contentSubtext:  #ddd;    // Dim White
-*/
 /* Red Alert, Enterprise-A */
 /*
 $primaryColor  :  #eb1c23; // Pinky Red
@@ -33,6 +23,15 @@ $contentText   :  #728cfd; // Lavender
 $contentSubtext:  #aeafc4; // Light Orange
 */
 /* Blue/Green, Enterprise-B */
+/*
+$primaryColor  :  #0d42c5; // Blue
+$primaryAction :  #00b9cb; // Light Teal
+$informational :  #00bdd0; // Teal
+$buttonsFilled :  #006cd4; // Cerulean Blue
+$contentAccent :  #6ae6e3; // Seafoam
+$contentText   :  #ddd;    // Dim White
+$contentSubtext:  #00c847; // Green
+*/
 /* Grayscale */
 /*
 $background    :  white;
@@ -100,7 +99,7 @@ $contentSubtext:  #CC6699;
 /* line 48, ../scss/index.scss */
 body {
   background-color: black;
-  color: #00c847;
+  color: #dddddd;
   font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
   font-size: 62.5%;
   /* 1em = 10px */
@@ -113,8 +112,8 @@ body {
   /* line 60, ../scss/index.scss */
   #top hr, #bottom hr {
     /*     background-color: #acaff7; */
-    background-color: #6ae6e3;
-    border-color: #6ae6e3;
+    background-color: #bab7fb;
+    border-color: #bab7fb;
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     -o-border-radius: 100px;
@@ -122,7 +121,7 @@ body {
     -khtml-border-radius: 100px;
     border-radius: 100px;
     border: 0;
-    color: #6ae6e3;
+    color: #bab7fb;
     line-height: 1;
     height: 2.5em; }
   /* line 71, ../scss/index.scss */
@@ -130,7 +129,7 @@ body {
     background-color: black;
     border: solid black;
     border-width: 0 0.5em;
-    color: #0d42c5;
+    color: #f58609;
     letter-spacing: -2px;
     line-height: 1;
     position: absolute;
@@ -143,7 +142,7 @@ body {
 
 /* line 89, ../scss/index.scss */
 .endcaps {
-  background-color: #0d42c5;
+  background-color: #f58609;
   border: 1em solid black;
   height: 2.5em;
   position: absolute;
@@ -186,11 +185,11 @@ body {
   text-transform: uppercase; }
   /* line 114, ../scss/index.scss */
   #communique h1 {
-    color: #0d42c5;
+    color: #f58609;
     font-size: 6em;
     letter-spacing: -2px;
     margin: 0; }
   /* line 120, ../scss/index.scss */
   #communique h3 {
-    color: #6ae6e3;
+    color: #bab7fb;
     font-size: 3em; }
