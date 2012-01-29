@@ -1,94 +1,8 @@
 /*
-    Grid view
+    Grid view, iPad
 */
-
-#grid th {
-    background-color: rgba(186,183,251,0.2);
-    border: 1px solid white;
-    border-width: 0 1px 1px 0;
-    padding: 10px 10px;
-    text-transform: uppercase;
-}
-
-#grid b, #grid td {
-    font-size: 1.6em;
-}
-
-#grid #number {
-    @include border-top-left-radius(8px);
-    width: 24px;
-}
-#grid #sceneTitle {
-    width: 200px;
-}
-#grid #desc {
-    width: 486px;
-}
-#grid #ratingHeader {
-    width: 80px;
-}
-
-#grid .seasonHeader td {
-    background-color: rgba(186,183,251,0.18);
-    padding: 3px 10px;
-    text-transform: uppercase;
-    width: 874px;
-}
-
-#grid tr {
-    display: block;
-    position: relative;
-}
-
-#grid tbody {
-    display: block;
-    height: 519px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-}
 
 #grid td {
-    border: 1px solid white;
-    border-width: 0 1px 1px 0;
-    padding: 10px 10px 0;
-}
-
-#grid .number em {
-    background-color: rgba(186,183,251,1);
-    @include border-top-left-radius(100px);
-    @include border-bottom-left-radius(100px);
-    display: block;
-    font-style: normal;
-    height: 2em;
-    line-height: 1;
-    width: 4em;
-}
-/*
-#grid tr:hover .number,
-#grid tr:active .number {
-    background-color: rgba(186,183,251,0.5);
-}
-*/
-#grid tr:hover {
-    cursor: pointer;
-}
-
-#grid .sceneTitle {
-    padding-bottom: 20px;
-}
-
-#grid p {
-    margin: 0 0 1em;
-}
-
-
-
-/*
-    Grid 2
-*/
-
-#grid2 b, #grid2 td {
     font-size: 2.5em;
     line-height: 1.5;
 }
@@ -101,11 +15,8 @@ h3 b {
     text-transform: uppercase;
 }
 
-#grid2 {
-    height: 519px;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-
+#grid {
+    padding-bottom: 6em;
     .season {
         border-left: 1.5em solid $informational;
         @include border-top-left-radius(100px);

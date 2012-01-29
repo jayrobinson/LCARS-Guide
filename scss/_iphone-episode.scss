@@ -38,10 +38,12 @@
             * {
                 display: none;
             }
+/*
             nav,
             nav back {
                 display: block;
             }
+*/
         }
     }
     
@@ -53,7 +55,7 @@
         position: relative;
         
         .inner {
-            padding-right: 0.5em;
+            padding-right: 5px !important;
         }
         
         .inner nav {

@@ -6,7 +6,14 @@ LCARS Guide is a Star Trek episode guide viewer styled as an [LCARS](http://en.w
 
 LCARS stands for Library Computer Access/Retrieval System, a fictional computer operating system created by Michael Okuda.
 
-## Requirements
+
+
+## Device Support
+
+* iOS devices running iOS 5+
+* WebKit desktop browsers. May degrade somewhat, but haven't tested yet.
+
+## Project Requirements
 
 * local web server to host the PHP/HTML files
 * Ruby for Sass/SCSS and Compass if you'd like to modify the styling
@@ -15,12 +22,17 @@ LCARS stands for Library Computer Access/Retrieval System, a fictional computer 
 
 ## Changelog
 
+*Jan 29, 2012*
+
+* Initial Grid view for iPhone.
+
 *Jan 28, 2012*
 
 * Added Start view for iPhone and iPad.
 * Activate/Deactivate individual series in Start view.
 * Added jQuery.
 * Better iOS 5 scrolling and layout for Start, Episode views via jQuery and ScrollFix.js. However, these are not completely compatible cross-device. Need to find a way to better target devices.
+* Works better in desktop browsers.
 * Switch to PHP for continued HTML development. Final file format will be HTML templates, not PHP.
 
 *Jan 27, 2012*

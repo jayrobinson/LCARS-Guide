@@ -1,5 +1,5 @@
 <?php include('inc.header.php'); ?>
-
+<div id="episode">
 <div id="top">
     <div class="inner">
         <span class="separator"></span>
@@ -104,6 +104,7 @@
             </footer>
         </article>
     </div>
+</div>
 </div>
 
 <script type="text/javascript" src="js/scrollfix.js"></script>
