@@ -1,47 +1,9 @@
 @import "compass/css3";
 @import "_themes.scss";
 
-
-
 /*
-    Start Screen
+    Splash Screen
 */
-
-
-#series {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    
-    li {
-        background: white;
-        @include border-top-right-radius(100px);
-        @include border-bottom-right-radius(100px);
-        margin-bottom: 2em;
-        width: 14em;
-    }
-
-    a {
-        background: black;
-        display: inline-block;
-/*
-        border-left: 2em solid white;
-        border-right: 6em solid white;
-*/
-        height: 4.6em;
-        line-height: 1;
-        margin: 0 6em 0 2em;
-        padding: 0 1em;
-        text-decoration: none;
-
-        b {
-        
-            font-size: 4.2em;
-        }
-
-    }
-
-}
 
 
 

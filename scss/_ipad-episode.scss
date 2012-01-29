@@ -1,0 +1,592 @@
+/*
+    Episode View
+*/
+
+a {
+    color: $contentText;
+    text-decoration: none;
+}
+
+.content {
+    font-family: HelveticaNeue;
+    line-height: 1.4;
+    -webkit-user-select: default;
+}
+
+#top {
+    background-color: $primaryColor;
+    @include border-bottom-left-radius(60px 50px);
+    margin-bottom: 1em;
+    padding: 0 0 2em 10em;
+}
+
+#bottom {
+    background-color: $primaryColor;
+    @include border-top-left-radius(60px 50px);
+    padding: 2em 0 0 10em;
+}
+
+.inner {
+    background-color: $background;
+    padding: 20px;
+    position: relative;
+
+    &>.separator {
+        background-color: $background;
+        display: block;
+        height: 20px;
+        position: absolute;
+            bottom: -20px;
+            left: 100px;
+        width:  1em;
+    }
+}
+
+#bottom .separator {
+        top: -20px;
+        bottom: auto;
+}
+.separator.right {
+        left: auto;
+        right: 35px;
+}
+
+.sweepButton {
+    background-color: $primaryAction;
+    border: 1em solid $background;
+    color: $background;
+    display: block;
+    position: absolute;
+    text-align: right;
+    width: 8em;
+    
+    & b {
+        font-size: 1.6em;
+    }
+
+    &.horz {
+        height: 2em;
+        padding: 0 1em;
+    }
+    &.vert {
+        height: 1em;
+        line-height: 0.3;
+        padding: 4em 1em 1em;
+    }
+    &.sweepHeading {
+        background-color: $background;
+        border-width: 10px 6px 10px 5px;
+        color: $contentText;
+        height: 20px;
+        letter-spacing: -1px;
+        line-height: 0.8;
+        padding: 0;
+        text-transform: uppercase;
+        width: auto;
+
+        & b {
+            font-size: 2.5em;
+        }
+    }
+    &:active {
+        background-color: darken($primaryAction, 10%);
+    }
+}
+
+    #backTop {
+        background-color: transparent;
+        border-width: 1em 1em 1.2em;
+        height: 1.6em;
+        top: -30px;
+        left: 100px;
+        width: 366px;
+        -webkit-transition: backgroundColor 1s ease-in;
+        
+        &.active {
+            background-color: darken($primaryColor, 10%);
+        }
+
+        &:active {
+            background-color: darken($primaryColor, 20%);
+        }
+    }
+
+    #playCount {
+        top: -30px;
+        right: 230px;
+        
+        b:active {
+            background-color: $background;
+            color: $contentSubtext;
+        }
+    }
+
+    #back {
+        height: 40px;
+        line-height: 1;
+        padding: 10px;
+        top: 30px;
+        left: -110px;
+    }
+
+    #random {
+        bottom: -30px;
+        right: /* 35px */ 2.5%;
+    }
+
+    #episodeNumber {
+        /* background-color: $informational; */
+        background-color: transparent;
+        bottom: -60px;
+        right: /* 35px */ 2.5%;
+
+        /*
+        &:active {
+            background-color: darken($informational, 10%);
+        }
+        */
+    }
+
+    #previous {
+        top: 270px;
+        left: -110px;
+    }
+
+    #next {
+        height: 80px;
+        line-height: 1;
+        padding: 10px;
+        top: 340px;
+        left: -110px;
+    }
+
+    #episodeNav {
+        /* background-color: $informational; */
+        background-color: transparent;
+        border-top: 0;
+        color: $background;
+        top: 210px;
+        left: -110px;
+
+/*
+        &:active {
+            background-color: darken($informational, 10%);
+        }
+*/
+    }
+
+#top .inner {
+    @include border-bottom-left-radius(30px 25px);
+    padding-top: 2em;
+    
+    h1 {
+        font-size: 3.2em;
+    }
+}
+
+#bottom .inner {
+    @include border-top-left-radius(30px 25px);
+    padding-right: 2.5%;
+    padding-bottom: 0;
+}
+
+#characters {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & li {
+        float: left;
+    }
+
+    & li a {
+        background-color: $buttonsFilled;
+        @include border-radius(100px);
+        color: $background;
+        display: block;
+        margin: 0 0.6em 0.6em 0;
+        padding: 0.2em 1em 0.2em 1em;
+        position: relative;
+        text-align: right;
+        text-transform: uppercase;
+        width: 7em;
+
+        & .pipe {
+            border-left: 0.3em solid $background;
+            height: 3em;
+            position: absolute;
+                top: 0;
+                left: 1.4em;
+        }
+
+        & b {
+            font-size: 1.6em;
+        }
+    }
+
+    #all span {
+    }
+
+}
+
+#search {
+    position: absolute;
+        top:   20px;
+        right: 20px;
+}
+#searchInput {
+    -webkit-appearance: none;
+    background-color: $background;
+    border: 2px solid $contentAccent;
+    @include border-radius(100px);
+    color: $contentText;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    padding: 5px;
+    text-align: right;
+    width: 160px;
+}
+
+hr {
+    background-color: $contentAccent;
+    border-color: $contentAccent;
+    @include border-radius(100px);
+    border: 0;
+/*     clear: both; */
+    color: $contentAccent;
+    line-height: 1;
+    height: 1px;
+}
+
+
+
+article {
+    @include border-top-left-radius(15px 12px);
+/*     height: 550px; */
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+article .content {
+    color: $contentText;
+    padding-right: 4em;
+}
+
+article .content > p {
+    font-size: 1.6em;
+}
+
+article h1 {
+    color: $contentText;
+    font-size: 3.2em;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-top: 10px;
+    
+    strong {
+        padding-right: 2rem; // 20px
+    }
+    span {
+        color: $contentAccent;
+        font-size: 80%;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+}
+
+#playCountTitle {
+    display: none;
+
+    &:before {
+        content: ' \00B7';
+    }
+}
+
+article h2 {
+    font-size: 2.4em;
+}
+
+article h4 {
+    font-size: 1.6em;
+}
+
+.teaser:before {
+    color: $contentAccent;
+    content: "Teaser: ";
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    text-transform: uppercase;
+}
+
+.plotSummary:before {
+    color: $contentAccent;
+    content: "Plot Summary: ";
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    text-transform: uppercase;
+}
+
+#quotes {
+    color: $contentAccent;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    overflow-x: hidden;
+    padding-bottom: 0.8em;
+    position: relative;
+}
+#quotes:before {
+    color: $contentAccent;
+    content: "Quotes: ";
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    font-size: 1.6em;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
+
+#quotes blockquote {
+    margin: 0;
+/*     width: 2494px; */
+}
+
+#quotes p {
+    display: block;
+    float: left;
+    letter-spacing: -1px;
+    margin: 2.4em 0;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 4em;
+/*     width: 46.4em; */
+
+    & span {
+        font-size: 2.4em;
+    }
+}
+#quotes p:first-child {
+    text-indent: -0.35em;
+}
+
+/* Generated quotes */
+#quotes p:first-child span:before {
+    content: "\201C";
+}
+#quotes p:last-child cite:before {
+    content: "\201D";
+    font-size: 1.25em;
+    font-style: normal;
+}
+
+
+#quotes cite {
+    font-size: 0.8em;
+}
+
+.tags {
+    -webkit-user-select: none;
+}
+
+.tags:before {
+    color: $contentAccent;
+    content: "Tags: ";
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    text-transform: uppercase;
+}
+.tags span {
+    color: $contentSubtext;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    padding: 0 4px 0 8px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.tags span:after {
+    content: ', ';
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    text-transform: uppercase;
+}
+.tags span:last-child:after {
+    content: '';
+}
+.tags span:hover,
+.tags span:focus,
+.tags span:active {
+    @include border-radius(100px);
+    background-color: $contentAccent;
+    color: $background;
+    cursor: pointer;
+    padding: 0 8px;
+}
+.tags span:hover:after {
+    content: '';
+}
+
+article aside {
+    float: right;
+    margin: 0 0 2em 4em;
+    width: 30em;
+}
+
+article aside h4 {
+    color: $contentAccent;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#rating {
+    margin: 10px 0 0;
+}
+
+#rating #myrating {
+    float: left;
+    width: 50%;
+}
+
+#rating #avgrating {
+    margin-left: 50%;
+}
+
+#rating p {
+    font-size: 2.4em;
+    margin: 0 0 1em;
+}
+
+article aside img {
+    @include border-radius(4px);
+}
+
+article aside figure {
+    margin: 1.4em 0 0.2em;
+}
+
+article aside figure img {
+    border: 0.2em solid $primaryAction;
+    max-width: 100%;
+}
+
+#thumbs {
+    margin: 0 0 2em 0;
+}
+
+#thumbs ul,
+#thumbs li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#thumbs li {
+    float: left;
+}
+
+#thumbs li a {
+    display: block;
+    margin-right: 0.4em;
+}
+
+#thumbs li a img {
+    border: 0.2em solid $primaryAction;
+    height: 92px;
+    width:  92px;
+}
+
+#meta {
+    clear: both;
+    list-style: none;
+    margin: 0;
+    padding: 20px 10px 0 20px;
+    text-indent: -20px;
+}
+    #meta li {
+        font-size: 1.6em;
+        margin-bottom: 0.4em;
+    }
+
+#social {
+    list-style: none;
+    margin: 0 0 2em;
+    padding: 1em 0 80px;
+}
+#social li {
+    float: right;
+}
+#social li a {
+    background-color: transparent;
+    border: 2px solid $contentAccent;
+    color: $contentAccent;
+    display: block;
+    margin: 0 4px 10px 0;
+    padding: 4px 12px 4px 4px;
+    text-align: right;
+    text-transform: uppercase;
+    width: 100px;
+
+    & b {
+        font-size: 1.6em;
+    }
+}
+#social li:first-child a {
+    @include border-bottom-right-radius(100px);
+    @include border-top-right-radius(100px);
+}
+#social li:last-child a {
+    @include border-bottom-left-radius(100px);
+    @include border-top-left-radius(100px);
+}
+
+
+
+/* iPad, portrait */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) { 
+
+    body.ipad {
+/*         max-height: 100%; */
+        height: 1024px;
+        width: 768px;
+    }
+
+    #bottom,
+    #top {
+        margin-left: 0;
+    }
+
+    article {
+/*         height: 770px; */
+    }
+
+    #quotes p {
+        margin: 0.5em 0;
+        padding: 0 2em;
+/*         width: 248px; */
+    }
+
+    #social li a {
+        margin: 0 4px 10px 0;
+        padding: 4px 8px 4px 4px;
+        text-align: right;
+        text-transform: uppercase;
+        width: 100px;
+    }
+    
+    #grid2 {
+        height: 700px;
+
+        .season {
+            padding: 0 0.3em;
+        }
+        .episode {
+            padding: 0 0.5em 0 0.3em;
+        }
+        .episodeName {
+            padding: 0 1em 0 0.3em;
+            width: 18em;
+        }
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+    body.ipad {
+        height: 768px;
+        width: 1024px;
+    }
+
+    #bottom,
+    #top {
+        margin-left: 0;
+    }
+}

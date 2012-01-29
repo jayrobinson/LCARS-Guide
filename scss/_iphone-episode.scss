@@ -1,0 +1,176 @@
+/* iPhone, portrait and landscape */
+
+@media only screen and (max-device-width: 480px) {
+
+    // Your underwear is showing.
+    html {
+        background-color: $background;
+        /* height: 320px; */
+    }
+
+    body {
+        background-color: $background;
+        /* height: 320px; */
+        margin: 0;
+        padding: 0;
+        width:  100%;
+    }
+
+
+
+/* Episode View */
+
+    .inner {
+        background-color: $background;
+        @include border-top-left-radius(0);
+        padding: 0;
+        position: relative;
+    }
+    #top {
+        background-color: $background;
+        @include border-bottom-left-radius(0);
+        margin: 0;
+        padding: 0;
+
+        .inner {
+            padding: 0 0 2em;
+
+            * {
+                display: none;
+            }
+            nav,
+            nav back {
+                display: block;
+            }
+        }
+    }
+    
+    #bottom {
+        background-color: $background;
+        @include border-top-left-radius(0);
+        margin: 0;
+        padding: 0;
+        position: relative;
+        
+        .inner {
+            padding-right: 0.5em;
+        }
+        
+        .inner nav {
+            display: none;
+        }
+    }
+
+    #playCount {
+        top: -3em;
+        right: 1em;
+        pointer-events: none;
+    }
+
+    article {
+        height: 460px;
+        margin: 0;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 1em;
+        position: relative;
+    }
+    article {
+        header {
+            h1 {
+                padding-left: .45em;
+                text-indent: -.45em;
+                strong {
+                    padding-right: 0;
+                }
+            
+                span {
+                    display: block;
+                    padding-top: .4em;
+                }
+            }
+        }
+        aside {
+            margin: 0 0 2em 1em;
+            // position: relative;
+            //     top: 160px;
+            width: 48%;
+    
+            * {
+                display: none;
+            }
+    
+            figure,
+            figure img {
+                display: block !important;
+            }
+            &.clicked {
+                margin-left: 0;
+                width: 100%;
+            }
+            &.clicked figure img {
+                width: 100%;
+            }
+        }
+    }
+    #playCountTitle {
+        display: inline;
+    }
+    article .content {
+        color: $contentText;
+        padding-right: 0.5em;
+    }
+
+    #quotes p {
+        margin: 2em 0;
+        padding: 0 2em;
+    }
+    #quotes p:first-child {
+        text-indent: -1em;
+    }
+
+    #social {
+        list-style: none;
+        margin: 0 0 2em;
+        padding: 1em 0 3em;
+    }
+    #social li {
+        float: right;
+    }
+    #social li a {
+        background-color: transparent;
+        border: 2px solid $contentAccent;
+        color: $contentAccent;
+        display: block;
+        margin: 0 4px 10px 0;
+        padding: 4px 8px;
+        text-align: right;
+        text-transform: uppercase;
+        width: 5.1em;
+    
+        & b {
+            font-size: 1.2em;
+        }
+    }
+    #social li:first-child a {
+        @include border-bottom-right-radius(100px);
+        @include border-top-right-radius(100px);
+    }
+    #social li:last-child a {
+        @include border-bottom-left-radius(100px);
+        @include border-top-left-radius(100px);
+    }
+
+/* End Episode View */
+
+}
+
+
+
+/* iPhone, landscape */
+
+@media only screen and (max-device-width: 480px) and (orientation:landscape) { 
+    article {
+        height: 300px;
+    }
+}

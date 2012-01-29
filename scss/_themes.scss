@@ -71,3 +71,16 @@ $contentText   :  #CC6666;
 $contentSubtext:  #CC6699;
 */
 
+/* Show color values inside buttons */
+/*
+    :after {
+      color: red;
+      content: "#{$background}";
+      display: block;
+      font-size: 1.6em;
+      position: relative;
+        top: 0px;
+        left: 0px;
+      z-index: 99;
+    }
+*/

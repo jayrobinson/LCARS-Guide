@@ -1,34 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-
-<title>LCARS Grid</title>
-
-<script type="text/javascript">
-    function scrollUp(paraId) {
-      var element = document.getElementById(paraId);
-      element.scrollIntoView(true);
-    }
-
-    // miniapps.co.uk/blog/post/enable-css-active-pseudo-styles-in-mobile-safari/
-    document.addEventListener("touchstart", function() {},false);
-</script>
-
-<link rel="apple-touch-icon-precomposed" href="img/lcars.png">
-<link rel="apple-touch-startup-image" href="img/splash.png">
-<link rel="stylesheet" href="css/screen.css">
-</head>
-<body>
+<?php include('inc.header.php'); ?>
 
 <div id="top">
     <div class="inner">
         <span class="separator">&nbsp;</span>
         <nav>
-            <a href="series-picker.html" id="back" class="sweepButton vert" title="Go Back"><b>BK</b></a>
+            <a href="#" id="back" class="sweepButton vert" title="Go Back"><b>BK</b></a>
             <a href="#" id="random" class="sweepButton horz" title="Random Episode"><b>RND</b></a>
         </nav>
 
@@ -66,7 +42,7 @@
                         <tr>
                             <td id="test" class="season">S01</td>
                             <td class="episode">E01</td>
-                            <td class="episodeName">“Encounter at Farpoint Part 1”</td>
+                            <td class="episodeName">“<a href="episode.php">Encounter at Farpoint Part 1</a>”</td>
                             <td class="rating">&#9733;&#9733;</td>
                             <td><span class="endtab"></span></td>
                         </tr>
@@ -95,7 +71,7 @@
                             <td>&nbsp;</td>
                             <td class="episode">E05</td>
                             <td class="episodeName">“The Last Outpost”</td>
-                            <td class="rating">&star;&star;&star;&star;&star;</td>
+                            <td class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
                             <td><span class="endtab"></span></td>
                         </tr>
                         <tr>
@@ -1307,5 +1283,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+<?php include('inc.footer.php'); ?>

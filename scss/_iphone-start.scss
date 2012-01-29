@@ -1,0 +1,115 @@
+/* iPhone, portrait and landscape */
+
+@media only screen and (max-device-width: 480px) {
+
+    #start {
+        background-color: $background;
+        -webkit-box-sizing: border-box;
+        padding: 1em;
+        position: relative;
+    }
+
+    #West {
+        float: left;
+        width: 100%;
+
+        h1 {
+            color: $contentSubtext;
+            display: block;
+            margin: 1.25em 0 0 4em;
+            text-transform: uppercase;
+            
+            strong {
+                font-size: 1.6em;
+            }
+        }
+    }
+
+    #East {
+        margin-left: 0;
+    }
+
+    #icon {
+        display: block;
+        float: left;
+        margin: 2em 2em 1em 0.5em;
+        width: 50px;
+    }
+
+    #series {
+        clear: both;
+        margin: 1em 0 0 0.5em;
+        padding: 0;
+
+        .clear {
+            display: block;
+        }
+
+        li {
+            height: 4.6em;
+            line-height: 0.7;
+            margin: 0 0 2em;
+            padding: 0;
+            position: relative;
+            width: 100%;
+
+            i { // Activate/Deactivate series
+                background-color: $primaryColor;
+                display: block;
+                height: 100%;
+                position: absolute;
+                    top: 0;
+                    left: 0;
+                width: 4em;
+            }
+
+            a {
+                margin: 0 0 0 4em;
+
+                span.total {
+                    border-bottom: 1em solid $background;
+                    padding: 0 1em 0 0;
+                    width: 9.5em;
+                    
+                    b {
+                        font-size: 6em;
+                        letter-spacing: -1px;
+                    }
+                }
+
+                span.acronym {
+                    position: absolute;
+                        right: 10em;
+                        bottom: 1em;
+
+                    b {
+                        font-size: 2.2em;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+
+        }
+        .disabled {
+            background-color: darken(grayscale($primaryColor),30%);
+
+            i {
+                background-color: darken(grayscale($primaryColor),30%);
+            }
+
+            a, b {
+                color: darken(grayscale($primaryAction),30%);
+                pointer-events: none;
+            }
+        }
+    }
+    
+    #lastWatched,
+    .ruleHeading {
+        clear: both;
+        display: none; // No Suggestion area on iPhone. For now…
+    }
+    #numberSet {
+        display: none;
+    }
+}

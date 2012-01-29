@@ -1,0 +1,16 @@
+    // // detect if installed as webapp. todo: design takeover install screen
+    // if (navigator.standalone) {
+    //     alert ('Running full screen');
+    // } else {
+    //     alert ('Running in a browser');
+    // }
+    // 
+    // // detect network connection
+    // function checkOnline() {
+    //     if (navigator.onLine) {
+    //         alert ('There is a network connection');
+    //     } else {
+    //         alert ('There is no network connection');
+    //     }
+    // }
+    // checkOnline();

@@ -1,0 +1,210 @@
+/*
+    Start Screen
+*/
+
+#start {
+    -webkit-box-sizing: border-box;
+    padding: 3em 0 0 2em;
+    position: relative;
+    /* -webkit-font-smoothing: antialiased; */
+    /* -webkit-text-stroke: -1px black; */
+}
+
+#West {
+    float: left;
+    width: 28em;
+
+        h1 {
+        display: none;
+    }
+}
+
+#East {
+    margin-left: 30em;
+}
+
+#icon {
+    display: block;
+    margin: 3em 0 0 1.5em;
+    width: 22em;
+}
+
+#series {
+    list-style: none;
+    margin: 4em 0 0 0.5em;
+    padding: 0;
+    -webkit-user-select: none;
+
+    li {
+        background: $primaryColor;
+        @include border-top-right-radius(100px);
+        @include border-bottom-right-radius(100px);
+        height: 4.6em;
+        line-height: 0.7;
+        margin: 0 0 2em;
+        padding: 0;
+        position: relative;
+        width: 24em;
+        
+        i { // Activate/Deactivate series
+            // background-color: red;
+            display: block;
+            height: 100%;
+            position: absolute;
+                top: 0;
+                left: 0;
+            width: 2em;
+        }
+
+        a {
+            display: block;
+            margin: 0 0 0 2em;
+            text-decoration: none;
+
+            span.total {
+                background-color: $background;
+                border-bottom: 1em solid $background;
+                color: $primaryAction;
+                display: inline-block;
+                padding: 0 1em 0 0;
+                text-align: right;
+                width: 9.5em;
+                
+                b {
+                    font-size: 6em;
+                    letter-spacing: -1px;
+                }
+            }
+
+            span.acronym {
+                color: $background;
+                display: block;
+                position: absolute;
+                    right: 8em;
+                    bottom: 1em;
+                text-align: left;
+        
+                b {
+                    font-size: 1.8em;
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+
+    .disabled {
+        background-color: darken(grayscale($primaryColor),30%);
+        
+        a, b {
+            color: darken(grayscale($primaryAction),30%);
+            pointer-events: none;
+        }
+    }
+
+}
+
+#lastWatched {
+    /* border-bottom: 1em solid $primaryAction; // need HR style for this */
+    padding: 0 4em 4em 0.5em;
+    
+    figure {
+        float: left;
+        margin: 0 2em 4em 0;
+        padding: 0;
+        
+        img {
+            @include border-radius(4px);
+            border: 0.2em solid $primaryAction;
+        }
+    }
+    p {
+        font-size: 1.6em;
+    }
+
+    h4  {
+        color: $contentText;
+        font-size: 3.2em;
+        letter-spacing: -1px;
+        line-height: 1;
+        margin-top: 10px;
+    }
+    
+    h4 strong {
+        padding-right: 2rem; // 20px
+    }
+    
+    h4 span {
+        color: $contentAccent;
+        font-size: 80%;
+        white-space: nowrap;
+    }
+
+
+}
+
+.ruleHeading {
+    background-color: $primaryAction;
+    @include border-radius(100px);
+    display: block;
+    line-height: 0.8;
+    height: 2.8em;
+    margin-bottom: 2em;
+    margin-left: -0.5em;
+    padding: 0 0 0 4em;
+    -webkit-user-select: none;
+
+    b {
+        background-color: $background;
+        color: $primaryColor;
+        font-size: 3.2em;
+        letter-spacing: -1px;
+        padding: 0 0.24em 0 .2em;
+        text-transform: uppercase;
+    }
+}
+
+#suggest {
+    @extend .ruleHeading;
+
+    &.lastEpisode {
+        b:before {
+            content: "Last Watched";
+        }
+    }
+    &.suggestedEpisode {
+        b:before {
+            content: 'Suggested Episode';
+        }
+    }
+}
+
+#southEast {
+    background-color: $contentAccent;
+    @include border-top-left-radius(60px 50px);
+    padding: 2em 0 0 10em;
+
+    .inner {
+        @include border-top-left-radius(30px 25px);
+        height: 17em;
+        padding: 2em;
+    }
+}
+
+#numberSet {
+    list-style: none;
+    margin: 0 0 0 1em;
+    overflow: hidden;
+    padding: 0;
+    
+    li {
+        color: $primaryColor;
+        float: left;
+        font-size: 2em;
+        text-align: right;
+        width: 5em;
+    }
+}
+
+/*
+    End Start Screen
+*/

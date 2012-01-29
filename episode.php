@@ -1,70 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-<meta name="format-detection" content="telephone=no">
-
-<title>LCARS E2 · “Brothers” (TNG S04 E03) · Star Trek Episode Guide</title>
-
-<link rel="apple-touch-icon-precomposed" href="img/lcars.png">
-<link rel="apple-touch-startup-image" href="img/splash.png">
-<link rel="stylesheet" href="css/screen.css">
-
-<script type="text/javascript">
-/*
-    function scrollUp(paraId) {
-      var element = document.getElementById(paraId);
-      element.scrollIntoView(true);
-    }
-*/
-
-    // miniapps.co.uk/blog/post/enable-css-active-pseudo-styles-in-mobile-safari/
-    document.addEventListener("touchstart", function() {},false);
-</script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript">
-    // detect if installed as webapp. todo: design takeover install screen
-/*
-    if (navigator.standalone) {
-        alert ('Running full screen');
-    } else {
-        alert ('Running in a browser');
-    }
-*/
-
-    // detect network connection
-/*
-    function checkOnline() {
-        if (navigator.onLine) {
-            alert ('There is a network connection');
-        } else {
-            alert ('There is no network connection');
-        }
-    }
-    checkOnline();
-*/
-
-    $(document).ready(function() {
-        // iPhone: expand sidebar when clicked
-        $('#test').click(function(){
-            $(this).toggleClass("clicked");
-        });
-    });
-</script>
-</head>
-<body>
+<?php include('inc.header.php'); ?>
 
 <div id="top">
     <div class="inner">
         <span class="separator"></span>
-            <span class="separatorL">&nbsp;</span>
-            <span class="separatorR">&nbsp;</span>
         <nav>
-            <a href="grid2.html" id="back" class="sweepButton vert" title="Go Back"><b>BK</b></a>
-            <a href="episode.html" id="random" class="sweepButton horz" title="Random Episode"><b>RND</b></a>
+            <a href="#" id="back" class="sweepButton vert" title="Go Back"><b>BK</b></a>
+            <a href="#" id="random" class="sweepButton horz" title="Random Episode"><b>RND</b></a>
             <a href="#" id="episodeNumber" class="sweepButton horz" title="188 of 727 All | 81 of 176 TNG"><b>0110-005</b></a>
         </nav>
 
@@ -81,7 +22,7 @@
             <li><a href="#"><b>Crusher</b></a></li>
         </ul>
         <br style="clear:both;">
-        <form id="search" action="search.html">
+        <form id="search" action="search.php">
             <input id="searchInput" type="search">
         </form>
     </div>
@@ -89,22 +30,19 @@
 <div id="bottom">
     <div class="inner">
         <nav>
-            <a href="#" id="scrollIntoView" class="sweepButton horz sweepHeading" title="Scroll to top." onclick="scrollUp('test')">&nbsp;</a>
-            <a href="#" id="playCount" class="sweepButton horz sweepHeading" title="You've watched this episode 3 times."><b title="00-003">03 Plays</b></a>
-            <a href="episode.html" id="previous" class="sweepButton vert" title="Previous Episode"><b>PRV</b></a>
-            <a href="episode.html" id="next" class="sweepButton vert" title="Next Episode"><b>NX</b></a>
-            <a href="#" onclick="alert('Select from Season/Episode picker');" id="episodeNav" class="sweepButton vert" title="Season 1, Episode 6"><b>S01 E06</b></a>
+            <a href="#" id="backTop" class="sweepButton horz sweepHeading" title="Scroll to top">&nbsp;</a>
+            <a href="#" id="playCount" class="sweepButton horz sweepHeading" title="You've watched this episode 3 times."><b title="00-003">003 Plays</b></a>
+            <a href="#" id="previous" class="sweepButton vert" title="Previous Episode"><b>PRV</b></a>
+            <a href="#" id="next" class="sweepButton vert" title="Next Episode"><b>NX</b></a>
+            <a href="#" id="episodeNav" class="sweepButton vert" title="Season 1, Episode 6"><b>S01 E06</b></a>
         </nav>
-        <article>
-            <header>
-                <h1><strong>“Where No One Has Gone&nbsp;Before”</strong> <span>TNG S04 E03 · 008 Plays</span></h1>
-                <h4>Stardate 41263.1 · Airdate October 26, 1987</h4>
-            </header>
+        <article class="scrollable" id="scrollable">
+            <!-- TODO: For mobile, <aside> works best _after_ <header>. Ref: http://cl.ly/3L202x2W2R30360E1o10 -->
             <aside id="test">
                 <div id="rating">
                     <div id="myrating">
                         <h4>My Rating</h4>
-                        <p class="pips"><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="unfilled"></span><span class="unfilled"></span></p>
+                        <p>&#9733;&#9733;&thinsp;&frac12;&thinsp;&star;&star;</p>
                     </div>
                     <div id="avgrating">
                         <h4>Average Rating</h4>
@@ -112,26 +50,32 @@
                     </div>
                 </div>
                 <figure>
-                    <img src="http://src.sencha.io/292/http://images3.wikia.nocookie.net/__cb20070410194314/memoryalpha/en/images/thumb/9/92/USS_Enterprise-D_in_distant_galaxy.jpg/292px-USS_Enterprise-D_in_distant_galaxy.jpg" alt="">
+                    <img src="img/episode-1.jpg" alt="">
                 </figure>
                 <div id="thumbs">
                     <ul>
                         <li><a href="#">
-                            <img src="http://src.sencha.io/92/92/http://3.bp.blogspot.com/_I74TaryEhNg/S89DZhZzAPI/AAAAAAAABCc/u1sUGkOJ9cQ/s1600/data_red.jpg" alt="">
+                            <img src="img/episode-2.jpg" alt="">
                         </a></li>
                         <li><a href="#">
-                            <img src="http://src.sencha.io/92/92/http://upload.wikimedia.org/wikipedia/en/d/d3/ST-TNG_Future_Imperfect.jpg" alt="">
+                            <img src="img/episode-3.jpg" alt="">
                         </a></li>
                         <li><a href="#">
-                            <img src="http://src.sencha.io/92/92/http://stagevu.com/img/thumbnail/xyhidpsgwahdbig.jpg" alt="">
+                            <img src="img/episode-4.jpg" alt="">
                         </a></li>
                     </ul>
                 </div>
+                <!--
                 <ul id="meta">
                     <li>Written by Diane Duane and Michael Reaves</li>
                     <li>Directed by Rob Bowman</li>
                 </ul>
+                -->
             </aside>
+            <header>
+                <h1><strong id="episodeName">“The Best of Both Worlds Part&nbsp;2”</strong> <span>TNG S04 E03<em id="playCountTitle">&nbsp;008 Plays</em></span></h1>
+                <h4>Stardate 41263.1 · Airdate October 26, 1987</h4>
+            </header>
             <div class="content">
                 <p class="teaser">When a specialist in propulsion makes modifications to the Enterprise's warp drive that send it 2.7 million light years out of the galaxy, then an impossibly unreturnable 1 billion light years in the other direction, it is his assistant, a mysterious alien, and Wesley Crusher that must bring it back home.</p>
                 <p class="tags">
@@ -156,18 +100,16 @@
             </div>
 
             <footer>
-                <ul id="social">
-                    <li><a href="mailto:?subject=“Future Imperfect” (TNG S04E08)&body=“Future Imperfect” from Star Trek: The Next Generation%0D%0A%0D%0AI give this episode ★★★ stars."><b>Email</b></a></li>
-                    <li><a href="http://www.facebook.com/sharer.php?u=http://startrekguide.com/&t=“Future Imperfect” TNG S04E08"><b>Facebook</b></a></li>
-                    <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="jayrobinson" data-related="StarTrek" data-count="none" data-hashtags="TNG" data-text="I’m watching “Future Imperfect” TNG S04E08"><b>Twitter</b></a></li>
-                    <li><a href="#" onclick="alert('Add and Edit photos, notes, and tags.')"><b>Edit</b></a></li>
-                </ul>
+                <?php include('inc.social.php'); ?>
             </footer>
         </article>
-        <span class="separatorBottom">&nbsp;</span>
-            <span class="separatorL">&nbsp;</span>
-            <span class="separatorR">&nbsp;</span>
     </div>
 </div>
-</body>
-</html>
+
+<script type="text/javascript" src="js/scrollfix.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var s = $(".ipad #scrollable");
+    new ScrollFix(s);
+</script>
+
+<?php include('inc.footer.php'); ?>
