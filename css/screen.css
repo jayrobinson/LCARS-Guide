@@ -970,9 +970,13 @@ h3 b {
   text-transform: uppercase; }
 
 /* line 18, ../scss/_ipad-grid.scss */
+#navBar {
+  display: none; }
+
+/* line 22, ../scss/_ipad-grid.scss */
 #grid {
   padding-bottom: 6em; }
-  /* line 20, ../scss/_ipad-grid.scss */
+  /* line 24, ../scss/_ipad-grid.scss */
   #grid .season {
     border-left: 1.5em solid #b182bb;
     -moz-border-radius-topleft: 100px;
@@ -989,11 +993,11 @@ h3 b {
     border-bottom-left-radius: 100px;
     color: #8179fb;
     padding: 0 0.4em; }
-  /* line 27, ../scss/_ipad-grid.scss */
+  /* line 31, ../scss/_ipad-grid.scss */
   #grid .episode {
     color: #bab7fb;
     padding: 0 1em 0 0.4em; }
-  /* line 31, ../scss/_ipad-grid.scss */
+  /* line 35, ../scss/_ipad-grid.scss */
   #grid .episodeName {
     padding: 0 1em 0 0.4em;
     width: 21em; }

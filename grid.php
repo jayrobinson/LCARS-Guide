@@ -2,7 +2,7 @@
 <div id="grid">
 <div id="top">
     <div class="inner">
-        <div id="navBar" class="ruleHeading flushLeft" style="display:none;"><b>TNG</b></div>
+        <div id="navBar" class="ruleHeading flushLeft"><b>TNG</b></div>
         <span class="separator">&nbsp;</span>
         <nav>
             <a href="#" id="back" class="sweepButton vert" title="Go Back"><b>BK</b></a>
