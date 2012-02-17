@@ -44,24 +44,6 @@
             padding: 1em 0 0;
         }
 
-        .ruleHeading {
-            display: block;
-            line-height: 1;
-            margin-bottom: 0;
-            
-            b {
-                display: inline-block;
-                font-size: 3.8em;
-                line-height: 0.75;
-            }
-            
-            &.flushLeft {
-                @include border-top-left-radius(0);
-                @include border-bottom-left-radius(0);
-                margin-left: 0;
-            }
-        }
-
         h3 {
             display: none;
 
@@ -109,7 +91,25 @@
         tr td:last-child {
             display: none !important;
         }
-
     }
+
+    .ruleHeading {
+        display: block;
+        line-height: 1;
+        margin-bottom: 0;
+
+        b {
+            display: inline-block;
+            font-size: 3.8em;
+            line-height: 0.75;
+        }
+
+        &.flushLeft {
+            @include border-top-left-radius(0);
+            @include border-bottom-left-radius(0);
+            margin-left: 0;
+        }
+    }
+
 
 }

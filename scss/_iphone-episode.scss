@@ -33,17 +33,19 @@
         padding: 0;
 
         .inner {
-            padding: 0 0 2em;
+            padding: 2em 0 1px;
 
             * {
                 display: none;
             }
-/*
-            nav,
-            nav back {
+            #navBar {
                 display: block;
+
+                b {
+                    display: inline;
+                    white-space: nowrap;
+                }
             }
-*/
         }
     }
     
@@ -56,6 +58,15 @@
         
         .inner {
             padding-right: 5px !important;
+
+            .separator {
+                display: none;
+            }
+            .separator.right {
+                display: block;
+                height: 4em;
+                margin-top: -2em;
+            }
         }
         
         .inner nav {

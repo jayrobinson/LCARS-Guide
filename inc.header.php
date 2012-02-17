@@ -33,6 +33,14 @@
         });
     }
 
+    // Episode view: Pull the <aside> up
+    function asideOffset() {
+        var a = $('.ipad header h1').outerHeight(true);
+        var b = $('.ipad header h4').outerHeight(true);
+        var c = ((a+b)-28);
+        var d = $('.ipad #test').css('margin-top', "-"+c+"px");
+    }
+
     // Button styles
     // miniapps.co.uk/blog/post/enable-css-active-pseudo-styles-in-mobile-safari/
     document.addEventListener("touchstart", function() {},false);
@@ -98,13 +106,14 @@
         });
 
         // iPad only
+        asideOffset();
         provideOffset($("#scrollable"));
         provideOffset($("#numberSet"));
-
     });
 
     window.onresize = function(event) {
         // iPad only
+        asideOffset();
         provideOffset($("#scrollable"));
         provideOffset($("#numberSet"));
     }

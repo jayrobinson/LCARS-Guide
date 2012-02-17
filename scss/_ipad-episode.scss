@@ -251,7 +251,7 @@ hr {
     border-color: $contentAccent;
     @include border-radius(100px);
     border: 0;
-/*     clear: both; */
+    /* clear: both; */
     color: $contentAccent;
     line-height: 1;
     height: 1px;
@@ -261,14 +261,25 @@ hr {
 
 article {
     @include border-top-left-radius(15px 12px);
-/*     height: 550px; */
+    /* height: 550px; */
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    
+    .ipad & header {
+        padding-right: 34em;
+    }
 }
 
 article .content {
     color: $contentText;
     padding-right: 4em;
+    
+    &>p {
+        text-align: justify;
+        -webkit-hyphens: auto;
+           -moz-hyphens: auto;
+                hyphens: auto;
+    }
 }
 
 article .content > p {
@@ -378,6 +389,8 @@ article h4 {
 }
 
 .tags {
+    font-size: 1.6em;
+    padding-left: 0;
     -webkit-user-select: none;
 }
 
@@ -387,31 +400,32 @@ article h4 {
     font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
     text-transform: uppercase;
 }
-.tags span {
+.tags li {
     color: $contentSubtext;
+    display: inline;
     font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
     padding: 0 4px 0 8px;
     text-transform: uppercase;
     white-space: nowrap;
 }
-.tags span:after {
+.tags li:after {
     content: ', ';
     font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
     text-transform: uppercase;
 }
-.tags span:last-child:after {
+.tags li:last-child:after {
     content: '';
 }
-.tags span:hover,
-.tags span:focus,
-.tags span:active {
+.tags li:hover,
+.tags li:focus,
+.tags li:active {
     @include border-radius(100px);
     background-color: $contentAccent;
     color: $background;
     cursor: pointer;
     padding: 0 8px;
 }
-.tags span:hover:after {
+.tags li:hover:after {
     content: '';
 }
 

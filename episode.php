@@ -2,7 +2,8 @@
 <div id="episode">
 <div id="top">
     <div class="inner">
-        <span class="separator"></span>
+        <div id="navBar" class="ruleHeading flushLeft"><b>S04&nbsp;E03</b></div>
+        <span class="separator">&nbsp;</span>
         <nav>
             <a href="#" id="back" class="sweepButton vert" title="Go Back"><b>BK</b></a>
             <a href="#" id="random" class="sweepButton horz" title="Random Episode"><b>RND</b></a>
@@ -29,6 +30,8 @@
 </div>
 <div id="bottom">
     <div class="inner">
+        <span class="separator">&nbsp;</span>
+        <span class="separator right">&nbsp;</span>
         <nav>
             <a href="#" id="backTop" class="sweepButton horz sweepHeading" title="Scroll to top">&nbsp;</a>
             <a href="#" id="playCount" class="sweepButton horz sweepHeading" title="You've watched this episode 3 times."><b title="00-003">003 Plays</b></a>
@@ -38,6 +41,10 @@
         </nav>
         <article class="scrollable" id="scrollable">
             <!-- TODO: For mobile, <aside> works best _after_ <header>. Ref: http://cl.ly/3L202x2W2R30360E1o10 -->
+            <header>
+                <h1><strong id="episodeName">“The Best of Both Worlds Part&nbsp;2”</strong> <span>TNG S04 E03<em id="playCountTitle">&nbsp;008 Plays</em></span></h1>
+                <h4>Stardate 41263.1 · Airdate October 26, 1987</h4>
+            </header>
             <aside id="test">
                 <div id="rating">
                     <div id="myrating">
@@ -72,17 +79,13 @@
                 </ul>
                 -->
             </aside>
-            <header>
-                <h1><strong id="episodeName">“The Best of Both Worlds Part&nbsp;2”</strong> <span>TNG S04 E03<em id="playCountTitle">&nbsp;008 Plays</em></span></h1>
-                <h4>Stardate 41263.1 · Airdate October 26, 1987</h4>
-            </header>
             <div class="content">
                 <p class="teaser">When a specialist in propulsion makes modifications to the Enterprise's warp drive that send it 2.7 million light years out of the galaxy, then an impossibly unreturnable 1 billion light years in the other direction, it is his assistant, a mysterious alien, and Wesley Crusher that must bring it back home.</p>
-                <p class="tags">
-                    <span>The Traveler</span>
-                    <span>Leave the Galaxy</span>
-                    <span>Wesley</span>
-                </p>
+                <ul class="tags">
+                    <li>The Traveler</li>
+                    <li>Leave the Galaxy</li>
+                    <li>Wesley</li>
+                </ul>
                 <hr>
                 <div id="quotes">
                     <blockquote>
