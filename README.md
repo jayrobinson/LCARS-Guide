@@ -24,6 +24,11 @@ LCARS stands for Library Computer Access/Retrieval System, a fictional computer 
 
 *Feb 21, 2012*
 
+* Added SeriesList navigation view.
+* Cleaned up data; Stardates and JSON structure.
+
+*Feb 20, 2012*
+
 * Added Sencha Touch app.
 
 *Feb 13, 2012*
