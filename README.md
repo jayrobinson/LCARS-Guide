@@ -11,7 +11,7 @@ LCARS stands for Library Computer Access/Retrieval System, a fictional computer 
 ## Device Support
 
 * iOS devices running iOS 5+
-* WebKit desktop browsers. May degrade somewhat, but haven't tested yet.
+* WebKit desktop browsers; other modern desktop browsers.
 
 ## Project Requirements
 
@@ -21,6 +21,13 @@ LCARS stands for Library Computer Access/Retrieval System, a fictional computer 
 
 
 ## Changelog
+
+*Feb 21, 2012*
+
+* Added Sencha Touch app.
+
+*Feb 13, 2012*
+* Latest comps: http://www.dropmocks.com/mBgeYs
 
 *Jan 29, 2012*
 
