@@ -15,13 +15,10 @@ Ext.define('LCARS.store.Episodes', {
 
         proxy: {
             type: 'ajax',
-            url: '../data/3-the-next-generation.json',
             
             reader: {
                 rootProperty: 'Data.Episode'
             }
-        },
-        
-        autoLoad: true
+        }
     }
 });

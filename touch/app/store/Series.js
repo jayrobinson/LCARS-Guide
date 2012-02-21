@@ -3,7 +3,8 @@ Ext.define('LCARS.store.Series', {
 
     config: {
         fields: [
-            'SeriesName'
+            'SeriesName',
+            'SeriesAbbr'
         ],
 
         proxy: {

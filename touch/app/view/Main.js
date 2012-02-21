@@ -4,7 +4,7 @@ Ext.define('LCARS.view.Main', {
 
     config: {
         items: [
-            { xtype: 'episodelist' }
+            { xtype: 'serieslist' }
         ]
     }
 });
