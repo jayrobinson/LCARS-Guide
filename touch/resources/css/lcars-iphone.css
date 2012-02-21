@@ -1,0 +1,115 @@
+/*
+    Color Schemes
+*/
+/* Default, Enterprise-D */
+/* Red Alert, Enterprise-A */
+/*
+$primaryColor  :  #eb1c23; // Pinky Red
+$primaryAction :  #760e12; // Darker Red
+$informational :  #b0151a; // Dark Red
+$buttonsFilled :  #ff0000; // Red
+$contentAccent :  #820404; // Dark Red
+$contentText   :  #fff;    // White
+$contentSubtext:  #ddd;    // Dim White
+*/
+/* Ocean Blue, Voyager */
+/*
+$primaryColor  :  #6598fd; // Blue
+$primaryAction :  #0348fa; // Darker Pale Blue
+$informational :  #2a66f8; // Deeper Blue
+$buttonsFilled :  #6598fd; // Light Blue
+$contentAccent :  #fe9a01; // Orange
+$contentText   :  #728cfd; // Lavender
+$contentSubtext:  #aeafc4; // Light Orange
+*/
+/* Blue/Green, Enterprise-B */
+/*
+$primaryColor  :  #0d42c5; // Blue
+$primaryAction :  #00b9cb; // Light Teal
+$informational :  #00bdd0; // Teal
+$buttonsFilled :  #006cd4; // Cerulean Blue
+$contentAccent :  #6ae6e3; // Seafoam
+$contentText   :  #ddd;    // Dim White
+$contentSubtext:  #00c847; // Green
+*/
+/* Grayscale */
+/*
+$background    :  white;
+$primaryColor  :  #9f9f9f;
+$primaryAction :  #7d7d7d;
+$informational :  white;
+$buttonsFilled :  #ddd;
+$contentAccent :  #9f9f9f;
+$contentText   :  #ccc;
+$contentSubtext:  #aaa;
+*/
+/* LCARSCom.net (Hex) */
+/*
+$primaryColor  :  #FF9900;
+$primaryAction :  #CC99CC;
+$informational :  #9999CC;
+$buttonsFilled :  #FF9966;
+$buttonsHollow :  #FFCC99;
+$contentAccent :  #9999FF;
+$contentText   :  #CC6666;
+$contentSubtext:  #CC6699;
+*/
+/* Show color values inside buttons */
+/*
+    :after {
+      color: red;
+      content: "#{$background}";
+      display: block;
+      font-size: 1.6em;
+      position: relative;
+        top: 0px;
+        left: 0px;
+      z-index: 99;
+    }
+*/
+/* line 4, ../scss/lcars-iphone.scss */
+* {
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  /* -webkit-font-smoothing: antialiased; */
+  /* -webkit-text-stroke: -1px black; */ }
+
+/* line 12, ../scss/lcars-iphone.scss */
+html {
+  background-color: black;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  tap-highlight-color: rgba(0, 0, 0, 0); }
+
+/* line 19, ../scss/lcars-iphone.scss */
+body {
+  background-color: black;
+  color: #dddddd;
+  font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+  /* font-size: 62.5%; */
+  /* 1em = 10px */
+  max-height: 100%;
+  margin: 0;
+  padding: 0; }
+
+/* line 29, ../scss/lcars-iphone.scss */
+em, cite {
+  font-style: normal; }
+
+/* line 33, ../scss/lcars-iphone.scss */
+.clear {
+  display: none; }
+
+/* line 1, ../scss/_iphone-episodeList.scss */
+.listItem {
+  border-bottom: 1px solid #000;
+  clear: both;
+  height: 56px;
+  padding: 0; }
+  /* line 7, ../scss/_iphone-episodeList.scss */
+  .listItem .screenshot {
+    float: left;
+    height: 55px;
+    overflow: hidden;
+    margin-right: 10px;
+    width: 55px; }
