@@ -27,6 +27,7 @@ LCARS stands for Library Computer Access/Retrieval System, a fictional computer 
 * Added Sencha Touch app.
 
 *Feb 13, 2012*
+
 * Latest comps: http://www.dropmocks.com/mBgeYs
 
 *Jan 29, 2012*
