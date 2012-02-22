@@ -1,0 +1,37 @@
+@import "compass/css3";
+@import "_themes.scss";
+
+* {
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
+    // -webkit-user-select: none; // Careful… .content should still be select-able.
+    /* -webkit-font-smoothing: antialiased; */
+    /* -webkit-text-stroke: -1px black; */
+}
+
+html { // miniapps.co.uk/blog/post/enable-css-active-pseudo-styles-in-mobile-safari/
+    background-color: $background;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    tap-highlight-color:         rgba(0,0,0,0);
+}
+
+body {
+    background-color: $background;
+    color: $contentSubtext;
+    font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
+    /* font-size: 62.5%; */ /* 1em = 10px */
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+em, cite {
+    font-style: normal;
+}
+
+.clear {
+    display: none;
+}
+
+@import "_iphone-episodeList.scss";

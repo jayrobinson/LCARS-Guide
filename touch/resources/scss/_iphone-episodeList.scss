@@ -1,0 +1,14 @@
+.listItem {
+    border-bottom:1px solid #000;
+    clear:both;
+    height:56px;
+    padding:0;
+    
+    .screenshot {
+        float:left;
+        height:55px;
+        overflow:hidden;
+        margin-right:10px;
+        width:55px;
+    }
+}

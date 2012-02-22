@@ -1,0 +1,57 @@
+html, body {
+    background-color: black;
+    margin: 0;
+}
+
+.orange {
+    background-color: $primaryColor;
+
+    &.topHeader {
+        padding-bottom: 20px;
+
+        &>.x-inner {
+            background: black;
+            @include border-bottom-left-radius(30px);
+        }
+    }
+
+    &.topLeft {
+        @include border-bottom-left-radius(60px);
+        height: 150px;
+        margin-bottom: 5px;
+    }
+
+    &.bottomLeft {
+        @include border-top-left-radius(60px);
+        // display: -webkit-box;
+        // -webkit-box-orient: vertical;
+        // -webkit-box-flex: 1;
+        margin-top: 5px;
+    }
+}
+
+.sweepButton {
+    background: $primaryAction;
+        border: 0;
+        @include border-radius(0);
+    // border: 1em solid $background;
+    // color: $background;
+    margin-bottom: 10px;
+    // position: absolute;
+    text-align: right;
+    width: 100px;
+    
+    .x-button-label {
+        // font-size: 1.6em;
+    }
+
+    &.horz {
+        // height: 2em;
+        // padding: 0 1em;
+    }
+    &.vert {
+        // height: 1em;
+        // line-height: 0.3;
+        // padding: 4em 1em 1em;
+    }
+}

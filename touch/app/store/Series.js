@@ -2,14 +2,11 @@ Ext.define('LCARS.store.Series', {
     extend: 'Ext.data.Store',
 
     config: {
-        fields: [
-            'SeriesName',
-            'SeriesAbbr'
-        ],
+        model: 'LCARS.model.Series',
 
         proxy: {
             type: 'ajax',
-            url: '../data/0-all-series.json',
+            url: '../data/all.json',
             
             reader: {
                 rootProperty: 'Data.Series'

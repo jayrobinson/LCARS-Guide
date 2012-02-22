@@ -24,8 +24,13 @@ LCARS stands for Library Computer Access/Retrieval System, a fictional computer 
 
 *Feb 21, 2012*
 
-* Added SeriesList navigation view.
-* Cleaned up data; Stardates and JSON structure.
+* *Sencha Touch App*
+* Implemented profiles for tablet and phone.
+* Added navigation view on iPhone/phone with back button and swipe to change episode.
+* Added navigation view on tablet/iPad with back, next, and previous buttons.
+* Consolidated and cleaned up data; now use single store.
+* Added local screenshots to project.
+* Started to apply custom CSS.
 
 *Feb 20, 2012*
 

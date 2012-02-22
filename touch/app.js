@@ -12,24 +12,16 @@ Ext.application({
     ],
 
     models: [
-        
+        'LCARS.model.Episode',
+        'LCARS.model.Series'
+    ],
+    
+    profiles: [
+        'Tablet',
+        'Phone'
     ],
 
     stores: [
         'LCARS.store.Series',
-        'LCARS.store.Episodes'
-    ],
-
-    views: [
-        'LCARS.view.Main',
-        'LCARS.view.SeriesList',
-        'LCARS.view.EpisodeList',
-        'LCARS.view.Episode'
-    ],
-
-    launch: function() {
-        Ext.create('LCARS.view.Main', {
-            fullscreen: true
-        });
-    }
+    ]
 });

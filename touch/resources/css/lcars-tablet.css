@@ -1,0 +1,122 @@
+/*
+    Color Schemes
+*/
+/* Default, Enterprise-D */
+/* Red Alert, Enterprise-A */
+/*
+$primaryColor  :  #eb1c23; // Pinky Red
+$primaryAction :  #760e12; // Darker Red
+$informational :  #b0151a; // Dark Red
+$buttonsFilled :  #ff0000; // Red
+$contentAccent :  #820404; // Dark Red
+$contentText   :  #fff;    // White
+$contentSubtext:  #ddd;    // Dim White
+*/
+/* Ocean Blue, Voyager */
+/*
+$primaryColor  :  #6598fd; // Blue
+$primaryAction :  #0348fa; // Darker Pale Blue
+$informational :  #2a66f8; // Deeper Blue
+$buttonsFilled :  #6598fd; // Light Blue
+$contentAccent :  #fe9a01; // Orange
+$contentText   :  #728cfd; // Lavender
+$contentSubtext:  #aeafc4; // Light Orange
+*/
+/* Blue/Green, Enterprise-B */
+/*
+$primaryColor  :  #0d42c5; // Blue
+$primaryAction :  #00b9cb; // Light Teal
+$informational :  #00bdd0; // Teal
+$buttonsFilled :  #006cd4; // Cerulean Blue
+$contentAccent :  #6ae6e3; // Seafoam
+$contentText   :  #ddd;    // Dim White
+$contentSubtext:  #00c847; // Green
+*/
+/* Grayscale */
+/*
+$background    :  white;
+$primaryColor  :  #9f9f9f;
+$primaryAction :  #7d7d7d;
+$informational :  white;
+$buttonsFilled :  #ddd;
+$contentAccent :  #9f9f9f;
+$contentText   :  #ccc;
+$contentSubtext:  #aaa;
+*/
+/* LCARSCom.net (Hex) */
+/*
+$primaryColor  :  #FF9900;
+$primaryAction :  #CC99CC;
+$informational :  #9999CC;
+$buttonsFilled :  #FF9966;
+$buttonsHollow :  #FFCC99;
+$contentAccent :  #9999FF;
+$contentText   :  #CC6666;
+$contentSubtext:  #CC6699;
+*/
+/* Show color values inside buttons */
+/*
+    :after {
+      color: red;
+      content: "#{$background}";
+      display: block;
+      font-size: 1.6em;
+      position: relative;
+        top: 0px;
+        left: 0px;
+      z-index: 99;
+    }
+*/
+/* line 1, ../scss/_tablet-episodeList.scss */
+html, body {
+  background-color: black;
+  margin: 0; }
+
+/* line 6, ../scss/_tablet-episodeList.scss */
+.orange {
+  background-color: #f58609; }
+  /* line 9, ../scss/_tablet-episodeList.scss */
+  .orange.topHeader {
+    padding-bottom: 20px; }
+    /* line 12, ../scss/_tablet-episodeList.scss */
+    .orange.topHeader > .x-inner {
+      background: black;
+      -moz-border-radius-bottomleft: 30px;
+      -webkit-border-bottom-left-radius: 30px;
+      -o-border-bottom-left-radius: 30px;
+      -ms-border-bottom-left-radius: 30px;
+      -khtml-border-bottom-left-radius: 30px;
+      border-bottom-left-radius: 30px; }
+  /* line 18, ../scss/_tablet-episodeList.scss */
+  .orange.topLeft {
+    -moz-border-radius-bottomleft: 60px;
+    -webkit-border-bottom-left-radius: 60px;
+    -o-border-bottom-left-radius: 60px;
+    -ms-border-bottom-left-radius: 60px;
+    -khtml-border-bottom-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    height: 150px;
+    margin-bottom: 5px; }
+  /* line 24, ../scss/_tablet-episodeList.scss */
+  .orange.bottomLeft {
+    -moz-border-radius-topleft: 60px;
+    -webkit-border-top-left-radius: 60px;
+    -o-border-top-left-radius: 60px;
+    -ms-border-top-left-radius: 60px;
+    -khtml-border-top-left-radius: 60px;
+    border-top-left-radius: 60px;
+    margin-top: 5px; }
+
+/* line 33, ../scss/_tablet-episodeList.scss */
+.sweepButton {
+  background: #8179fb;
+  border: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  -khtml-border-radius: 0;
+  border-radius: 0;
+  margin-bottom: 10px;
+  text-align: right;
+  width: 100px; }

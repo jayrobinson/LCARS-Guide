@@ -1,49 +1,38 @@
 Ext.define('LCARS.controller.Series', {
     extend: 'Ext.app.Controller',
 
-    config: {
-        refs: {
-            'main' : 'main'
-        },
+    onPreviousButtonTap: function() {
+        var activeItem   = this.getMain().getActiveItem(),
+            episodeList  = this.getEpisodeList(),
+            episodeStore = episodeList.getStore(),
+            selected     = episodeList.getSelection()[0],
+            index        = episodeStore.indexOf(selected),
+            record;
 
-        control : {
-            serieslist : {
-                itemtap: 'onSeriesTap'
+        if (activeItem.xtype == 'episodetablet' || activeItem.xtype == "episodephone") {
+            if (index > 0) {
+                record = episodeStore.getAt(index-1);
+                episodeList.select(record);
+                this.getEpisode().setData(record.data);
             }
         }
     },
 
-    onSeriesTap: function(dataView, index, target, record) {
-        var episodeStore = Ext.getStore('Episodes'),
-            url;
+    onNextButtonTap: function() {
+        var activeItem   = this.getMain().getActiveItem(),
+            episodeList  = this.getEpisodeList(),
+            episodeStore = episodeList.getStore(),
+            selected     = episodeList.getSelection()[0],
+            index        = episodeStore.indexOf(selected),
+            total        = episodeStore.getCount(),
+            record;
 
-        console.log(record.get('SeriesAbbr'))
-
-        if ( record.get('SeriesAbbr') == 'TOS' ) {
-            url = '../data/1-the-original-series.json';
-        } else if ( record.get('SeriesAbbr') == 'TAS' ) {
-            url = '../data/2-the-animated-series.json';
-        } else if ( record.get('SeriesAbbr') == 'TNG' ) {
-            url = '../data/3-the-next-generation.json';
-        } else if ( record.get('SeriesAbbr') == 'DS9' ) {
-            url = '../data/4-deep-space-nine.json';
-        } else if ( record.get('SeriesAbbr') == 'VOY' ) {
-            url = '../data/5-voyager.json';
-        } else if ( record.get('SeriesAbbr') == 'ENT' ) {
-            url = '../data/6-enterprise.json';
+        if (activeItem.xtype == 'episodetablet' || activeItem.xtype == "episodephone") {
+            if (index != total-1) {
+                record = episodeStore.getAt(index+1);
+                episodeList.select(record);
+                this.getEpisode().setData(record.data);
+            }
         }
-
-        episodeStore.load({
-            url: url,
-            callback: function() {
-                console.log("Finished load")
-                this.getMain().push({
-                    xtype: 'episodelist',
-                    title: record.get('SeriesName'),
-                });
-            },
-            scope: this
-        });
     }
-
 });

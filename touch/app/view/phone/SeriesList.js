@@ -1,6 +1,6 @@
-Ext.define('LCARS.view.SeriesList', {
+Ext.define('LCARS.view.phone.SeriesList', {
     extend: 'Ext.List',
-    xtype: 'serieslist',
+    xtype: 'serieslistphone',
 
     config: {
         title: 'Select Series',
@@ -8,7 +8,7 @@ Ext.define('LCARS.view.SeriesList', {
         store: 'Series',
 
         itemTpl: Ext.create('Ext.XTemplate',
-            '<div class="">{SeriesName}</div>'
+            '<div class="">{SeriesName} {SeriesAbbr}</div>'
         )
     }
 });
