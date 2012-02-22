@@ -3,15 +3,15 @@ Ext.define('LCARS.view.tablet.Main', {
     xtype: 'maintablet',
 
     requires: [
-        'LCARS.view.tablet.Header',
         'LCARS.view.tablet.NavButtons',
-        'LCARS.view.tablet.EpisodeList',
+        'LCARS.view.tablet.Header',
+        'LCARS.view.tablet.Content',
         'LCARS.view.tablet.SeriesList',
+        'LCARS.view.tablet.EpisodeList',
         'LCARS.view.tablet.Episode'
     ],
 
     config: {
-        style: 'background-color: black',
         navigationBar: false,
         layout: 'fit',
         items: [
@@ -25,7 +25,7 @@ Ext.define('LCARS.view.tablet.Main', {
                 docked: 'top'
             },
             {
-                xtype: 'serieslisttablet'
+                xtype: 'content'
             }
         ]
     }

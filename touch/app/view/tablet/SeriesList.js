@@ -3,6 +3,7 @@ Ext.define('LCARS.view.tablet.SeriesList', {
     xtype: 'serieslisttablet',
 
     config: {
+        id: 'seriesListTablet',
         store: 'Series',
 
         itemTpl: Ext.create('Ext.XTemplate',

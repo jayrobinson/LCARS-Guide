@@ -55,3 +55,55 @@ html, body {
         // padding: 4em 1em 1em;
     }
 }
+
+
+
+/* 2 Column View for Episode List */
+
+.bottomContent {
+    background-color: $primaryColor;
+    margin-top: 10px;
+
+    & .x-inner:first-child {
+        background: black;
+        @include border-top-left-radius(30px);
+        margin-top: 20px;
+        padding: 10px;
+    }
+}
+
+.episodeInListTablet {
+    background: black;
+    clear: right;
+    float: left;
+    padding: 0 0 10px 10px;
+    width: 50%;
+    
+    .screenshot {
+        border: 2px solid $contentAccent;
+        display: block;
+        float: left;
+        margin: 0 10px 0 0;
+    }
+}
+
+
+
+/* Episode View */
+
+#episodeTablet {
+    background-color: $background;
+}
+
+.x-html .content {
+    color:  $contentSubtext;
+    font-size: 1.6em;
+    
+    .screenshot {
+        border: 2px solid $contentAccent;
+        display: block;
+        float: right;
+        margin: 0 0 40px 20px;
+        width: 48%;
+    }
+}
