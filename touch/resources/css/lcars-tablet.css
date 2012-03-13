@@ -155,11 +155,13 @@ html, body {
   width: 100px; }
 
 /* 2 Column View for Episode List */
-/* line 63, ../scss/_tablet-episodeList.scss */
+/* line 64, ../scss/_tablet-episodeList.scss */
+#episodeTablet,
 .bottomContent {
   background-color: #f58609;
   margin-top: 10px; }
-  /* line 67, ../scss/_tablet-episodeList.scss */
+  /* line 68, ../scss/_tablet-episodeList.scss */
+  #episodeTablet .x-inner:first-child,
   .bottomContent .x-inner:first-child {
     background: black;
     -moz-border-radius-topleft: 30px;
@@ -171,14 +173,14 @@ html, body {
     margin-top: 20px;
     padding: 10px; }
 
-/* line 75, ../scss/_tablet-episodeList.scss */
+/* line 76, ../scss/_tablet-episodeList.scss */
 .episodeInListTablet {
   background: black;
   clear: right;
   float: left;
   padding: 0 0 10px 10px;
   width: 50%; }
-  /* line 82, ../scss/_tablet-episodeList.scss */
+  /* line 83, ../scss/_tablet-episodeList.scss */
   .episodeInListTablet .screenshot {
     border: 2px solid #bab7fb;
     display: block;
@@ -186,15 +188,11 @@ html, body {
     margin: 0 10px 0 0; }
 
 /* Episode View */
-/* line 94, ../scss/_tablet-episodeList.scss */
-#episodeTablet {
-  background-color: black; }
-
-/* line 98, ../scss/_tablet-episodeList.scss */
+/* line 99, ../scss/_tablet-episodeList.scss */
 .x-html .content {
   color: #dddddd;
   font-size: 1.6em; }
-  /* line 102, ../scss/_tablet-episodeList.scss */
+  /* line 103, ../scss/_tablet-episodeList.scss */
   .x-html .content .screenshot {
     border: 2px solid #bab7fb;
     display: block;

@@ -4,7 +4,11 @@ Ext.define('LCARS.profile.Phone', {
     config: {
         name: 'phone',
         namespace: 'phone',
-        controllers: ['Series'],
+        controllers: [
+            'Series',
+            'Episodes',
+            'Plays'
+        ],
         views: ['LCARS.view.phone.Main']
     },
     

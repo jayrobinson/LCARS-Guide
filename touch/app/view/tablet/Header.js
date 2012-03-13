@@ -40,7 +40,8 @@ Ext.define('LCARS.view.tablet.Header', {
                                         flex: 1,
                                         xtype: 'button',
                                         text: 'Random',
-                                        cls: 'sweepButton'
+                                        cls: 'sweepButton',
+                                        id: 'random'
                                     }
                                 ]
                             }

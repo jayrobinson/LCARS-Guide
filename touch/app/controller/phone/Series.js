@@ -30,13 +30,18 @@ Ext.define('LCARS.controller.phone.Series', {
     },
 
     onEpisodeTap: function(dataView, index, target, record) {
-        this.getMain().setActiveItem({
+        var main = this.getMain(),
+            item;
+
+        item = main.setActiveItem({
             xtype: 'episodephone',
-            data: record.data,
+            record: record,
             title: record.get('EpisodeName')
         });
+
+        this.updatePlayCountButton(record, item);
     },
-    
+
     onEpisodeSwipe: function(episodeView, direction) {
         if (direction == "left") {
             this.onNextButtonTap();

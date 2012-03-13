@@ -1,5 +1,5 @@
 html, body {
-    background-color: black;
+    background-color: $background;
     margin: 0;
 }
 
@@ -60,6 +60,7 @@ html, body {
 
 /* 2 Column View for Episode List */
 
+#episodeTablet,
 .bottomContent {
     background-color: $primaryColor;
     margin-top: 10px;
@@ -92,7 +93,7 @@ html, body {
 /* Episode View */
 
 #episodeTablet {
-    background-color: $background;
+    // background-color: $background;
 }
 
 .x-html .content {

@@ -4,13 +4,16 @@ Ext.define('LCARS.profile.Tablet', {
     config: {
         name: 'tablet',
         namespace: 'tablet',
-        controllers: ['Series'],
+        controllers: [
+            'Series',
+            'Episodes',
+            'Plays'
+        ],
         views: ['Main']
-        
     },
     
     isActive: function() {
-        return Ext.os.is.Tablet;
+        return !Ext.os.is.Phone;
     },
 
     launch: function() {

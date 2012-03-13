@@ -2,18 +2,14 @@ Ext.application({
     name: 'LCARS',
 
     icon: 'resources/img/icon.png',
-    tabletStartupScreen: 'resources/img/tablet_startup.png',
-    phoneStartupScreen: 'resources/img/phone_startup.png',
     glossOnIcon: false,
-
-    controllers: [
-        'LCARS.controller.Series',
-        'LCARS.controller.Episodes'
-    ],
+    phoneStartupScreen: 'resources/img/phone_startup.png',
+    tabletStartupScreen: 'resources/img/tablet_startup.png',
 
     models: [
         'LCARS.model.Episode',
-        'LCARS.model.Series'
+        'LCARS.model.Series',
+        'LCARS.model.Play'
     ],
     
     profiles: [
@@ -23,5 +19,6 @@ Ext.application({
 
     stores: [
         'LCARS.store.Series',
+        'LCARS.store.Plays'
     ]
 });

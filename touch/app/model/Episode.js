@@ -10,7 +10,17 @@ Ext.define('LCARS.model.Episode', {
             'Stardate',
             'Overview',
             'Screenshot',
-            'playCount'
+            'IMDB_ID'
+        ],
+
+        associations: [
+            {
+                type: 'belongsTo',
+                name: 'series',
+                associationKey: 'Series',
+                model: 'LCARS.model.Series'
+            }
         ]
+
     }
 });

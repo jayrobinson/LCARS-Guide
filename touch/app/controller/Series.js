@@ -1,38 +1,19 @@
 Ext.define('LCARS.controller.Series', {
     extend: 'Ext.app.Controller',
 
-    onPreviousButtonTap: function() {
-        var activeItem   = this.getMain().getActiveItem(),
-            episodeList  = this.getEpisodeList(),
-            episodeStore = episodeList.getStore(),
-            selected     = episodeList.getSelection()[0],
-            index        = episodeStore.indexOf(selected),
-            record;
+    updatePlayCountButton: function(record, item) {
+        var main = this.getMain(),
+            series = record.getSeries(),
+            store = Ext.getStore('Plays'),
+            id = series.get('SeriesAbbr') + record.get('SeasonNumber') + record.get('EpisodeNumber'),
+            existingIndex = store.find('episode', id),
+            existing,
+            plays = 0;
 
-        if (activeItem.xtype == 'episodetablet' || activeItem.xtype == "episodephone") {
-            if (index > 0) {
-                record = episodeStore.getAt(index-1);
-                episodeList.select(record);
-                this.getEpisode().setData(record.data);
-            }
+        if (existingIndex != -1) {
+            existing = store.getAt(existingIndex);
+            plays = existing.get('plays');
         }
-    },
-
-    onNextButtonTap: function() {
-        var activeItem   = this.getMain().getActiveItem(),
-            episodeList  = this.getEpisodeList(),
-            episodeStore = episodeList.getStore(),
-            selected     = episodeList.getSelection()[0],
-            index        = episodeStore.indexOf(selected),
-            total        = episodeStore.getCount(),
-            record;
-
-        if (activeItem.xtype == 'episodetablet' || activeItem.xtype == "episodephone") {
-            if (index != total-1) {
-                record = episodeStore.getAt(index+1);
-                episodeList.select(record);
-                this.getEpisode().setData(record.data);
-            }
-        }
+        item.down('button[action=addPlays]').setText('Play Count: ' + plays);
     }
 });

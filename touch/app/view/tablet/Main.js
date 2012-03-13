@@ -1,5 +1,5 @@
 Ext.define('LCARS.view.tablet.Main', {
-    extend: 'Ext.navigation.View', // Panel has more styling, which is not needed for custom UI
+    extend: 'Ext.navigation.View',
     xtype: 'maintablet',
 
     requires: [
@@ -13,7 +13,6 @@ Ext.define('LCARS.view.tablet.Main', {
 
     config: {
         navigationBar: false,
-        layout: 'fit',
         items: [
             {
                 xtype: 'navbuttons',

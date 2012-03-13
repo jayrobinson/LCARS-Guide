@@ -9,8 +9,20 @@ Ext.define('LCARS.view.phone.Main', {
     ],
 
     config: {
+        navigationBar: {
+            items: [
+                {
+                    text: 'Random',
+                    id: 'random',
+                    align: 'right'
+                }
+            ]
+        },
+
         items: [
-            { xtype: 'serieslistphone' }
+            {
+                xtype: 'serieslistphone'
+            }
         ]
     }
 });

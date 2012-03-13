@@ -19,12 +19,6 @@ Ext.define('LCARS.controller.tablet.Series', {
             },
             '#backButton': {
                 tap: 'onBackButtonTap'
-            },
-            'previousButton': {
-                tap: 'onPreviousButtonTap'
-            },
-            'nextButton': {
-                tap: 'onNextButtonTap'
             }
         }
     },
@@ -37,10 +31,17 @@ Ext.define('LCARS.controller.tablet.Series', {
     },
 
     onEpisodeTap: function(dataView, index, target, record) {
-        this.getMain().setActiveItem({
+        var main = this.getMain(),
+            item;
+
+        item = main.setActiveItem({
             xtype: 'episodetablet',
-            data: record.data
+            record: record,
+            title: record.get('EpisodeName')
         });
+
+        this.updatePlayCountButton(record, item);
+
         this.getPreviousButton().setText('PRV');
         this.getNextButton().setText('NX');
     },

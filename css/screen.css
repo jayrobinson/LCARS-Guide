@@ -103,7 +103,7 @@ em, cite {
 /*
     Start Screen
 */
-/* line 5, ../scss/_ipad-start.scss */
+/* line 5, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #start {
   -webkit-box-sizing: border-box;
   padding: 3em 0 0 2em;
@@ -111,31 +111,31 @@ em, cite {
   /* -webkit-font-smoothing: antialiased; */
   /* -webkit-text-stroke: -1px black; */ }
 
-/* line 13, ../scss/_ipad-start.scss */
+/* line 13, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #West {
   float: left;
   width: 28em; }
-  /* line 17, ../scss/_ipad-start.scss */
+  /* line 17, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #West h1 {
     display: none; }
 
-/* line 22, ../scss/_ipad-start.scss */
+/* line 22, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #East {
   margin-left: 30em; }
 
-/* line 26, ../scss/_ipad-start.scss */
+/* line 26, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #icon {
   display: block;
   margin: 3em 0 0 1.5em;
   width: 22em; }
 
-/* line 32, ../scss/_ipad-start.scss */
+/* line 32, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #series {
   list-style: none;
   margin: 4em 0 0 0.5em;
   padding: 0;
   -webkit-user-select: none; }
-  /* line 38, ../scss/_ipad-start.scss */
+  /* line 38, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #series li {
     background: #f58609;
     -moz-border-radius-topright: 100px;
@@ -156,7 +156,7 @@ em, cite {
     padding: 0;
     position: relative;
     width: 24em; }
-    /* line 49, ../scss/_ipad-start.scss */
+    /* line 49, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
     #series li i {
       display: block;
       height: 100%;
@@ -164,12 +164,12 @@ em, cite {
       top: 0;
       left: 0;
       width: 2em; }
-    /* line 59, ../scss/_ipad-start.scss */
+    /* line 59, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
     #series li a {
       display: block;
       margin: 0 0 0 2em;
       text-decoration: none; }
-      /* line 64, ../scss/_ipad-start.scss */
+      /* line 64, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
       #series li a span.total {
         background-color: black;
         border-bottom: 1em solid black;
@@ -178,11 +178,11 @@ em, cite {
         padding: 0 1em 0 0;
         text-align: right;
         width: 9.5em; }
-        /* line 73, ../scss/_ipad-start.scss */
+        /* line 73, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
         #series li a span.total b {
           font-size: 6em;
           letter-spacing: -1px; }
-      /* line 79, ../scss/_ipad-start.scss */
+      /* line 79, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
       #series li a span.acronym {
         color: black;
         display: block;
@@ -190,28 +190,28 @@ em, cite {
         right: 8em;
         bottom: 1em;
         text-align: left; }
-        /* line 87, ../scss/_ipad-start.scss */
+        /* line 87, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
         #series li a span.acronym b {
           font-size: 1.8em;
           letter-spacing: 0; }
-  /* line 95, ../scss/_ipad-start.scss */
+  /* line 95, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #series .disabled {
     background-color: #333333; }
-    /* line 98, ../scss/_ipad-start.scss */
+    /* line 98, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
     #series .disabled a, #series .disabled b {
       color: #6e6e6e;
       pointer-events: none; }
 
-/* line 106, ../scss/_ipad-start.scss */
+/* line 106, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #lastWatched {
   /* border-bottom: 1em solid $primaryAction; // need HR style for this */
   padding: 0 4em 4em 0.5em; }
-  /* line 110, ../scss/_ipad-start.scss */
+  /* line 110, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #lastWatched figure {
     float: left;
     margin: 0 2em 4em 0;
     padding: 0; }
-    /* line 115, ../scss/_ipad-start.scss */
+    /* line 115, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
     #lastWatched figure img {
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -220,26 +220,26 @@ em, cite {
       -khtml-border-radius: 4px;
       border-radius: 4px;
       border: 0.2em solid #8179fb; }
-  /* line 120, ../scss/_ipad-start.scss */
+  /* line 120, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #lastWatched p {
     font-size: 1.6em; }
-  /* line 124, ../scss/_ipad-start.scss */
+  /* line 124, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #lastWatched h4 {
     color: white;
     font-size: 3.2em;
     letter-spacing: -1px;
     line-height: 1;
     margin-top: 10px; }
-  /* line 132, ../scss/_ipad-start.scss */
+  /* line 132, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #lastWatched h4 strong {
     padding-right: 2rem; }
-  /* line 136, ../scss/_ipad-start.scss */
+  /* line 136, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #lastWatched h4 span {
     color: #bab7fb;
     font-size: 80%;
     white-space: nowrap; }
 
-/* line 145, ../scss/_ipad-start.scss */
+/* line 145, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 .ruleHeading, #suggest {
   background-color: #8179fb;
   -moz-border-radius: 100px;
@@ -255,7 +255,7 @@ em, cite {
   margin-left: -0.5em;
   padding: 0 0 0 4em;
   -webkit-user-select: none; }
-  /* line 156, ../scss/_ipad-start.scss */
+  /* line 156, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   .ruleHeading b, #suggest b {
     background-color: black;
     color: #f58609;
@@ -264,14 +264,14 @@ em, cite {
     padding: 0 0.24em 0 .2em;
     text-transform: uppercase; }
 
-/* line 170, ../scss/_ipad-start.scss */
+/* line 170, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #suggest.lastEpisode b:before {
   content: "Last Watched"; }
-/* line 175, ../scss/_ipad-start.scss */
+/* line 175, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #suggest.suggestedEpisode b:before {
   content: 'Suggested Episode'; }
 
-/* line 181, ../scss/_ipad-start.scss */
+/* line 181, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #southEast {
   background-color: #bab7fb;
   -moz-border-radius-topleft: 60px 50px;
@@ -281,7 +281,7 @@ em, cite {
   -khtml-border-top-left-radius: 60px 50px;
   border-top-left-radius: 60px 50px;
   padding: 2em 0 0 10em; }
-  /* line 186, ../scss/_ipad-start.scss */
+  /* line 186, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #southEast .inner {
     -moz-border-radius-topleft: 30px 25px;
     -webkit-border-top-left-radius: 30px 25px;
@@ -292,13 +292,13 @@ em, cite {
     height: 17em;
     padding: 2em; }
 
-/* line 193, ../scss/_ipad-start.scss */
+/* line 193, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
 #numberSet {
   list-style: none;
   margin: 0 0 0 1em;
   overflow: hidden;
   padding: 0; }
-  /* line 199, ../scss/_ipad-start.scss */
+  /* line 199, /Users/jay/Sites/LCARS/scss/_ipad-start.scss */
   #numberSet li {
     color: #f58609;
     float: left;
@@ -312,18 +312,18 @@ em, cite {
 /*
     Episode View
 */
-/* line 5, ../scss/_ipad-episode.scss */
+/* line 5, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 a {
   color: white;
   text-decoration: none; }
 
-/* line 10, ../scss/_ipad-episode.scss */
+/* line 10, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .content {
   font-family: HelveticaNeue;
   line-height: 1.4;
   -webkit-user-select: default; }
 
-/* line 16, ../scss/_ipad-episode.scss */
+/* line 16, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #top {
   background-color: #f58609;
   -moz-border-radius-bottomleft: 60px 50px;
@@ -335,7 +335,7 @@ a {
   margin-bottom: 1em;
   padding: 0 0 2em 10em; }
 
-/* line 23, ../scss/_ipad-episode.scss */
+/* line 23, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #bottom {
   background-color: #f58609;
   -moz-border-radius-topleft: 60px 50px;
@@ -346,12 +346,12 @@ a {
   border-top-left-radius: 60px 50px;
   padding: 2em 0 0 10em; }
 
-/* line 29, ../scss/_ipad-episode.scss */
+/* line 29, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .inner {
   background-color: black;
   padding: 20px;
   position: relative; }
-  /* line 34, ../scss/_ipad-episode.scss */
+  /* line 34, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   .inner > .separator {
     background-color: black;
     display: block;
@@ -361,17 +361,17 @@ a {
     left: 100px;
     width: 1em; }
 
-/* line 45, ../scss/_ipad-episode.scss */
+/* line 45, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #bottom .separator {
   top: -20px;
   bottom: auto; }
 
-/* line 49, ../scss/_ipad-episode.scss */
+/* line 49, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .separator.right {
   left: auto;
   right: 35px; }
 
-/* line 54, ../scss/_ipad-episode.scss */
+/* line 54, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .sweepButton {
   background-color: #8179fb;
   border: 1em solid black;
@@ -380,19 +380,19 @@ a {
   position: absolute;
   text-align: right;
   width: 8em; }
-  /* line 63, ../scss/_ipad-episode.scss */
+  /* line 63, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   .sweepButton b {
     font-size: 1.6em; }
-  /* line 67, ../scss/_ipad-episode.scss */
+  /* line 67, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   .sweepButton.horz {
     height: 2em;
     padding: 0 1em; }
-  /* line 71, ../scss/_ipad-episode.scss */
+  /* line 71, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   .sweepButton.vert {
     height: 1em;
     line-height: 0.3;
     padding: 4em 1em 1em; }
-  /* line 76, ../scss/_ipad-episode.scss */
+  /* line 76, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   .sweepButton.sweepHeading {
     background-color: black;
     border-width: 10px 6px 10px 5px;
@@ -403,14 +403,14 @@ a {
     padding: 0;
     text-transform: uppercase;
     width: auto; }
-    /* line 87, ../scss/_ipad-episode.scss */
+    /* line 87, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
     .sweepButton.sweepHeading b {
       font-size: 2.5em; }
-  /* line 91, ../scss/_ipad-episode.scss */
+  /* line 91, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   .sweepButton:active {
     background-color: #5247fa; }
 
-/* line 96, ../scss/_ipad-episode.scss */
+/* line 96, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #backTop {
   background-color: transparent;
   border-width: 1em 1em 1.2em;
@@ -419,23 +419,23 @@ a {
   left: 100px;
   width: 366px;
   -webkit-transition: backgroundColor 1s ease-in; }
-  /* line 105, ../scss/_ipad-episode.scss */
+  /* line 105, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #backTop.active {
     background-color: #c46b07; }
-  /* line 109, ../scss/_ipad-episode.scss */
+  /* line 109, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #backTop:active {
     background-color: #935005; }
 
-/* line 114, ../scss/_ipad-episode.scss */
+/* line 114, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #playCount {
   top: -30px;
   right: 230px; }
-  /* line 118, ../scss/_ipad-episode.scss */
+  /* line 118, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #playCount b:active {
     background-color: black;
     color: #dddddd; }
 
-/* line 124, ../scss/_ipad-episode.scss */
+/* line 124, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #back {
   height: 40px;
   line-height: 1;
@@ -443,12 +443,12 @@ a {
   top: 30px;
   left: -110px; }
 
-/* line 132, ../scss/_ipad-episode.scss */
+/* line 132, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #random {
   bottom: -30px;
   right: 2.5%; }
 
-/* line 137, ../scss/_ipad-episode.scss */
+/* line 137, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #episodeNumber {
   /* background-color: $informational; */
   background-color: transparent;
@@ -460,12 +460,12 @@ a {
   }
   */ }
 
-/* line 150, ../scss/_ipad-episode.scss */
+/* line 150, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #previous {
   top: 270px;
   left: -110px; }
 
-/* line 155, ../scss/_ipad-episode.scss */
+/* line 155, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #next {
   height: 80px;
   line-height: 1;
@@ -473,7 +473,7 @@ a {
   top: 340px;
   left: -110px; }
 
-/* line 163, ../scss/_ipad-episode.scss */
+/* line 163, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #episodeNav {
   /* background-color: $informational; */
   background-color: transparent;
@@ -487,7 +487,7 @@ a {
           }
   */ }
 
-/* line 178, ../scss/_ipad-episode.scss */
+/* line 178, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #top .inner {
   -moz-border-radius-bottomleft: 30px 25px;
   -webkit-border-bottom-left-radius: 30px 25px;
@@ -496,11 +496,11 @@ a {
   -khtml-border-bottom-left-radius: 30px 25px;
   border-bottom-left-radius: 30px 25px;
   padding-top: 2em; }
-  /* line 182, ../scss/_ipad-episode.scss */
+  /* line 182, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #top .inner h1 {
     font-size: 3.2em; }
 
-/* line 187, ../scss/_ipad-episode.scss */
+/* line 187, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #bottom .inner {
   -moz-border-radius-topleft: 30px 25px;
   -webkit-border-top-left-radius: 30px 25px;
@@ -511,15 +511,15 @@ a {
   padding-right: 2.5%;
   padding-bottom: 0; }
 
-/* line 193, ../scss/_ipad-episode.scss */
+/* line 193, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #characters {
   list-style: none;
   margin: 0;
   padding: 0; }
-  /* line 198, ../scss/_ipad-episode.scss */
+  /* line 198, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #characters li {
     float: left; }
-  /* line 202, ../scss/_ipad-episode.scss */
+  /* line 202, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #characters li a {
     background-color: #f8b462;
     -moz-border-radius: 100px;
@@ -536,24 +536,24 @@ a {
     text-align: right;
     text-transform: uppercase;
     width: 7em; }
-    /* line 214, ../scss/_ipad-episode.scss */
+    /* line 214, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
     #characters li a .pipe {
       border-left: 0.3em solid black;
       height: 3em;
       position: absolute;
       top: 0;
       left: 1.4em; }
-    /* line 222, ../scss/_ipad-episode.scss */
+    /* line 222, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
     #characters li a b {
       font-size: 1.6em; }
 
-/* line 232, ../scss/_ipad-episode.scss */
+/* line 232, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #search {
   position: absolute;
   top: 20px;
   right: 20px; }
 
-/* line 237, ../scss/_ipad-episode.scss */
+/* line 237, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #searchInput {
   -webkit-appearance: none;
   background-color: black;
@@ -570,7 +570,7 @@ a {
   text-align: right;
   width: 160px; }
 
-/* line 249, ../scss/_ipad-episode.scss */
+/* line 249, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 hr {
   background-color: #bab7fb;
   border-color: #bab7fb;
@@ -586,7 +586,7 @@ hr {
   line-height: 1;
   height: 1px; }
 
-/* line 262, ../scss/_ipad-episode.scss */
+/* line 262, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article {
   -moz-border-radius-topleft: 15px 12px;
   -webkit-border-top-left-radius: 15px 12px;
@@ -597,72 +597,72 @@ article {
   /* height: 550px; */
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
-  /* line 268, ../scss/_ipad-episode.scss */
+  /* line 268, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   .ipad article header {
     padding-right: 34em; }
 
-/* line 273, ../scss/_ipad-episode.scss */
+/* line 273, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article .content {
   color: white;
   padding-right: 4em; }
-  /* line 277, ../scss/_ipad-episode.scss */
+  /* line 277, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   article .content > p {
     text-align: justify;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto; }
 
-/* line 285, ../scss/_ipad-episode.scss */
+/* line 285, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article .content > p {
   font-size: 1.6em; }
 
-/* line 289, ../scss/_ipad-episode.scss */
+/* line 289, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article h1 {
   color: white;
   font-size: 3.2em;
   letter-spacing: -1px;
   line-height: 1;
   margin-top: 10px; }
-  /* line 296, ../scss/_ipad-episode.scss */
+  /* line 296, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   article h1 strong {
     padding-right: 2rem; }
-  /* line 299, ../scss/_ipad-episode.scss */
+  /* line 299, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   article h1 span {
     color: #bab7fb;
     font-size: 80%;
     text-transform: uppercase;
     white-space: nowrap; }
 
-/* line 307, ../scss/_ipad-episode.scss */
+/* line 307, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #playCountTitle {
   display: none; }
-  /* line 310, ../scss/_ipad-episode.scss */
+  /* line 310, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #playCountTitle:before {
     content: ' \00B7'; }
 
-/* line 315, ../scss/_ipad-episode.scss */
+/* line 315, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article h2 {
   font-size: 2.4em; }
 
-/* line 319, ../scss/_ipad-episode.scss */
+/* line 319, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article h4 {
   font-size: 1.6em; }
 
-/* line 323, ../scss/_ipad-episode.scss */
+/* line 323, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .teaser:before {
   color: #bab7fb;
   content: "Teaser: ";
   font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
   text-transform: uppercase; }
 
-/* line 330, ../scss/_ipad-episode.scss */
+/* line 330, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .plotSummary:before {
   color: #bab7fb;
   content: "Plot Summary: ";
   font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
   text-transform: uppercase; }
 
-/* line 337, ../scss/_ipad-episode.scss */
+/* line 337, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #quotes {
   color: #bab7fb;
   font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
@@ -670,7 +670,7 @@ article h4 {
   padding-bottom: 0.8em;
   position: relative; }
 
-/* line 344, ../scss/_ipad-episode.scss */
+/* line 344, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #quotes:before {
   color: #bab7fb;
   content: "Quotes: ";
@@ -679,12 +679,12 @@ article h4 {
   line-height: 1.8;
   text-transform: uppercase; }
 
-/* line 353, ../scss/_ipad-episode.scss */
+/* line 353, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #quotes blockquote {
   margin: 0;
   /*     width: 2494px; */ }
 
-/* line 358, ../scss/_ipad-episode.scss */
+/* line 358, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #quotes p {
   display: block;
   float: left;
@@ -694,43 +694,43 @@ article h4 {
   -webkit-overflow-scrolling: touch;
   padding: 0 4em;
   /*     width: 46.4em; */ }
-  /* line 368, ../scss/_ipad-episode.scss */
+  /* line 368, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #quotes p span {
     font-size: 2.4em; }
 
-/* line 372, ../scss/_ipad-episode.scss */
+/* line 372, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #quotes p:first-child {
   text-indent: -0.35em; }
 
 /* Generated quotes */
-/* line 377, ../scss/_ipad-episode.scss */
+/* line 377, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #quotes p:first-child span:before {
   content: "\201C"; }
 
-/* line 380, ../scss/_ipad-episode.scss */
+/* line 380, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #quotes p:last-child cite:before {
   content: "\201D";
   font-size: 1.25em;
   font-style: normal; }
 
-/* line 387, ../scss/_ipad-episode.scss */
+/* line 387, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #quotes cite {
   font-size: 0.8em; }
 
-/* line 391, ../scss/_ipad-episode.scss */
+/* line 391, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .tags {
   font-size: 1.6em;
   padding-left: 0;
   -webkit-user-select: none; }
 
-/* line 397, ../scss/_ipad-episode.scss */
+/* line 397, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .tags:before {
   color: #bab7fb;
   content: "Tags: ";
   font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
   text-transform: uppercase; }
 
-/* line 403, ../scss/_ipad-episode.scss */
+/* line 403, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .tags li {
   color: #dddddd;
   display: inline;
@@ -739,17 +739,17 @@ article h4 {
   text-transform: uppercase;
   white-space: nowrap; }
 
-/* line 411, ../scss/_ipad-episode.scss */
+/* line 411, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .tags li:after {
   content: ', ';
   font-family: "HelveticaNeue-CondensedBold",HelveticaNeue;
   text-transform: uppercase; }
 
-/* line 416, ../scss/_ipad-episode.scss */
+/* line 416, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .tags li:last-child:after {
   content: ''; }
 
-/* line 421, ../scss/_ipad-episode.scss */
+/* line 421, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .tags li:hover,
 .tags li:focus,
 .tags li:active {
@@ -764,41 +764,41 @@ article h4 {
   cursor: pointer;
   padding: 0 8px; }
 
-/* line 428, ../scss/_ipad-episode.scss */
+/* line 428, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 .tags li:hover:after {
   content: ''; }
 
-/* line 432, ../scss/_ipad-episode.scss */
+/* line 432, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article aside {
   float: right;
   margin: 0 0 2em 4em;
   width: 30em; }
 
-/* line 438, ../scss/_ipad-episode.scss */
+/* line 438, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article aside h4 {
   color: #bab7fb;
   margin: 0;
   text-transform: uppercase; }
 
-/* line 444, ../scss/_ipad-episode.scss */
+/* line 444, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #rating {
   margin: 10px 0 0; }
 
-/* line 448, ../scss/_ipad-episode.scss */
+/* line 448, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #rating #myrating {
   float: left;
   width: 50%; }
 
-/* line 453, ../scss/_ipad-episode.scss */
+/* line 453, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #rating #avgrating {
   margin-left: 50%; }
 
-/* line 457, ../scss/_ipad-episode.scss */
+/* line 457, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #rating p {
   font-size: 2.4em;
   margin: 0 0 1em; }
 
-/* line 462, ../scss/_ipad-episode.scss */
+/* line 462, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article aside img {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -807,42 +807,42 @@ article aside img {
   -khtml-border-radius: 4px;
   border-radius: 4px; }
 
-/* line 466, ../scss/_ipad-episode.scss */
+/* line 466, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article aside figure {
   margin: 1.4em 0 0.2em; }
 
-/* line 470, ../scss/_ipad-episode.scss */
+/* line 470, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 article aside figure img {
   border: 0.2em solid #8179fb;
   max-width: 100%; }
 
-/* line 475, ../scss/_ipad-episode.scss */
+/* line 475, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #thumbs {
   margin: 0 0 2em 0; }
 
-/* line 480, ../scss/_ipad-episode.scss */
+/* line 480, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #thumbs ul,
 #thumbs li {
   list-style: none;
   margin: 0;
   padding: 0; }
 
-/* line 486, ../scss/_ipad-episode.scss */
+/* line 486, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #thumbs li {
   float: left; }
 
-/* line 490, ../scss/_ipad-episode.scss */
+/* line 490, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #thumbs li a {
   display: block;
   margin-right: 0.4em; }
 
-/* line 495, ../scss/_ipad-episode.scss */
+/* line 495, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #thumbs li a img {
   border: 0.2em solid #8179fb;
   height: 92px;
   width: 92px; }
 
-/* line 501, ../scss/_ipad-episode.scss */
+/* line 501, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #meta {
   clear: both;
   list-style: none;
@@ -850,22 +850,22 @@ article aside figure img {
   padding: 20px 10px 0 20px;
   text-indent: -20px; }
 
-/* line 508, ../scss/_ipad-episode.scss */
+/* line 508, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #meta li {
   font-size: 1.6em;
   margin-bottom: 0.4em; }
 
-/* line 513, ../scss/_ipad-episode.scss */
+/* line 513, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #social {
   list-style: none;
   margin: 0 0 2em;
   padding: 1em 0 80px; }
 
-/* line 518, ../scss/_ipad-episode.scss */
+/* line 518, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #social li {
   float: right; }
 
-/* line 521, ../scss/_ipad-episode.scss */
+/* line 521, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #social li a {
   background-color: transparent;
   border: 2px solid #bab7fb;
@@ -876,11 +876,11 @@ article aside figure img {
   text-align: right;
   text-transform: uppercase;
   width: 100px; }
-  /* line 532, ../scss/_ipad-episode.scss */
+  /* line 532, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #social li a b {
     font-size: 1.6em; }
 
-/* line 536, ../scss/_ipad-episode.scss */
+/* line 536, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #social li:first-child a {
   -moz-border-radius-bottomright: 100px;
   -webkit-border-bottom-right-radius: 100px;
@@ -895,7 +895,7 @@ article aside figure img {
   -khtml-border-top-right-radius: 100px;
   border-top-right-radius: 100px; }
 
-/* line 540, ../scss/_ipad-episode.scss */
+/* line 540, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
 #social li:last-child a {
   -moz-border-radius-bottomleft: 100px;
   -webkit-border-bottom-left-radius: 100px;
@@ -912,28 +912,28 @@ article aside figure img {
 
 /* iPad, portrait */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
-  /* line 551, ../scss/_ipad-episode.scss */
+  /* line 551, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   body.ipad {
     /*         max-height: 100%; */
     height: 1024px;
     width: 768px; }
 
-  /* line 558, ../scss/_ipad-episode.scss */
+  /* line 558, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #bottom,
   #top {
     margin-left: 0; }
 
-  /* line 562, ../scss/_ipad-episode.scss */
+  /* line 562, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   article {
     /*         height: 770px; */ }
 
-  /* line 566, ../scss/_ipad-episode.scss */
+  /* line 566, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #quotes p {
     margin: 0.5em 0;
     padding: 0 2em;
     /*         width: 248px; */ }
 
-  /* line 572, ../scss/_ipad-episode.scss */
+  /* line 572, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #social li a {
     margin: 0 4px 10px 0;
     padding: 4px 8px 4px 4px;
@@ -941,38 +941,38 @@ article aside figure img {
     text-transform: uppercase;
     width: 100px; }
 
-  /* line 580, ../scss/_ipad-episode.scss */
+  /* line 580, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #grid2 {
     height: 700px; }
-    /* line 583, ../scss/_ipad-episode.scss */
+    /* line 583, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
     #grid2 .season {
       padding: 0 0.3em; }
-    /* line 586, ../scss/_ipad-episode.scss */
+    /* line 586, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
     #grid2 .episode {
       padding: 0 0.5em 0 0.3em; }
-    /* line 589, ../scss/_ipad-episode.scss */
+    /* line 589, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
     #grid2 .episodeName {
       padding: 0 1em 0 0.3em;
       width: 18em; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
-  /* line 597, ../scss/_ipad-episode.scss */
+  /* line 597, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   body.ipad {
     height: 768px;
     width: 1024px; }
 
-  /* line 603, ../scss/_ipad-episode.scss */
+  /* line 603, /Users/jay/Sites/LCARS/scss/_ipad-episode.scss */
   #bottom,
   #top {
     margin-left: 0; } }
 /*
     Grid view, iPad
 */
-/* line 5, ../scss/_ipad-grid.scss */
+/* line 5, /Users/jay/Sites/LCARS/scss/_ipad-grid.scss */
 #grid td {
   font-size: 2.5em;
   line-height: 1.5; }
 
-/* line 10, ../scss/_ipad-grid.scss */
+/* line 10, /Users/jay/Sites/LCARS/scss/_ipad-grid.scss */
 h3 b {
   color: #dddddd;
   font-size: 2.1em;
@@ -980,14 +980,14 @@ h3 b {
   padding-left: 7.6em;
   text-transform: uppercase; }
 
-/* line 18, ../scss/_ipad-grid.scss */
+/* line 18, /Users/jay/Sites/LCARS/scss/_ipad-grid.scss */
 #navBar {
   display: none; }
 
-/* line 22, ../scss/_ipad-grid.scss */
+/* line 22, /Users/jay/Sites/LCARS/scss/_ipad-grid.scss */
 #grid {
   padding-bottom: 6em; }
-  /* line 24, ../scss/_ipad-grid.scss */
+  /* line 24, /Users/jay/Sites/LCARS/scss/_ipad-grid.scss */
   #grid .season {
     border-left: 1.5em solid #b182bb;
     -moz-border-radius-topleft: 100px;
@@ -1004,58 +1004,58 @@ h3 b {
     border-bottom-left-radius: 100px;
     color: #8179fb;
     padding: 0 0.4em; }
-  /* line 31, ../scss/_ipad-grid.scss */
+  /* line 31, /Users/jay/Sites/LCARS/scss/_ipad-grid.scss */
   #grid .episode {
     color: #bab7fb;
     padding: 0 1em 0 0.4em; }
-  /* line 35, ../scss/_ipad-grid.scss */
+  /* line 35, /Users/jay/Sites/LCARS/scss/_ipad-grid.scss */
   #grid .episodeName {
     padding: 0 1em 0 0.4em;
     width: 21em; }
 
 /* iPhone, portrait and landscape */
 @media only screen and (max-device-width: 480px) {
-  /* line 5, ../scss/_iphone-start.scss */
+  /* line 5, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
   #start {
     background-color: black;
     -webkit-box-sizing: border-box;
     padding: 1em;
     position: relative; }
 
-  /* line 12, ../scss/_iphone-start.scss */
+  /* line 12, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
   #West {
     float: left;
     width: 100%; }
-    /* line 16, ../scss/_iphone-start.scss */
+    /* line 16, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
     #West h1 {
       color: #dddddd;
       display: block;
       margin: 1.25em 0 0 4em;
       text-transform: uppercase; }
-      /* line 22, ../scss/_iphone-start.scss */
+      /* line 22, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
       #West h1 strong {
         font-size: 1.6em; }
 
-  /* line 28, ../scss/_iphone-start.scss */
+  /* line 28, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
   #East {
     margin-left: 0; }
 
-  /* line 32, ../scss/_iphone-start.scss */
+  /* line 32, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
   #icon {
     display: block;
     float: left;
     margin: 2em 2em 1em 0.5em;
     width: 50px; }
 
-  /* line 39, ../scss/_iphone-start.scss */
+  /* line 39, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
   #series {
     clear: both;
     margin: 1em 0 0 0.5em;
     padding: 0; }
-    /* line 44, ../scss/_iphone-start.scss */
+    /* line 44, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
     #series .clear {
       display: block; }
-    /* line 48, ../scss/_iphone-start.scss */
+    /* line 48, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
     #series li {
       height: 4.6em;
       line-height: 0.7;
@@ -1063,7 +1063,7 @@ h3 b {
       padding: 0;
       position: relative;
       width: 100%; }
-      /* line 56, ../scss/_iphone-start.scss */
+      /* line 56, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
       #series li i {
         background-color: #f58609;
         display: block;
@@ -1072,87 +1072,87 @@ h3 b {
         top: 0;
         left: 0;
         width: 4em; }
-      /* line 66, ../scss/_iphone-start.scss */
+      /* line 66, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
       #series li a {
         margin: 0 0 0 4em; }
-        /* line 69, ../scss/_iphone-start.scss */
+        /* line 69, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
         #series li a span.total {
           border-bottom: 1em solid black;
           padding: 0 1em 0 0;
           width: 9.5em; }
-          /* line 74, ../scss/_iphone-start.scss */
+          /* line 74, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
           #series li a span.total b {
             font-size: 6em;
             letter-spacing: -1px; }
-        /* line 80, ../scss/_iphone-start.scss */
+        /* line 80, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
         #series li a span.acronym {
           position: absolute;
           right: 10em;
           bottom: 1em; }
-          /* line 85, ../scss/_iphone-start.scss */
+          /* line 85, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
           #series li a span.acronym b {
             font-size: 2.2em;
             letter-spacing: 0; }
-    /* line 93, ../scss/_iphone-start.scss */
+    /* line 93, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
     #series .disabled {
       background-color: #333333; }
-      /* line 96, ../scss/_iphone-start.scss */
+      /* line 96, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
       #series .disabled i {
         background-color: #333333; }
-      /* line 100, ../scss/_iphone-start.scss */
+      /* line 100, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
       #series .disabled a, #series .disabled b {
         color: #6e6e6e;
         pointer-events: none; }
 
-  /* line 108, ../scss/_iphone-start.scss */
+  /* line 108, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
   #lastWatched,
   .ruleHeading,
   #suggest {
     clear: both;
     display: none; }
 
-  /* line 112, ../scss/_iphone-start.scss */
+  /* line 112, /Users/jay/Sites/LCARS/scss/_iphone-start.scss */
   #numberSet {
     display: none; } }
 /*
     Grid view
 */
 @media only screen and (max-device-width: 480px) {
-  /* line 7, ../scss/_iphone-grid.scss */
+  /* line 7, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
   #grid {
     padding-bottom: 6em;
     max-width: 320px;
     width: 320px; }
-    /* line 13, ../scss/_iphone-grid.scss */
+    /* line 13, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid #top .inner {
       padding: 2em 0 1px; }
-      /* line 16, ../scss/_iphone-grid.scss */
+      /* line 16, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
       #grid #top .inner #navBar {
         display: block; }
-      /* line 19, ../scss/_iphone-grid.scss */
+      /* line 19, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
       #grid #top .inner .separator {
         display: none; }
-    /* line 26, ../scss/_iphone-grid.scss */
+    /* line 26, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid #bottom .inner {
       padding: 0 !important; }
-      /* line 29, ../scss/_iphone-grid.scss */
+      /* line 29, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
       #grid #bottom .inner .separator {
         display: none; }
-      /* line 32, ../scss/_iphone-grid.scss */
+      /* line 32, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
       #grid #bottom .inner .separator.right {
         display: block;
         height: 4em;
         margin-top: -2em; }
-    /* line 38, ../scss/_iphone-grid.scss */
+    /* line 38, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid #bottom #scrollIntoView {
       display: none; }
-    /* line 43, ../scss/_iphone-grid.scss */
+    /* line 43, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid article {
       padding: 1em 0 0; }
-    /* line 47, ../scss/_iphone-grid.scss */
+    /* line 47, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid h3 {
       display: none; }
-      /* line 50, ../scss/_iphone-grid.scss */
+      /* line 50, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
       #grid h3 b {
         color: #dddddd;
         font-size: 1.9em;
@@ -1160,10 +1160,10 @@ h3 b {
         padding-left: 0.6em;
         text-align: center;
         text-transform: uppercase; }
-    /* line 59, ../scss/_iphone-grid.scss */
+    /* line 59, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid table {
       max-width: 320px; }
-    /* line 62, ../scss/_iphone-grid.scss */
+    /* line 62, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid .season {
       border-left: none;
       -moz-border-radius-topleft: 100px;
@@ -1181,38 +1181,38 @@ h3 b {
       font-size: 1.3em;
       height: 2em;
       padding: 0 0 0 .2em; }
-    /* line 70, ../scss/_iphone-grid.scss */
+    /* line 70, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid .episode {
       color: #bab7fb;
       font-size: 1.3em;
       padding: 0 .6em 0 0; }
-    /* line 75, ../scss/_iphone-grid.scss */
+    /* line 75, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid .episodeName {
       font-size: 1.8em;
       line-height: 1;
       padding: 0 .8em 0.3em 0; }
-    /* line 84, ../scss/_iphone-grid.scss */
+    /* line 84, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid .rating {
       font-size: 1.3em;
       line-height: 1.2; }
-    /* line 88, ../scss/_iphone-grid.scss */
+    /* line 88, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid td {
       vertical-align: top; }
-    /* line 91, ../scss/_iphone-grid.scss */
+    /* line 91, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     #grid tr td:last-child {
       display: none !important; }
 
-  /* line 96, ../scss/_iphone-grid.scss */
+  /* line 96, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
   .ruleHeading, #suggest {
     display: block;
     line-height: 1;
     margin-bottom: 0; }
-    /* line 101, ../scss/_iphone-grid.scss */
+    /* line 101, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     .ruleHeading b, #suggest b {
       display: inline-block;
       font-size: 3.8em;
       line-height: 0.75; }
-    /* line 107, ../scss/_iphone-grid.scss */
+    /* line 107, /Users/jay/Sites/LCARS/scss/_iphone-grid.scss */
     .ruleHeading.flushLeft, .flushLeft#suggest {
       -moz-border-radius-topleft: 0;
       -webkit-border-top-left-radius: 0;
@@ -1229,12 +1229,12 @@ h3 b {
       margin-left: 0; } }
 /* iPhone, portrait and landscape */
 @media only screen and (max-device-width: 480px) {
-  /* line 6, ../scss/_iphone-episode.scss */
+  /* line 6, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   html {
     background-color: black;
     /* height: 320px; */ }
 
-  /* line 11, ../scss/_iphone-episode.scss */
+  /* line 11, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   body {
     background-color: black;
     /* height: 320px; */
@@ -1243,7 +1243,7 @@ h3 b {
     width: 100%; }
 
   /* Episode View */
-  /* line 23, ../scss/_iphone-episode.scss */
+  /* line 23, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   .inner {
     background-color: black;
     -moz-border-radius-topleft: 0;
@@ -1255,7 +1255,7 @@ h3 b {
     padding: 0;
     position: relative; }
 
-  /* line 29, ../scss/_iphone-episode.scss */
+  /* line 29, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #top {
     background-color: black;
     -moz-border-radius-bottomleft: 0;
@@ -1266,21 +1266,21 @@ h3 b {
     border-bottom-left-radius: 0;
     margin: 0;
     padding: 0; }
-    /* line 35, ../scss/_iphone-episode.scss */
+    /* line 35, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     #top .inner {
       padding: 2em 0 1px; }
-      /* line 38, ../scss/_iphone-episode.scss */
+      /* line 38, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
       #top .inner * {
         display: none; }
-      /* line 41, ../scss/_iphone-episode.scss */
+      /* line 41, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
       #top .inner #navBar {
         display: block; }
-        /* line 44, ../scss/_iphone-episode.scss */
+        /* line 44, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
         #top .inner #navBar b {
           display: inline;
           white-space: nowrap; }
 
-  /* line 52, ../scss/_iphone-episode.scss */
+  /* line 52, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #bottom {
     background-color: black;
     -moz-border-radius-topleft: 0;
@@ -1292,28 +1292,28 @@ h3 b {
     margin: 0;
     padding: 0;
     position: relative; }
-    /* line 59, ../scss/_iphone-episode.scss */
+    /* line 59, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     #bottom .inner {
       padding-right: 5px !important; }
-      /* line 62, ../scss/_iphone-episode.scss */
+      /* line 62, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
       #bottom .inner .separator {
         display: none; }
-      /* line 65, ../scss/_iphone-episode.scss */
+      /* line 65, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
       #bottom .inner .separator.right {
         display: block;
         height: 4em;
         margin-top: -2em; }
-    /* line 72, ../scss/_iphone-episode.scss */
+    /* line 72, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     #bottom .inner nav {
       display: none; }
 
-  /* line 77, ../scss/_iphone-episode.scss */
+  /* line 77, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #playCount {
     top: -3em;
     right: 1em;
     pointer-events: none; }
 
-  /* line 83, ../scss/_iphone-episode.scss */
+  /* line 83, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   article {
     height: 460px;
     margin: 0;
@@ -1322,65 +1322,65 @@ h3 b {
     padding: 0 1em;
     position: relative; }
 
-  /* line 93, ../scss/_iphone-episode.scss */
+  /* line 93, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   article header h1 {
     padding-left: .45em;
     text-indent: -0.45em; }
-    /* line 96, ../scss/_iphone-episode.scss */
+    /* line 96, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     article header h1 strong {
       padding-right: 0; }
-    /* line 100, ../scss/_iphone-episode.scss */
+    /* line 100, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     article header h1 span {
       display: block;
       padding-top: .4em; }
-  /* line 106, ../scss/_iphone-episode.scss */
+  /* line 106, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   article aside {
     margin: 0 0 2em 1em;
     width: 48%; }
-    /* line 112, ../scss/_iphone-episode.scss */
+    /* line 112, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     article aside * {
       display: none; }
-    /* line 117, ../scss/_iphone-episode.scss */
+    /* line 117, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     article aside figure,
     article aside figure img {
       display: block !important; }
-    /* line 120, ../scss/_iphone-episode.scss */
+    /* line 120, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     article aside.clicked {
       margin-left: 0;
       width: 100%; }
-    /* line 124, ../scss/_iphone-episode.scss */
+    /* line 124, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     article aside.clicked figure img {
       width: 100%; }
 
-  /* line 129, ../scss/_iphone-episode.scss */
+  /* line 129, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #playCountTitle {
     display: inline; }
 
-  /* line 132, ../scss/_iphone-episode.scss */
+  /* line 132, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   article .content {
     color: white;
     padding-right: 0.5em; }
 
-  /* line 137, ../scss/_iphone-episode.scss */
+  /* line 137, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #quotes p {
     margin: 2em 0;
     padding: 0 2em; }
 
-  /* line 141, ../scss/_iphone-episode.scss */
+  /* line 141, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #quotes p:first-child {
     text-indent: -1em; }
 
-  /* line 145, ../scss/_iphone-episode.scss */
+  /* line 145, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #social {
     list-style: none;
     margin: 0 0 2em;
     padding: 1em 0 3em; }
 
-  /* line 150, ../scss/_iphone-episode.scss */
+  /* line 150, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #social li {
     float: right; }
 
-  /* line 153, ../scss/_iphone-episode.scss */
+  /* line 153, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #social li a {
     background-color: transparent;
     border: 2px solid #bab7fb;
@@ -1391,11 +1391,11 @@ h3 b {
     text-align: right;
     text-transform: uppercase;
     width: 5.1em; }
-    /* line 164, ../scss/_iphone-episode.scss */
+    /* line 164, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
     #social li a b {
       font-size: 1.2em; }
 
-  /* line 168, ../scss/_iphone-episode.scss */
+  /* line 168, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #social li:first-child a {
     -moz-border-radius-bottomright: 100px;
     -webkit-border-bottom-right-radius: 100px;
@@ -1410,7 +1410,7 @@ h3 b {
     -khtml-border-top-right-radius: 100px;
     border-top-right-radius: 100px; }
 
-  /* line 172, ../scss/_iphone-episode.scss */
+  /* line 172, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   #social li:last-child a {
     -moz-border-radius-bottomleft: 100px;
     -webkit-border-bottom-left-radius: 100px;
@@ -1428,6 +1428,6 @@ h3 b {
   /* End Episode View */ }
 /* iPhone, landscape */
 @media only screen and (max-device-width: 480px) and (orientation:landscape) {
-  /* line 186, ../scss/_iphone-episode.scss */
+  /* line 186, /Users/jay/Sites/LCARS/scss/_iphone-episode.scss */
   article {
     height: 300px; } }

@@ -3,27 +3,28 @@ Ext.define('LCARS.controller.Episodes', {
 
     config: {
         refs: {
-            'main' : 'main'
+            'random' : '#random'
         },
 
-        control : {
-            episodelist : {
-                itemtap: 'onEpisodeTap'
+        control: {
+            random : {
+                tap : 'onRandomTap'
             }
         }
     },
 
-    onEpisodeTap: function(dataView, index, target, record) {
-        var titleTpl = record.get('EpisodeName') + ' S0' + record.get('DVD_season') + ' E0' + record.get('EpisodeNumber');
-        var date = record.get('FirstAired');
-        date = new Date(date);
-        var UTCstring = date.toUTCString();
+    randomNumber: function(from, to) {
+        return Math.floor(Math.random() * (to - from + 1) + from);
+    },
+    
+    getRandomEpisode: function() {
+        var seriesStore  = Ext.getStore('Series'),
+            series       = seriesStore.getAt(this.randomNumber(0,5)),
+            episodeStore = series.episodes(),
+            episode      = episodeStore.getAt(this.randomNumber(0,episodeStore.getCount() - 1));
+        
+        return episode;
+    },
 
-        this.getMain().push({
-            xtype: 'episode',
-            record: record,
-            title: titleTpl
-        });
-    }
-
+    onRandomTap: Ext.emptyFn
 });
