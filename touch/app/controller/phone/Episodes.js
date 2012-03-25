@@ -3,31 +3,71 @@ Ext.define('LCARS.controller.phone.Episodes', {
 
     config: {
         refs: {
-            'main' : 'mainphone'
-        }
-/*
+            main : 'mainphone',
+            episode : 'episodephone',
+            share  : 'button[action=share]',
+            episodeList : 'episodelistphone'
+        },
         control : {
-            episodelistphone : {
-                itemtap: 'onEpisodeTap'
+            share : {
+                tap: 'onShareTap'
+            },
+            episode: {
+                swipeepisode: 'onEpisodeSwipe'
             }
         }
-*/
     },
 
-/*
-    onEpisodeTap: function(dataView, index, target, record) {
-        var titleTpl = record.get('EpisodeName') + ' S0' + record.get('DVD_season') + ' E0' + record.get('EpisodeNumber');
-        var date = record.get('FirstAired');
-        date = new Date(date);
-        var UTCstring = date.toUTCString();
+    onShareTap: function() {
+        if (!this.actions) {
+            this.actions = Ext.Viewport.add({
+                xtype: 'actionsheet',
+                items: [
+                    {
+                        text: 'Edit',
+                        scope: this,
+                        handler: function() {
+                            //
+                        }
+                    },
+                    {
+                        text: 'Watch',
+                        scope: this,
+                        handler: function() {
+                            //
+                        }
+                    },
+                    {
+                        xtype: 'button',
+                        text: 'Share',
+                        scope: this,
+                        handler: function() {
+                            //
+                        }
+                    },
+                    {
+                        xtype: 'button',
+                        ui: 'decline',
+                        text: 'Cancel',
+                        scope: this,
+                        handler: function() {
+                            this.actions.hide();
+                        }
+                    }
+                ]
+            });
+        }
 
-        this.getMain().push({
-            xtype: 'episodephone',
-            record: record,
-            title: titleTpl
-        });
+        this.actions.show();
     },
-*/
+
+    onEpisodeSwipe: function(episodeView, direction) {
+        if (direction == "left") {
+            this.onNextButtonTap();
+        } else if (direction == "right") {
+            this.onPreviousButtonTap();
+        }
+    },
 
     onRandomTap: function() {
         var episode = this.getRandomEpisode(),
@@ -44,5 +84,6 @@ Ext.define('LCARS.controller.phone.Episodes', {
         });
 
         seriesController.updatePlayCountButton(episode, item);
-    }
+    },
+
 });

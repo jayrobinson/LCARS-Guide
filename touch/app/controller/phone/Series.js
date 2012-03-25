@@ -3,9 +3,7 @@ Ext.define('LCARS.controller.phone.Series', {
 
     config: {
         refs: {
-            'main'              : 'mainphone',
-            'episodeList'       : 'episodelistphone',
-            'episode'           : 'episodephone'
+            'main' : 'mainphone'
         },
 
         control : {
@@ -14,9 +12,6 @@ Ext.define('LCARS.controller.phone.Series', {
             },
             episodelistphone : {
                 itemtap: 'onEpisodeTap'
-            },
-            episode: {
-                swipeepisode: 'onEpisodeSwipe'
             }
         }
     },
@@ -40,14 +35,6 @@ Ext.define('LCARS.controller.phone.Series', {
         });
 
         this.updatePlayCountButton(record, item);
-    },
-
-    onEpisodeSwipe: function(episodeView, direction) {
-        if (direction == "left") {
-            this.onNextButtonTap();
-        } else if (direction == "right") {
-            this.onPreviousButtonTap();
-        }
     }
 
 });
