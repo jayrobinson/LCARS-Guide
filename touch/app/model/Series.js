@@ -9,6 +9,14 @@ Ext.define('LCARS.model.Series', {
         associations: [
             {
                 type: 'hasMany',
+                store: {
+                    grouper: {
+                        groupFn: function(record){
+                            return "S0" + record.get('SeasonNumber');
+                        },
+                        sortProperty: 'SeasonNumber'
+                    }
+                },
                 name: 'episodes',
                 associationKey: 'Episode',
                 model: 'LCARS.model.Episode'

@@ -3,6 +3,8 @@ Ext.define('LCARS.view.phone.Main', {
     xtype: 'mainphone',
 
     requires: [
+        'LCARS.view.phone.Start',
+        'LCARS.view.phone.About',
         'LCARS.view.phone.SeriesList',
         'LCARS.view.phone.EpisodeList',
         'LCARS.view.phone.Episode'
@@ -10,18 +12,18 @@ Ext.define('LCARS.view.phone.Main', {
 
     config: {
         navigationBar: {
-            items: [
-                {
-                    text: 'Random',
-                    id: 'random',
-                    align: 'right'
-                }
-            ]
+            // items: [
+            //     {
+            //         text: 'Random',
+            //         id: 'random',
+            //         align: 'right'
+            //     }
+            // ]
         },
 
         items: [
             {
-                xtype: 'serieslistphone'
+                xtype: 'startphone'
             }
         ]
     }

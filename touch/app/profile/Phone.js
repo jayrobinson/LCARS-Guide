@@ -5,13 +5,14 @@ Ext.define('LCARS.profile.Phone', {
         name: 'phone',
         namespace: 'phone',
         controllers: [
+            'Start',
             'Series',
             'Episodes',
             'Plays'
         ],
         views: ['LCARS.view.phone.Main']
     },
-    
+
     isActive: function() {
         return Ext.os.is.Phone;
     },
