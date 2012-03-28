@@ -1,4 +1,26 @@
 /*
+    Fonts
+*/
+
+//@font-face {
+//  font-family: 'HelveticaNeueRegular';
+//  src: url('../fonts/HelveticaNeue.eot');
+//  src: local('Helvetica Neue Bold'), local('HelveticaNeue'), url('../fonts/HelveticaNeue.woff') format('woff'), url('../fonts/HelveticaNeue.ttf') format('truetype');
+//}
+//
+//@font-face {
+//  font-family: 'HelveticaNeueCondensedBold';
+//  src: url('../fonts/HelveticaNeue-CondensedBold.eot');
+//  src: local('HelveticaNeue-CondensedBold'), local('HelveticaNeue-CondensedBold'), url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff'), url('../fonts/HelveticaNeue-CondensedBold.ttf') format('truetype');
+//}
+//
+//$font: HelveticaNeue;
+$font: "HelveticaNeueCondensedBold","HelveticaNeue-CondensedBold",HelveticaNeue;
+//$font : "Helvetica LT Std","HelveticaNeue-CondensedBold",HelveticaNeue; Can I try @font-face?
+
+
+
+/*
     Color Schemes
 */
 

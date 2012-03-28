@@ -6,8 +6,36 @@ Ext.define('LCARS.view.phone.EpisodeList', {
         grouped: true,
         indexBar: true,
         itemTpl: Ext.create('Ext.XTemplate',
-            '<div class="listItem" style="clear:both;"><div class="screenshot" style="float:left;padding: 0 6px 6px 0;"><img src="{Screenshot}" alt="" height="55"></div><div class="episodeListMeta"><strong class="episodeListTitle" style="display:block;font-size:18px;font-weight:bold;">{EpisodeName}</strong><span style="color:#666;"><span class="prettyepisodeid">{PrettyEpisodeID}</span>&nbsp;&nbsp;&nbsp;<span class="airdate">{PrettyFirstAired}</span>&nbsp;&nbsp;&nbsp;<span class="playcount">{PlayCount}</span></span></div></div>'
-        )
+            '<div class="listItem"><div class="screenshot" style="background-image:url({Screenshot});"></div><div class="episodeListMeta"><strong class="episodeListTitle" style="">{EpisodeName}</strong><span class="episodeListMetaSub"><span class="prettyepisodeid">{PrettyEpisodeID}</span>&nbsp;&nbsp;&nbsp;<span class="airdate">{PrettyFirstAired}</span>&nbsp;&nbsp;&nbsp;<span class="playcount">{PlayCount}</span></span></div></div>'
+        ),
+
+        items: [
+            {
+                cls: ['ruleHeading', 'flushLeft'],
+                xtype: 'titlebar',
+                docked: 'top',
+                items: [
+                    {
+                        xtype: 'button',
+                        html: 'BK',
+                        action: 'back',
+                        align: 'left',
+                        cls: 'backButton'
+                    },
+                    {
+                        xtype: 'component',
+                        html: 'Select Series',
+                        cls: 'ruleTitle'
+                    },
+                    {
+                        xtype: 'button',
+                        html: 'END',
+                        align: 'right',
+                        cls: 'endCapRight'
+                    }
+                ]
+            }
+        ]
     },
     applyStore: function(store){
         var seasons = [],

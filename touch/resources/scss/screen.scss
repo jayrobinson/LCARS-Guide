@@ -1,0 +1,206 @@
+@import 'sencha-touch/default/all';
+
+// @include sencha-panel;
+// @include sencha-buttons;
+// @include sencha-sheet;
+// @include sencha-picker;
+// @include sencha-tabs;
+// @include sencha-toolbar;
+// @include sencha-toolbar-forms;
+@include sencha-indexbar;
+// @include sencha-list;
+// @include sencha-list-paging;
+// @include sencha-list-pullrefresh;
+@include sencha-layout;
+// @include sencha-carousel;
+// @include sencha-form;
+// @include sencha-msgbox;
+// @include sencha-loading-spinner;
+
+@import 'themes'; // LCARS color schemes
+
+.x-layout-card-item {
+    background: transparent; // was #EEE, this should be removed from Touch
+}
+
+.x-html {
+    font-size: 10px; /* 62.5%, 1em = 10px */
+ }
+
+
+
+/* iPhone */
+
+* {
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
+    // -webkit-user-select: none; // Careful… .content should still be select-able.
+    /* -webkit-font-smoothing: antialiased; */
+    /* -webkit-text-stroke: -1px black; */
+    font-weight: bold;
+}
+
+b, i {
+    // font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: $background;
+    color: $contentSubtext;
+    font-family: $font;
+    font-size: 10px; /* 62.5%, 1em = 10px */
+
+    &.x-ios.x-phone {
+        font-size: 10px; /* 1em = 10px */
+    }
+}
+
+/* Start */
+
+.ruleHeading {
+    background-color: $primaryAction;
+    @include border-radius(100px);
+    color: $background;
+    height: 30px;
+
+    &.flushLeft {
+        @include border-left-radius(0);
+    }
+
+    .x-button-label {
+        font-size: 1.4em;
+    }
+
+    .backButton {
+
+        height: 30px;
+        width: 40px;
+    }
+}
+
+#startButton {
+    padding: 77px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    img {
+        display: block;
+        margin: 0 auto 23px;
+    }
+    b {
+        color: $primaryColor;
+        display: block;
+        //font-size: 4.8em;
+        font-size: 2.4em;
+
+    }
+    i {
+        color: $contentAccent;
+        font-size: 1.8em;
+    }
+}
+
+/* Series List */
+
+// Lowercase IDS indicate a View. Todo: Better convention?
+#serieslistphone .x-list-container .x-list-item {
+    position: relative;
+
+    &:first-child {
+        padding-top: 62px;
+    }
+
+    .x-list-disclosure {
+        // background: red;
+        height: 44px;
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        width: 37px;
+        z-index: 99;
+    }
+}
+
+.seriesItem {
+    background-color: $primaryColor;
+    @include border-right-radius(100px);
+    color: $background;
+    height: 44px;
+    line-height: 1;
+    margin: 0 30px 10px;
+    padding: 0 0 0 164px;
+    position: relative;
+
+    span {
+        background-color: $background;
+        color: $primaryAction;
+        display: block;
+        padding: 0 10px 0 20px;
+        position: absolute;
+        top: -3px;
+        left: 37px;
+
+        b {
+            font-size: 6em;
+            line-height: 0.8;
+        }
+    }
+    i {
+        font-size: 2.2em;
+        font-style: normal;
+        line-height: 2.6;
+    }
+}
+
+/* Episode List */
+
+.backButton {
+    color: $background;
+    font-size: 1.6em;
+    padding: 10px 20px;
+}
+
+//.x-list-item-label > .seriesItem {
+//    font-size: 3em;
+//}
+
+.listItem {
+    clear: both;
+    height: 55px;
+    overflow: hidden;
+    margin-bottom: 1px;
+    width: 100%;
+
+    .screenshot {
+        background-position: 50% 50%;
+        background-size: cover;
+        // float: left;
+        height: 55px;
+        margin: 0 12px 0 0;
+        position: absolute;
+        left: 0;
+        width: 55px;
+    }
+}
+
+.episodeListTitle {
+    display: block;
+    font-size: 2.3em;
+    font-weight: bold;
+    line-height: 1;
+    overflow: hidden;
+    padding: 5px 0 0 67px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.episodeListMetaSub {
+    color: #878787;
+    display: block;
+    // font-family: $font;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0 0 0 67px;
+    white-space: nowrap;
+}

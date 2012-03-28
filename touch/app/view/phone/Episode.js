@@ -14,6 +14,31 @@ Ext.define('LCARS.view.phone.Episode', {
 
         items: [
             {
+                cls: ['ruleHeading', 'flushLeft'],
+                xtype: 'titlebar',
+                docked: 'top',
+                items: [
+                    {
+                        xtype: 'button',
+                        html: 'BK',
+                        action: 'back',
+                        align: 'left',
+                        cls: 'backButton'
+                    },
+                    {
+                        xtype: 'component',
+                        html: 'Select Series',
+                        cls: 'ruleTitle'
+                    },
+                    {
+                        xtype: 'button',
+                        html: 'END',
+                        align: 'right',
+                        cls: 'endCapRight'
+                    }
+                ]
+            },
+            {
                 xtype: 'button',
                 action: 'addPlays',
                 text: 'Play Count: 0'

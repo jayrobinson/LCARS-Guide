@@ -1,0 +1,3957 @@
+/* line 3, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3,
+h4, h5, h6, pre, code, form, fieldset, legend,
+input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+/* line 8, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 13, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+fieldset, img {
+  border: 0; }
+
+/* line 18, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+address, caption, cite, code,
+dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+/* line 23, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+li {
+  list-style: none; }
+
+/* line 27, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+caption, th {
+  text-align: left; }
+
+/* line 31, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+/* line 37, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+q:before,
+q:after {
+  content: ""; }
+
+/* line 41, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+/* line 46, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+sup {
+  vertical-align: text-top; }
+
+/* line 50, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+sub {
+  vertical-align: text-bottom; }
+
+/* line 54, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+/* line 60, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_reset.scss */
+*:focus {
+  outline: none; }
+
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/* line 10, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+html, body {
+  font-family: "Helvetica Neue", HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif;
+  font-weight: normal;
+  position: relative;
+  -webkit-text-size-adjust: none; }
+
+/* line 17, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-desktop {
+  overflow: hidden; }
+
+/* line 21, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none; }
+
+/* line 29, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-ios.x-tablet .x-landscape * {
+  -webkit-text-stroke: 1px transparent; }
+
+/* line 33, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body {
+  font-size: 104%; }
+
+/* line 37, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-ios {
+  -webkit-backface-visibility: hidden; }
+
+/* line 41, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-android.x-phone {
+  font-size: 116%; }
+
+/* line 45, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-android.x-phone.x-silk {
+  font-size: 130%; }
+
+/* line 49, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-ios.x-phone {
+  font-size: 114%; }
+
+/* line 53, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+body.x-desktop {
+  font-size: 114%; }
+
+/* line 57, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+input, textarea {
+  -webkit-user-select: text; }
+
+/* line 61, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-hidden-visibility {
+  visibility: hidden !important; }
+
+/* line 65, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-hidden-display {
+  display: none !important; }
+
+/* line 69, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-hidden-offsets {
+  position: absolute !important;
+  left: -10000em;
+  top: -10000em;
+  visibility: hidden; }
+
+/* line 76, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-fullscreen {
+  position: absolute !important; }
+
+/* line 83, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-desktop .x-body-stretcher {
+  margin-bottom: 0px; }
+
+/* line 87, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  z-index: 10;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-align: center;
+  box-align: center;
+  -webkit-box-pack: center;
+  box-pack: center;
+  background: rgba(0, 0, 0, 0.3) center center no-repeat; }
+  /* line 104, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+  .x-mask.x-mask-gray {
+    background-color: rgba(0, 0, 0, 0.5); }
+  /* line 108, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+  .x-mask.x-mask-transparent {
+    background-color: transparent; }
+  /* line 112, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+  .x-mask .x-mask-inner {
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    text-align: center;
+    padding: .4em;
+    font-size: .95em;
+    font-weight: bold;
+    -webkit-border-radius: 0.5em;
+    border-radius: 0.5em; }
+  /* line 122, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+  .x-mask .x-loading-spinner-outer {
+    display: -webkit-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-align: center;
+    box-align: center;
+    -webkit-box-pack: center;
+    box-pack: center;
+    width: 100%;
+    min-width: 8.5em;
+    height: 8.5em; }
+  /* line 133, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+  .x-mask.x-indicator-hidden .x-loading-spinner-outer {
+    display: none; }
+  /* line 138, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+  .x-mask .x-mask-message {
+    text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0;
+    -webkit-box-flex: 0 !important;
+    max-width: 13em;
+    min-width: 8.5em; }
+
+/* line 146, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-draggable {
+  z-index: 1; }
+
+/* line 150, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-dragging {
+  opacity: 0.7; }
+
+/* line 154, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-panel-list {
+  background-color: #eaf6fe; }
+
+/* line 159, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-html {
+  -webkit-user-select: auto;
+  -webkit-touch-callout: inherit;
+  line-height: 1.5;
+  color: #333;
+  font-size: .8em;
+  padding: 1.2em; }
+  /* line 33, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html body {
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #333333;
+    font-size: 75%; }
+  /* line 51, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html h1, .x-html h2, .x-html h3, .x-html h4, .x-html h5, .x-html h6 {
+    font-weight: normal;
+    color: #222222; }
+    /* line 52, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+    .x-html h1 img, .x-html h2 img, .x-html h3 img, .x-html h4 img, .x-html h5 img, .x-html h6 img {
+      margin: 0; }
+  /* line 53, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: 0.50em; }
+  /* line 54, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html h2 {
+    font-size: 2em;
+    margin-bottom: 0.75em; }
+  /* line 55, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 1.00em; }
+  /* line 56, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html h4 {
+    font-size: 1.2em;
+    line-height: 1.25;
+    margin-bottom: 1.25em; }
+  /* line 57, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html h5 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1.50em; }
+  /* line 58, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html h6 {
+    font-size: 1em;
+    font-weight: bold; }
+  /* line 59, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html p {
+    margin: 0 0 1.5em; }
+    /* line 60, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+    .x-html p .left {
+      display: inline;
+      float: left;
+      margin: 1.5em 1.5em 1.5em 0;
+      padding: 0; }
+    /* line 61, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+    .x-html p .right {
+      display: inline;
+      float: right;
+      margin: 1.5em 0 1.5em 1.5em;
+      padding: 0; }
+  /* line 62, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html a {
+    text-decoration: underline;
+    color: #0066cc; }
+    /* line 18, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+    .x-html a:visited {
+      color: #004c99; }
+    /* line 21, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+    .x-html a:focus {
+      color: #0099ff; }
+    /* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+    .x-html a:hover {
+      color: #0099ff; }
+    /* line 27, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+    .x-html a:active {
+      color: #bf00ff; }
+  /* line 63, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html blockquote {
+    margin: 1.5em;
+    color: #666666;
+    font-style: italic; }
+  /* line 64, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html strong, .x-html dfn {
+    font-weight: bold; }
+  /* line 65, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html em, .x-html dfn {
+    font-style: italic; }
+  /* line 66, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html sup, .x-html sub {
+    line-height: 0; }
+  /* line 67, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html abbr, .x-html acronym {
+    border-bottom: 1px dotted #666666; }
+  /* line 68, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html address {
+    margin: 0 0 1.5em;
+    font-style: italic; }
+  /* line 69, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html del {
+    color: #666666; }
+  /* line 70, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html pre {
+    margin: 1.5em 0;
+    white-space: pre; }
+  /* line 71, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html pre, .x-html code, .x-html tt {
+    font: 1em "andale mono", "lucida console", monospace;
+    line-height: 1.5; }
+  /* line 72, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html li ul, .x-html li ol {
+    margin: 0; }
+  /* line 73, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html ul, .x-html ol {
+    margin: 0 1.5em 1.5em 0;
+    padding-left: 1.5em; }
+  /* line 74, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html ul {
+    list-style-type: disc; }
+  /* line 75, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html ol {
+    list-style-type: decimal; }
+  /* line 76, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html dl {
+    margin: 0 0 1.5em 0; }
+    /* line 77, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+    .x-html dl dt {
+      font-weight: bold; }
+  /* line 78, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html dd {
+    margin-left: 1.5em; }
+  /* line 79, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html table {
+    margin-bottom: 1.4em;
+    width: 100%; }
+  /* line 80, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html th {
+    font-weight: bold; }
+  /* line 81, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html thead th {
+    background: #c3d9ff; }
+  /* line 82, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html th, .x-html td, .x-html caption {
+    padding: 4px 10px 4px 5px; }
+  /* line 85, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html table.striped tr:nth-child(even) td,
+  .x-html table tr.even td {
+    background: #e5ecf9; }
+  /* line 86, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html tfoot {
+    font-style: italic; }
+  /* line 87, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html caption {
+    background: #eeeeee; }
+  /* line 88, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html .quiet {
+    color: #666666; }
+  /* line 89, /Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
+  .x-html .loud {
+    color: #111111; }
+  /* line 169, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+  .x-html ul li {
+    list-style-type: circle; }
+  /* line 172, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+  .x-html ol li {
+    list-style-type: decimal; }
+
+/* line 178, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-video {
+  background-color: #000; }
+
+/* line 182, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-sortable .x-dragging {
+  opacity: 1;
+  z-index: 5; }
+
+/* line 187, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_core.scss */
+.x-layout-card-item {
+  background: #eeeeee; }
+
+/* line 1, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_map.scss */
+.x-map {
+  background-color: #edeae2; }
+  /* line 3, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_map.scss */
+  .x-map * {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box; }
+
+/* line 9, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_map.scss */
+.x-mask-map {
+  background: transparent !important; }
+
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Ext.Toolbar
+ */
+/**
+ * @var {color} $toolbar-base-color
+ * The primary color variable from which toolbars derive their light and dark UIs.
+ */
+/**
+ * @var {measurement} $toolbar-spacing
+ * Space between items in a toolbar (like buttons and fields)
+ */
+/**
+ * @var {string} $toolbar-gradient
+ * Background gradient style for toolbars.
+ */
+/**
+ * @var {boolean} $include-toolbar-uis
+ * Optionally disable separate toolbar UIs (light and dark).
+ */
+/**
+ * Includes default toolbar styles.
+ */
+/**
+ * Creates a theme UI for toolbars.
+ *
+ *     // SCSS
+ *     @include sencha-toolbar-ui('sub', #58710D, 'glossy');
+ *
+ *     // JS
+ *     var myTb = new Ext.Toolbar({title: 'My Green Glossy Toolbar', ui: 'sub'})
+ *
+ * @param {string} $ui-label The name of the UI being created.
+ *   Can not included spaces or special punctuation (used in class names)
+ * @param {color} $color Base color for the UI.
+ * @param {string} $gradient: $toolbar-gradien Background gradient style for the UI.
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Ext.Button
+ */
+/**
+ * @var {measurement} $button-height Default height for buttons.
+ */
+/**
+ * @var {measurement} $button-radius Default border-radius for buttons.
+ */
+/**
+ * @var {measurement} $button-stroke-weight Default border width for buttons.
+ */
+/**
+ * @var {string} $button-gradient Default gradient for buttons.
+ *
+ * See {@link Global_CSS#background-gradient background-gradient}.
+ */
+/**
+ * @var {string} $toolbar-icon-size Default size (width and height) for toolbar icons.
+ */
+/**
+ * @var {boolean} $include-button-uis Optionally disable separate button UIs, including action, confirm, and decline.
+ */
+/**
+ * @var {boolean} $include-button-highlights Optionally disable special CSS3 effects on buttons including gradients, text-shadows, and box-shadows.
+ */
+/**
+ * Includes default button styles.
+ *
+ * See {@link Global_CSS#background-gradient background-gradient}.
+ */
+/**
+ * Creates a theme UI for buttons.
+ * Also automatically generates UIs for {ui-label}-round and {ui-label}-small.
+ *
+ *     // SCSS
+ *     @include sencha-button-ui('secondary', #99A4AE, 'glossy');
+ *
+ *     // JS
+ *     var cancelBtn = new Ext.Button({text: 'Cancel', ui: 'secondary'});
+ *
+ * @param {string} $ui-label The name of the UI being created.
+ *   Can not included spaces or special punctuation (used in class names)
+ * @param {color} $color Base color for the UI.
+ * @param {string} $gradient Default gradient for the UI.
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Ext.tab.Bar
+ */
+/**
+ * @var {boolean} $include-tabbar-uis Optionally disable separate tabbar UIs (light and dark).
+ */
+/**
+ * @var {boolean} $include-top-tabs
+ * Optionally exclude top tab styles by setting to false.
+ */
+/**
+ * @var {boolean} $include-bottom-tabs
+ * Optionally exclude bottom tab styles by setting to false.
+ */
+/**
+ * @var {color} $tabs-light
+ * Base color for "light" UI tabs.
+ */
+/**
+ * @var {color} $tabs-light-active
+ * Active color for "light" UI tabs.
+ */
+/**
+ * @var {color} $tabs-dark
+ * Base color for "dark" UI tabs.
+ */
+/**
+ * @var {color} $tabs-dark-active
+ * Active color for "dark" UI tabs.
+ */
+/**
+ * @var {string} $tabs-bar-gradient
+ * Background gradient style for tab bars.
+ */
+/**
+ * @class Ext.tab.Tab
+ */
+/**
+ * @var {string} $tabs-bottom-radius
+ * Border-radius for bottom tabs.
+ */
+/**
+ * @var {string} $tabs-bottom-icon-size
+ * Icon size for bottom tabs
+ */
+/**
+ * @var {string} $tabs-bottom-active-gradient
+ * Background gradient style for active bottom tabs.
+ */
+/**
+ * @var {boolean} $include-tab-highlights
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * Includes default tab styles.
+ *
+ * @member Ext.tab.Bar
+ */
+/**
+ * Creates a theme UI for tabbar/tab components.
+ *
+ *     // SCSS
+ *     @include sencha-button-ui('pink', #333, 'matte', #AE537A);
+ *
+ *     // JS
+ *     var tabs = new Ext.tab.Panel({
+ *        tabBar: {
+ *          ui: 'pink',
+ *          dock: 'bottom',
+ *          layout: { pack: 'center' }
+ *        },
+ *        ...
+ *     });
+ *
+ * @param {string} $ui-label The name of the UI being created.
+ *   Can not included spaces or special punctuation (used in class names)
+ * @param {color} $bar-color Base color for the tab bar.
+ * @param {string} $bar-gradient Background gradient style for the tab bar.
+ * @param {color} $tab-active-color Background-color for active tab icons.
+ *
+ * @member Ext.tab.Bar
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Ext.carousel.Indicator
+ */
+/**
+ * @var {measurement} $carousel-indicator-size Size (width/height) of carousel indicator dots.
+ */
+/**
+ * @var {measurement} $carousel-indicator-spacing
+ * Amount of space between carousel indicator dots.
+ */
+/**
+ * @var {measurement} $carousel-track-size Size of the track the carousel indicator dots are in.
+ */
+/**
+ * Creates a theme UI for carousel indicator components.
+ *
+ * @param {string} $ui-label The name of the UI being created.
+ *   Can not included spaces or special punctuation (used in class names)
+ * @param {color} $color Base color for the UI.
+ * @param {string} $gradient Default gradient for the UI.
+ * @param {color} $active-color Active color for the UI.
+ * @param {string} $active-gradient Active gradient for the UI.
+ */
+/**
+ * @class Ext.carousel.Carousel
+ */
+/**
+ * Includes basic carousel formatting.
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Ext.dataview.IndexBar
+ */
+/**
+ * @var {measurement} $index-bar-width
+ * Width of the index bar.
+ */
+/**
+ * @var {color} $index-bar-bg-color
+ * Background-color of the index bar.
+ */
+/**
+ * @var {color} $index-bar-color
+ * Text color of the index bar.
+ */
+/**
+ * Includes default index bar styles.
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Ext.dataview.List
+ */
+/**
+ * @var {color} $list-color
+ * Text color for list rows.
+ */
+/**
+ * @var {color} $list-bg-color
+ * Background-color for list rows.
+ */
+/**
+ * @var {color} $include-list-highlights
+ * Optionally disable all list gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $list-zebrastripe
+ * Optionally zebra-stripe the list (alternating background colors).
+ */
+/**
+ * @var {color} $list-pressed-color
+ * Background-color for pressed list rows.
+ */
+/**
+ * @var {color} $list-active-color
+ * Background-color for selected list rows.
+ */
+/**
+ * @var {string} $list-active-gradient
+ * Gradient style for selected list rows.
+ */
+/**
+ * @var {color} $list-header-bg-color
+ * Background-color for list header rows (in grouped lists).
+ */
+/**
+ * @var {string} $list-header-gradient
+ * Gradient style for list header rows (in grouped lists).
+ *
+ * See {@link Global_CSS#background-gradient background-gradient}.
+ */
+/**
+ * @var {measurement} $list-disclosure-size
+ * Default size (width/height) for disclosure icons.
+ */
+/**
+ * @var {measurement} $list-disclosure-round-size
+ * Default size (width/height) for disclosure icons in a list with a 'round' ui.
+ */
+/**
+ * Includes default list styles.
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * Includes default form slider styles.
+ *
+ * @member Ext.field.Slider
+ */
+/**
+ * @var {color} $form-bg-color
+ * Default background-color for forms.
+ *
+ * @member Ext.form.Panel
+ */
+/**
+ * @class Ext.field.Field
+ */
+/**
+ * @var {color} $form-field-bg-color
+ * Default background-color for form fields.
+ */
+/**
+ * @var {color} $form-light
+ * Light color for form fields, mostly used on field borders.
+ */
+/**
+ * @var {color} $form-dark
+ * Dark color for form fields, mostly used on labels/text.
+ */
+/**
+ * @var {measurement} $form-label-width
+ * Default width for form labels.
+ */
+/**
+ * @var {color} $form-label-background-color
+ * The default background color for labels
+ */
+/**
+ * @var {measurement} $form-field-height
+ * Default height for form fields.
+ */
+/**
+ * @var {measurement} $form-spacing
+ * Default spacing for form fields, used for padding, etc.
+ */
+/**
+ * @var {measurement} $form-textarea-height
+ * Default height for form textareas.
+ *
+ * @member Ext.field.TextArea
+ */
+/**
+ * @var {measurement} $form-thumb-size
+ * Default size of "thumbs" for form sliders/toggles.
+ *
+ * @member Ext.field.Slider
+ */
+/**
+ * @var {measurement} $form-toggle-size
+ * Thumb size minus padding for inset thumbs like in a Toggle element.
+ *
+ * @member Ext.field.Toggle
+ */
+/**
+ * @var {measurement} $form-fieldset-radius
+ * Default border-radius for form fieldsets.
+ *
+ * @member Ext.form.FieldSet
+ */
+/**
+ * @var {measurement} $form-slider-size
+ * Height of the slider "track."
+ *
+ * @member Ext.field.Slider
+ */
+/**
+ * Includes default form styles.
+ *
+ * See {@link Global_CSS#background-gradient background-gradient}.
+ *
+ * @member Ext.form.Panel
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Ext.Sheet
+ */
+/**
+ * @var {color} $sheet-bg-color
+ * Background-color for action sheets and message boxes.
+ */
+/**
+ * @var {color} $sheet-bg-gradient
+ * Background gradient style for action sheets and message boxes.
+ */
+/**
+ * @var {measurement} $sheet-button-spacing
+ * Vertical spacing between sheet buttons.
+ */
+/**
+ * @var {measurement} $sheet-padding
+ * Overall padding in a sheet.
+ */
+/**
+ * Includes default sheet styles (also required for message box).
+ */
+/**
+ * Includes default message box styles.
+ *
+ * @member Ext.MessageBox
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/**
+ * @class Ext.field.Field
+ */
+/**
+ * @var {color} $toolbar-input-bg
+ * Background-color for toolbar form fields.
+ */
+/**
+ * @var {color} $toolbar-input-color
+ * Text color for toolbar form fields.
+ */
+/**
+ * @var {measurement} $toolbar-input-height
+ * Text color for toolbar form fields.
+ */
+/**
+ * @var {color} $toolbar-input-border-color
+ * Border color for toolbar form fields.
+ */
+/**
+ * Includes default toolbar form field styles.
+ *
+ * @member Ext.tab.Bar
+ */
+/**
+ * @class Ext.LoadMask
+ */
+/**
+ * @var {color} $loading-spinner-color
+ * Background-color for the bars in the loading spinner.
+ */
+/**
+ * Includes default loading spinner styles (for dataviews).
+ */
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/* line 3, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_img.scss */
+.x-img {
+  background-repeat: no-repeat; }
+
+/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+/**
+ * @var {boolean} $include-floating-panels
+ * Decides whether or not to include floating panels (useful to disable for iPhone applications which do not typically have floating menus).
+ */
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+/**
+ * @var {boolean} $include-highlights=true
+ * Optionally disable all gradients, text-shadows, and box-shadows. Useful for CSS debugging,
+ * non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $include-border-radius
+ * Optionally disable all border-radius. Useful for CSS debugging, non-performant browsers, or minimalist designs.
+ */
+/**
+ * @var {boolean} $basic-slider
+ * Optionally remove CSS3 effects from the slider component for improved performance.
+ */
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+/**
+ * @var {string} $base-gradient
+ * The primary gradient variable from which most elements derive their color scheme.
+ * @see background-gradient
+ */
+/**
+ * @var {font-family} $font-family
+ * The font-family to be used throughout the theme.
+ * @see background-gradient
+ */
+/**
+ * @var {color} $alert-color
+ * Color used for elements like badges, errors, and "decline" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $confirm-color
+ * Color used for elements like success messages, and "confirm" UIs (eg. on buttons).
+ */
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+/**
+ * @var {color} $neutral-color
+ * Color used for the neautral `ui` for Toolbars and Tabbars.
+ */
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars and list items.
+ */
+/**
+ * @class Global_CSS
+ */
+/**
+ * Add a background gradient to a selector.
+ *
+ *     .my-element {
+ *       @include background-gradient(green, 'recessed')
+ *     }
+ *
+ * @param {color} $bg-color The base color of the gradient.
+ * @param {string} $type The style of the gradient, one of five pre-defined options: matte, bevel, glossy, recessed, or flat.
+ */
+/**
+ * Includes a base64-encoded icon for use within tab bars and buttons (With the component parameter iconMask: true).
+ *
+ *     @include pictos-iconmask('attachment');
+ *
+ * @param {string} $name The name of the icon to be included. This is to match the name of the icon file (located at resources/themes/images/default/pictos) without its extention (.png).
+ */
+/**
+ * Includes the default styles for toolbar buttons, mostly used as a helper function.
+ *
+ * @param {color} $bg-color Base color to be used for the button.
+ * @param {color} $type Gradient style for the button, will automatically use "recessed" when pressed.
+ */
+/**
+ * Adds a small text shadow (or highlight) to give the impression of beveled text.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds a small box shadow (or highlight) to give the impression of being beveled.
+ *
+ * @param {string} $type Either shadow or highlight, decides whether to apply a light shadow or dark.
+ */
+/**
+ * Adds basic styles to :before or :after pseudo-elements.
+ *
+ *     .my-element:after {
+ *       @include insertion(50px, 50px);
+ *     }
+ *
+ * @param {measurement} $width Height of pseudo-element.
+ * @param {measurement} $height Height of pseudo-element.
+ * @param {measurement} $top Top positioning of pseudo-element.
+ * @param {measurement} $left Left positioning of pseudo-element.
+ *
+ */
+/**
+ * Makes an element stretch to its parent's bounds.
+ */
+/**
+ * Colors the text of an element based on lightness of its background.
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff); // Colors text black.
+ *     }
+ *
+ *     .my-element {
+ *       @include color-by-background(#fff, 40%); // Colors text gray.
+ *     }
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $contrast Contrast of text color to its background.
+ *
+ */
+/**
+ * Bevels the text based on its background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @see bevel-text
+ *
+ */
+/**
+ * Creates a background gradient for masked elements, based on the lightness of their background.
+ *
+ * @param {color} $bg-color Background color of element.
+ * @param {percent} $percent Contrast of the new gradient to its background.
+ * @param {percent} $style Gradient style of the gradient.
+ * @see background-gradient
+ *
+ */
+/**
+ * Makes the element text overflow to use ellipsis.
+ */
+/* line 3, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_media.scss */
+.x-video {
+  height: 100%;
+  width: 100%; }
+
+/* line 8, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_media.scss */
+.x-video > * {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+
+/* line 14, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_media.scss */
+.x-video-ghost {
+  -webkit-background-size: 100% auto;
+  background: black url() center center no-repeat; }
+
+/* line 19, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_media.scss */
+audio {
+  width: 100%; }
+
+/* line 29, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
+.x-indexbar-wrapper {
+  -webkit-box-pack: end !important;
+  box-pack: end !important;
+  pointer-events: none; }
+
+/* line 35, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
+.x-indexbar-vertical {
+  width: 1.1em;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  margin-right: 8px; }
+
+/* line 41, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
+.x-indexbar-horizontal {
+  height: 1.1em;
+  -webkit-box-orient: horizontal;
+  box-orient: horizontal;
+  margin-bottom: 8px; }
+
+/* line 47, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
+.x-indexbar {
+  pointer-events: auto;
+  z-index: 2;
+  padding: .3em 0;
+  min-height: 0 !important;
+  height: auto !important;
+  -webkit-box-flex: 0 !important; }
+  /* line 55, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
+  .x-indexbar > div {
+    color: #155988;
+    font-size: 0.6em;
+    text-align: center;
+    line-height: 1.1em;
+    font-weight: bold;
+    display: block; }
+
+/* line 66, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
+.x-phone.x-landscape .x-indexbar > div {
+  font-size: 0.38em;
+  line-height: 1em; }
+
+/* line 72, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/widgets/_indexbar.scss */
+.x-indexbar-pressed {
+  -webkit-border-radius: 0.55em;
+  border-radius: 0.55em;
+  background-color: rgba(143, 155, 163, 0.8); }
+
+/* line 2, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+html, body {
+  width: 100%;
+  height: 100%; }
+
+/* line 7, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-translatable {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  z-index: 1; }
+
+/* line 14, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-translatable-container {
+  position: relative; }
+
+/* line 18, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-translatable-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden; }
+
+/* line 25, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-translatable-stretcher {
+  width: 300%;
+  height: 300%;
+  position: absolute;
+  visibility: hidden;
+  z-index: -1; }
+
+/* line 33, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-translatable-nested-stretcher {
+  width: 100%;
+  height: 100%;
+  left: 100%;
+  top: 100%;
+  position: absolute;
+  visibility: hidden;
+  z-index: -1; }
+
+/* line 44, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-layout-fit,
+.x-layout-card {
+  position: relative;
+  overflow: hidden; }
+
+/* line 49, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-layout-fit-item, .x-layout-card-item {
+  position: absolute !important;
+  width: 100%;
+  height: 100%; }
+
+/* line 55, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-layout-hbox, .x-layout-vbox {
+  display: -webkit-box; }
+  /* line 57, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-layout-hbox > *, .x-layout-vbox > * {
+    -webkit-box-flex: 0; }
+
+/* line 62, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-layout-hbox {
+  -webkit-box-orient: horizontal; }
+
+/* line 66, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-layout-vbox {
+  -webkit-box-orient: vertical; }
+
+/* line 70, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-layout-hbox > .x-layout-box-item {
+  width: 0 !important; }
+
+/* line 74, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-layout-vbox > .x-layout-box-item {
+  height: 0 !important; }
+
+/* line 78, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-table-inner {
+  display: table !important;
+  width: 100%;
+  height: 100%; }
+
+/* line 84, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-table-inner.x-table-fixed {
+  table-layout: fixed !important; }
+
+/* line 88, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-table-row {
+  display: table-row !important; }
+
+/* line 92, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-table-row > * {
+  display: table-cell !important;
+  vertical-align: middle; }
+
+/* line 97, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-container, .x-body {
+  display: -webkit-box; }
+
+/* line 101, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-body {
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  min-width: 100%;
+  min-height: 100%; }
+
+/* line 108, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-body > .x-inner, .x-container > .x-inner {
+  -webkit-box-flex: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative; }
+
+/* line 115, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-docking-horizontal {
+  display: -webkit-box;
+  -webkit-box-flex: 1;
+  -webkit-box-orient: horizontal;
+  min-width: 100%;
+  min-height: 100%; }
+
+/* line 123, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-docking-vertical {
+  display: -webkit-box;
+  -webkit-box-flex: 1;
+  -webkit-box-orient: vertical;
+  min-width: 100%;
+  min-height: 100%; }
+
+/* line 131, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-centered {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center; }
+
+/* line 140, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-floating {
+  position: absolute !important; }
+
+/* line 144, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-centered > * {
+  position: relative !important;
+  -webkit-box-flex: 0 !important; }
+
+/* line 149, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-size-change-detector {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 160, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-size-change-detector > * {
+  visibility: hidden; }
+
+/* line 164, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-size-change-detector-shrink > * {
+  width: 200%;
+  height: 200%; }
+
+/* line 169, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-size-change-detector-expand > * {
+  width: 100000px;
+  height: 100000px; }
+
+/* line 174, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-view {
+  position: relative;
+  display: block; }
+
+/* line 179, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-container {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+
+/* line 186, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-scroller {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%; }
+
+/* line 192, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-ios .x-scroll-scroller {
+  -webkit-transform: translate3d(0, 0, 0); }
+
+/* line 196, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-stretcher {
+  position: absolute;
+  visibility: hidden; }
+
+/* line 201, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-bar-grid-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+/* line 207, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-bar-grid {
+  display: table;
+  width: 100%;
+  height: 100%; }
+  /* line 212, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-grid > * {
+    display: table-row; }
+  /* line 216, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-grid > * > * {
+    display: table-cell; }
+  /* line 220, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-grid > :first-child > :first-child {
+    width: 100%;
+    height: 100%; }
+  /* line 225, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-grid > :first-child > :nth-child(2) {
+    padding: 3px 3px 0 0; }
+  /* line 229, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-grid > :nth-child(2) > :first-child {
+    padding: 0 0 3px 3px; }
+
+/* line 234, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-bar {
+  position: relative;
+  overflow: hidden; }
+
+/* line 239, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-bar-stretcher {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 100%; }
+
+/* line 246, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-bar-x {
+  width: 100%; }
+  /* line 249, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-x > .x-scroll-bar-stretcher {
+    width: 300%; }
+  /* line 253, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-x.active {
+    height: 6px; }
+
+/* line 258, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-bar-y {
+  height: 100%; }
+  /* line 261, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-y > .x-scroll-bar-stretcher {
+    height: 300%; }
+  /* line 265, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-bar-y.active {
+    width: 6px; }
+
+/* line 270, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-indicator {
+  background: #333;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.5; }
+
+/* line 277, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-indicator.default {
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px; }
+
+/* line 284, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-list-light .x-scroll-indicator,
+.x-dataview-light .x-scroll-indicator {
+  background: #fff;
+  opacity: 1; }
+
+/* line 290, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-indicator-x {
+  height: 100%; }
+
+/* line 294, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-indicator-y {
+  width: 100%; }
+
+/* line 298, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+.x-scroll-indicator.csstransform {
+  background: none;
+  /*-webkit-transition: opacity 0.2s ease-out;*/ }
+  /* line 302, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform > * {
+    position: absolute;
+    background-color: #333; }
+  /* line 307, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform > :nth-child(2) {
+    -webkit-transform-origin: 0% 0%;
+    background: none;
+    content: url(data:image/bmp;base64,Qk08AAAAAAAAADYAAAAoAAAAAQAAAAEAAAABABAAAAAAAAYAAAASCwAAEgsAAAAAAAAAAAAAxhgAAAAA); }
+  /* line 314, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-light > * {
+    background-color: #eee; }
+  /* line 318, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-light > :nth-child(2) {
+    content: url(data:image/bmp;base64,Qk08AAAAAAAAADYAAAAoAAAAAQAAAAEAAAABABAAAAAAAAYAAAASCwAAEgsAAAAAAAAAAAAAvXcAAAAA); }
+  /* line 324, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-y > * {
+    width: 100%; }
+  /* line 328, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-y > :first-child {
+    height: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px; }
+  /* line 333, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-y > :nth-child(2) {
+    height: 1px; }
+  /* line 337, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-y > :last-child {
+    height: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
+  /* line 344, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-x > * {
+    height: 100%; }
+  /* line 348, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-x > :first-child {
+    width: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px; }
+  /* line 353, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-x > :nth-child(2) {
+    width: 1px; }
+  /* line 356, /Users/jay/Sites/libs/sencha-touch-2.0.0-gpl/resources/themes/stylesheets/sencha-touch/default/core/_layout.scss */
+  .x-scroll-indicator.csstransform.x-scroll-indicator-x > :last-child {
+    width: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
+
+/*
+    Fonts
+*/
+/*
+    Color Schemes
+*/
+/* Default, Enterprise-D */
+/* Red Alert, Enterprise-A */
+/*
+$primaryColor  :  #eb1c23; // Pinky Red
+$primaryAction :  #760e12; // Darker Red
+$informational :  #b0151a; // Dark Red
+$buttonsFilled :  #ff0000; // Red
+$contentAccent :  #820404; // Dark Red
+$contentText   :  #fff;    // White
+$contentSubtext:  #ddd;    // Dim White
+*/
+/* Ocean Blue, Voyager */
+/*
+$primaryColor  :  #6598fd; // Blue
+$primaryAction :  #0348fa; // Darker Pale Blue
+$informational :  #2a66f8; // Deeper Blue
+$buttonsFilled :  #6598fd; // Light Blue
+$contentAccent :  #fe9a01; // Orange
+$contentText   :  #728cfd; // Lavender
+$contentSubtext:  #aeafc4; // Light Orange
+*/
+/* Blue/Green, Enterprise-B */
+/*
+$primaryColor  :  #0d42c5; // Blue
+$primaryAction :  #00b9cb; // Light Teal
+$informational :  #00bdd0; // Teal
+$buttonsFilled :  #006cd4; // Cerulean Blue
+$contentAccent :  #6ae6e3; // Seafoam
+$contentText   :  #ddd;    // Dim White
+$contentSubtext:  #00c847; // Green
+*/
+/* Grayscale */
+/*
+$background    :  white;
+$primaryColor  :  #9f9f9f;
+$primaryAction :  #7d7d7d;
+$informational :  white;
+$buttonsFilled :  #ddd;
+$contentAccent :  #9f9f9f;
+$contentText   :  #ccc;
+$contentSubtext:  #aaa;
+*/
+/* LCARSCom.net (Hex) */
+/*
+$primaryColor  :  #FF9900;
+$primaryAction :  #CC99CC;
+$informational :  #9999CC;
+$buttonsFilled :  #FF9966;
+$buttonsHollow :  #FFCC99;
+$contentAccent :  #9999FF;
+$contentText   :  #CC6666;
+$contentSubtext:  #CC6699;
+*/
+/* Show color values inside buttons */
+/*
+    :after {
+      color: red;
+      content: "#{$background}";
+      display: block;
+      font-size: 1.6em;
+      position: relative;
+        top: 0px;
+        left: 0px;
+      z-index: 99;
+    }
+*/
+/* line 22, ../scss/screen.scss */
+.x-layout-card-item {
+  background: transparent; }
+
+/* line 26, ../scss/screen.scss */
+.x-html {
+  font-size: 10px;
+  /* 62.5%, 1em = 10px */ }
+
+/* iPhone */
+/* line 34, ../scss/screen.scss */
+* {
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  /* -webkit-font-smoothing: antialiased; */
+  /* -webkit-text-stroke: -1px black; */
+  font-weight: bold; }
+
+/* line 43, ../scss/screen.scss */
+b, i {
+  font-style: normal; }
+
+/* line 48, ../scss/screen.scss */
+body {
+  background-color: black;
+  color: #dddddd;
+  font-family: "HelveticaNeueCondensedBold", "HelveticaNeue-CondensedBold", HelveticaNeue;
+  font-size: 10px;
+  /* 62.5%, 1em = 10px */ }
+  /* line 54, ../scss/screen.scss */
+  body.x-ios.x-phone {
+    font-size: 10px;
+    /* 1em = 10px */ }
+
+/* Start */
+/* line 61, ../scss/screen.scss */
+.ruleHeading {
+  background-color: #8179fb;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  color: black;
+  height: 30px; }
+  /* line 67, ../scss/screen.scss */
+  .ruleHeading.flushLeft {
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  /* line 71, ../scss/screen.scss */
+  .ruleHeading .x-button-label {
+    font-size: 1.4em; }
+  /* line 75, ../scss/screen.scss */
+  .ruleHeading .backButton {
+    height: 30px;
+    width: 40px; }
+
+/* line 82, ../scss/screen.scss */
+#startButton {
+  padding: 77px 0 0;
+  text-align: center;
+  text-transform: uppercase; }
+  /* line 87, ../scss/screen.scss */
+  #startButton img {
+    display: block;
+    margin: 0 auto 23px; }
+  /* line 91, ../scss/screen.scss */
+  #startButton b {
+    color: #f58609;
+    display: block;
+    font-size: 2.4em; }
+  /* line 98, ../scss/screen.scss */
+  #startButton i {
+    color: #bab7fb;
+    font-size: 1.8em; }
+
+/* Series List */
+/* line 107, ../scss/screen.scss */
+#serieslistphone .x-list-container .x-list-item {
+  position: relative; }
+  /* line 110, ../scss/screen.scss */
+  #serieslistphone .x-list-container .x-list-item:first-child {
+    padding-top: 62px; }
+  /* line 114, ../scss/screen.scss */
+  #serieslistphone .x-list-container .x-list-item .x-list-disclosure {
+    height: 44px;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 37px;
+    z-index: 99; }
+
+/* line 125, ../scss/screen.scss */
+.seriesItem {
+  background-color: #f58609;
+  -webkit-border-top-right-radius: 100px;
+  border-top-right-radius: 100px;
+  -webkit-border-bottom-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  color: black;
+  height: 44px;
+  line-height: 1;
+  margin: 0 30px 10px;
+  padding: 0 0 0 164px;
+  position: relative; }
+  /* line 135, ../scss/screen.scss */
+  .seriesItem span {
+    background-color: black;
+    color: #8179fb;
+    display: block;
+    padding: 0 10px 0 20px;
+    position: absolute;
+    top: -3px;
+    left: 37px; }
+    /* line 144, ../scss/screen.scss */
+    .seriesItem span b {
+      font-size: 6em;
+      line-height: 0.8; }
+  /* line 149, ../scss/screen.scss */
+  .seriesItem i {
+    font-size: 2.2em;
+    font-style: normal;
+    line-height: 2.6; }
+
+/* Episode List */
+/* line 158, ../scss/screen.scss */
+.backButton {
+  color: black;
+  font-size: 1.6em;
+  padding: 10px 20px; }
+
+/* line 168, ../scss/screen.scss */
+.listItem {
+  clear: both;
+  height: 55px;
+  overflow: hidden;
+  margin-bottom: 1px;
+  width: 100%; }
+  /* line 175, ../scss/screen.scss */
+  .listItem .screenshot {
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 55px;
+    margin: 0 12px 0 0;
+    position: absolute;
+    left: 0;
+    width: 55px; }
+
+/* line 187, ../scss/screen.scss */
+.episodeListTitle {
+  display: block;
+  font-size: 2.3em;
+  font-weight: bold;
+  line-height: 1;
+  overflow: hidden;
+  padding: 5px 0 0 67px;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/* line 197, ../scss/screen.scss */
+.episodeListMetaSub {
+  color: #878787;
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0 0 0 67px;
+  white-space: nowrap; }

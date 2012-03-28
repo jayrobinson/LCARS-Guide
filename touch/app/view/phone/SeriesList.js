@@ -3,13 +3,62 @@ Ext.define('LCARS.view.phone.SeriesList', {
     xtype: 'serieslistphone',
 
     config: {
+        id: 'serieslistphone',
         title: 'Select Series',
 
         store: 'Series',
 
         itemTpl: Ext.create('Ext.XTemplate',
-            '<div class="">{SeriesName} {SeriesAbbr}</div>'
+            '<div class="seriesItem" title="{SeriesName}"><i>{SeriesAbbr}</i><span><b>000</b></span></div>'
         ),
+
+        items: [
+            {
+                cls: ['ruleHeading', 'flushLeft'],
+                xtype: 'titlebar',
+                docked: 'top',
+                items: [
+                    {
+                        xtype: 'button',
+                        html: 'BK',
+                        action: 'back',
+                        align: 'left',
+                        cls: 'backButton'
+                    },
+                    {
+                        xtype: 'component',
+                        html: 'Select Series',
+                        cls: 'ruleTitle'
+                    },
+                    {
+                        xtype: 'button',
+                        html: 'END',
+                        align: 'right',
+                        cls: 'endCapRight'
+                    }
+                ]
+            },
+            {
+                cls: ['ruleHeading'],
+                xtype: 'titlebar',
+                docked: 'bottom',
+                items: [
+                    {
+                        cls: ['ruleButton', 'rulebuttonLeft'],
+                        text: 'About',
+                        align: 'left',
+                        id: 'aboutButton'
+                    },
+                    {
+                        cls: ['ruleButton', 'rulebuttonRight'],
+                        text: 'Settings',
+                        align: 'right',
+                        id: 'settingsButton'
+                    }
+                ]
+            }
+        ],
+
         onItemDisclosure: function(){
             alert(this.id); // returns entire Series List ID.
                             // Need to narrow scope.

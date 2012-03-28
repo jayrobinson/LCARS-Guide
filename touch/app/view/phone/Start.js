@@ -6,7 +6,7 @@ Ext.define('LCARS.view.phone.Start', {
 
         items: [
             {
-                title: 'Start Screen',
+                cls: ['ruleHeading'],
                 xtype: 'titlebar',
                 docked: 'top',
                 items: [
@@ -24,20 +24,23 @@ Ext.define('LCARS.view.phone.Start', {
             },
             {
                 xtype: 'button',
-                text: 'Series Picker',
+                html: '<img src="/LCARS/touch/resources/img/ufp.png" height="205" width="266"><b>Access Granted</b><i>Database Retrieval<br>In Progress...</i>',
                 action: 'start',
                 id: 'startButton'
             },
             {
+                cls: ['ruleHeading'],
                 xtype: 'titlebar',
                 docked: 'bottom',
                 items: [
                     {
+                        cls: 'ruleButton rulebuttonLeft',
                         text: 'About',
                         align: 'left',
                         id: 'aboutButton'
                     },
                     {
+                        cls: 'ruleButton rulebuttonRight',
                         text: 'Settings',
                         align: 'right',
                         id: 'settingsButton'
