@@ -7,6 +7,9 @@ Ext.define('LCARS.controller.phone.Series', {
         },
 
         control : {
+            'button[action=back]' : {
+                tap: 'onBack'
+            },
             serieslistphone : {
                 itemtap: 'onSeriesTap'
             },
@@ -14,6 +17,12 @@ Ext.define('LCARS.controller.phone.Series', {
                 itemtap: 'onEpisodeTap'
             }
         }
+    },
+
+    onBack: function() {
+        var innerItems = this.getMain().getInnerItems();
+        console.log(innerItems.length);
+        this.getMain().removeAt(innerItems.length - 1);
     },
 
     onSeriesTap: function(dataView, index, target, record) {

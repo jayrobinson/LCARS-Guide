@@ -77,7 +77,7 @@ Ext.define('LCARS.controller.phone.Episodes', {
             seriesController = this.getApplication().getControllerInstances()['LCARS.controller.phone.Series'],
             item;
 
-        item = this.getMain().push({
+        item = this.getMain().setActiveItem({
             xtype: 'episodephone',
             record: episode,
             title: titleTpl

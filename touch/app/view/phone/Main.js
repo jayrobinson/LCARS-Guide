@@ -1,5 +1,5 @@
 Ext.define('LCARS.view.phone.Main', {
-    extend: 'Ext.NavigationView',
+    extend: 'Ext.Container',
     xtype: 'mainphone',
 
     requires: [
@@ -11,15 +11,7 @@ Ext.define('LCARS.view.phone.Main', {
     ],
 
     config: {
-        navigationBar: {
-            // items: [
-            //     {
-            //         text: 'Random',
-            //         id: 'random',
-            //         align: 'right'
-            //     }
-            // ]
-        },
+        layout: 'card',
 
         items: [
             {

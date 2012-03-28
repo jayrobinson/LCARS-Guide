@@ -23,19 +23,19 @@ Ext.define('LCARS.controller.phone.Start', {
     },
 
     onStartTap: function() {
-        this.getMain().push({
+        this.getMain().setActiveItem({
             xtype: 'serieslistphone'
         });
     },
 
     onAboutTap: function() {
-        this.getMain().push({
+        this.getMain().setActiveItem({
             xtype: 'aboutphone'
         });
     },
 
     onSettingsTap: function() {
-        this.getMain().push({
+        this.getMain().setActiveItem({
             xtype: 'settingslistphone'
         });
     }
